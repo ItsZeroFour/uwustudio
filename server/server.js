@@ -16,7 +16,7 @@ app.use(cors());
 app.use(helmet());
 app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 app.use(morgan("common"));
-app.use(bodyParser.json({ limit: "200mb" }));
+app.use(bodyParser.json({ limit: "20mb" }));
 app.use(
   bodyParser.urlencoded({
     limit: "200mb",

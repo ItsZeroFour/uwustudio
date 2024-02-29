@@ -1,0 +1,81 @@
+@import "./reset";
+@import "./vars";
+@import "./fonts";
+
+/* BASIC SETTINGS */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  font-size: 20px;
+  width: 100vw;
+  overflow: hidden;
+}
+
+body {
+  background: var(--color-white);
+  color: var(--color-black);
+  font-family: "Raleway", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-block-start: 75px;
+}
+
+::-webkit-scrollbar {
+  background: var(--color-purple);
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-white);
+}
+
+/* CONTAINER */
+.container {
+  width: 1580px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+textarea {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+}
