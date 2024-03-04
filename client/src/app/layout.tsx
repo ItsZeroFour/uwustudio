@@ -13,9 +13,11 @@ import type { Metadata } from "next";
 import "./scss/index.scss";
 import Header from "@/widgets/header/Header";
 import Footer from "@/widgets/footer/Footer";
+import Cursor from "@/shared/cursor/Cursor";
+// import SmoothScroll from "@/features/SmoothScroll";
 
 export const metadata: Metadata = {
-  title: "UwUStudio",
+  title: "UWUSTUDIO",
   description: `
     Лидеры в веб-разработке на полуострове, наша вэб-студия в Крыму
     предоставляет уникальные и креативные решения для клиентов по всей территории России и странам СНГ.
@@ -31,6 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
+      {/* <SmoothScroll> */}
       <body className="#root">
         <header className="header">
           <div className="container">
@@ -45,7 +48,10 @@ export default function RootLayout({
             <Footer />
           </div>
         </footer>
+
+        <Cursor />
       </body>
+      {/* </SmoothScroll> */}
     </html>
   );
 }

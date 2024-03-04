@@ -1,0 +1,147 @@
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+
+  font-size: 16px;
+}
+
+.header__wrapper nav > ul {
+  display: flex;
+  gap: 35px;
+}
+
+.header__wrapper nav > ul > li > a {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    bottom: 0;
+
+    width: 0%;
+    height: 1px;
+
+    background: var(--color-black);
+
+    transition: var(--transition);
+  }
+}
+
+.header__wrapper nav > ul a:hover::before {
+  width: 100%;
+}
+
+.header__wrapper nav > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__logo svg {
+  width: 350px;
+  height: auto;
+
+  @media (max-width: 535px) {
+    width: 300px;
+  }
+
+  @media (max-width: 404px) {
+    width: 200px;
+  }
+}
+
+.header__wrapper nav {
+  @media (max-width: 1380px) {
+    display: none;
+  }
+}
+
+.header__contact a {
+  padding: 16px 35px;
+  background: var(--color-black);
+  color: #fff;
+  border-radius: 36px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s linear;
+  display: inline-block;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 40px !important;
+    height: 40px !important;
+    background: radial-gradient(
+      circle,
+      rgb(156, 68, 244) 0%,
+      rgba(123, 34, 211, 1) 100%
+    ) !important;
+    border-radius: 50%;
+    transform: scale(0); /* Начальный масштаб 0 */
+    transform-origin: center;
+    transition: transform 0.3s linear;
+    z-index: 1;
+  }
+}
+
+.header__contact a:hover {
+  &::before {
+    transform: scale(8);
+  }
+}
+
+.header__contact span {
+  position: relative;
+  z-index: 2; /* Убедитесь, что это значение больше, чем у псевдоэлемента */
+}
+
+/* Дополнительный стиль для span, чтобы сделать текст другого цвета */
+.header__contact span::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: difference; /* Этот стиль создаст эффект вычитания */
+  z-index: -1; /* Убедитесь, что это значение меньше, чем у псевдоэлемента */
+}
+
+.header__menu {
+  width: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.header__menu__box {
+  background: var(--color-black);
+  width: 10px;
+  height: 10px;
+}
+
+.current__language {
+  padding: 10px 30px 10px 10px;
+  border: 1px solid var(--color-black);
+  border-radius: 20px;
+
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    right: 15%;
+    top: 35%;
+
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 10px 6.5px 0 6.5px;
+    border-color: #000000 transparent transparent transparent;
+    transform: rotate(0deg);
+  }
+}

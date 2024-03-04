@@ -20,13 +20,13 @@ body,
 #root {
   font-size: 20px;
   width: 100vw;
-  overflow: hidden;
 }
 
 body {
   background: var(--color-white);
   color: var(--color-black);
   font-family: "Raleway", sans-serif;
+  overflow-x: hidden;
 }
 
 html {
@@ -35,17 +35,18 @@ html {
 }
 
 ::-webkit-scrollbar {
-  background: var(--color-purple);
+  background: var(--color-white);
   width: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-white);
+  background: var(--color-purple);
+  border-radius: 5px;
 }
 
 /* CONTAINER */
 .container {
-  width: 1580px;
+  max-width: 1580px;
   padding: 0 10px;
   margin: 0 auto;
 }
@@ -78,4 +79,9 @@ li {
 textarea {
   font-family: "Raleway", sans-serif;
   font-size: 18px;
+}
+
+.page-loader {
+  display: flex;
+  flex-direction: column;
 }
