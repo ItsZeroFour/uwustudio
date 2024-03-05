@@ -421,6 +421,7 @@
 .our__team__wrapper__top {
   position: relative;
   width: 100%;
+  min-height: 700px;
 
   &::before {
     content: "";
@@ -457,12 +458,12 @@
 
 .our__team__list {
   margin-top: 100px;
+}
 
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-  }
+.our__team__list > ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .our__team__list > ul > li:last-child {
@@ -604,18 +605,343 @@
   margin-top: 100px;
 }
 
-.reviews__wrapper {
-  h2 {
-    font-size: 64px;
-    font-family: "Raleway-bl", sans-serif;
-    font-weight: 900;
-    line-height: 120%;
-    width: 645px;
+.reviews__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    bottom: 31.9%;
+    right: 0.4%;
+
+    width: 0;
+    height: 100%;
+
+    background: url("../../../public/images/home/reviews-line-1.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: -2;
+
+    animation-name: drow;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    bottom: 15%;
+
+    width: 0;
+    height: 100%;
+
+    background: url("../../../public/images/home/reviews-line-2.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: -2;
+
+    animation-name: drow;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes drow {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.reviews__main__image {
+  position: absolute;
+  right: 0;
+  top: 20%;
+
+  z-index: -1;
+}
+
+.reviews__wrapper > h2 {
+  font-size: 64px;
+  font-family: "Raleway-bl", sans-serif;
+  font-weight: 900;
+  line-height: 120%;
+  width: 645px;
+}
+
+.reviews__wrapper > p {
+  margin-left: 60px;
+  margin-top: 30px;
+  width: 645px;
+}
+
+.reviews__main__list {
+  width: 1035px;
+  margin-top: 50px;
+}
+
+.reviews__main__list > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+}
+
+.reviews__main__list > ul > li:not(:last-child) {
+  display: flex;
+  flex-direction: column;
+
+  padding: 30px;
+  width: 500px;
+  min-height: 550px;
+
+  border: 1px solid var(--color-black);
+  border-radius: var(--border-radius-md);
+  background: var(--color-white);
+
+  .reviews__stars {
+    display: flex;
+    gap: 10px !important;
+    align-items: center;
   }
 
   p {
-    margin-left: 60px;
-    margin-top: 30px;
-    width: 645px;
+    width: 450px;
+    margin-top: 35px;
+    line-height: 120%;
+  }
+
+  h3 {
+    font-family: "Raleway-bd";
+    margin-top: 10px;
+    font-size: 20px;
+  }
+}
+
+.reviews__main__list > ul {
+  position: relative;
+}
+
+.reviews__main__list > ul > li:nth-child(2),
+.reviews__main__list > ul > li:nth-child(4),
+.reviews__main__list > ul > li:nth-child(6) {
+  position: absolute;
+  right: 0;
+}
+
+.reviews__main__list > ul > li:nth-child(2) {
+  top: 3%;
+}
+
+.reviews__main__list > ul > li:nth-child(4) {
+  top: 37%;
+}
+
+.reviews__main__list > ul > li:nth-child(6) {
+  top: 73%;
+  left: 52%;
+
+  a {
+    font-size: 24px;
+    border-bottom: 1px solid var(--color-black);
+    transition: var(--transition);
+
+    &:hover {
+      border-bottom: 1px solid var(--color-purple);
+    }
+  }
+}
+
+.reviews__stars > h3 {
+  font-size: 36px !important;
+  font-weight: 900;
+  font-family: "Raleway-bl", sans-serif !important;
+}
+
+// Contacts
+.contacts {
+  background: #181818;
+  padding: 60px;
+  margin-top: 100px;
+
+  h2,
+  p,
+  label {
+    color: var(--color-white);
+  }
+}
+
+.contacts__wrapper__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 1260px;
+  margin-top: -100px;
+}
+
+.contacts__form {
+  width: 560px;
+  z-index: 9;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    input[type="text"],
+    textarea {
+      background: none;
+      padding-bottom: 15px;
+      border-bottom: 1px solid var(--color-white);
+      font-size: 20px;
+      color: var(--color-white);
+      letter-spacing: 1.1px;
+      width: 100%;
+
+      &::placeholder {
+        font-size: 24px;
+        color: var(--color-white);
+        font-family: "Raleway-th", sans-serif;
+      }
+    }
+
+    textarea {
+      height: 150px;
+      resize: none;
+    }
+  }
+
+  button {
+    width: 100%;
+    padding: 17px;
+    background: var(--color-white);
+    font-size: 24px;
+  }
+}
+
+.contacts__policy {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  gap: 10px;
+
+  label {
+    font-size: 16px;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+.contacts__text {
+  width: 660px;
+  z-index: 9;
+
+  h2 {
+    font-size: 96px;
+    line-height: 100%;
+    font-weight: 900;
+    font-family: "Raleway-bl", sans-serif;
+    width: 570px;
+    margin-left: 90px;
+
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+
+      width: 170px;
+      height: 3px;
+
+      background: var(--color-white);
+      right: 10%;
+      top: 77%;
+    }
+  }
+
+  p {
+    margin-top: 70px;
+  }
+}
+
+.contacts {
+  position: relative;
+}
+
+.contacts__wrapper__images {
+  display: flex;
+
+  .contacts__wrapper__image__left {
+    position: absolute;
+
+    width: 50%;
+    height: 50%;
+
+    right: 50%;
+    top: 40%;
+
+    opacity: 0.2;
+
+    background-image: url("../../../public/images/home/contacts-head-left.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+
+    animation-name: fromLeftToRight;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+
+  .contacts__wrapper__image__right {
+    position: absolute;
+
+    width: 60%;
+    height: 60%;
+
+    left: 50%;
+    top: 25%;
+
+    opacity: 0.2;
+
+    background-image: url("../../../public/images/home/contacts-head-right.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+
+    animation-name: fromRightToLeft;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes fromRightToLeft {
+  from {
+    left: 100%;
+  }
+
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes fromLeftToRight {
+  from {
+    right: 100%;
+  }
+
+  to {
+    right: 50%;
   }
 }

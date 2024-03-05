@@ -1,7 +1,18 @@
+"use client";
+
 import React from "react";
 import style from "./style.module.scss";
+import Star from "../../../public/icons/Star.svg";
+import Image from "next/image";
+import ReviewsImage from "../../../public/images/home/reviews-statue.png";
+import { useInView } from "react-intersection-observer";
+import Link from "next/link";
 
 const Reviews = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+  });
+
   const reviews = [
     {
       starsCount: [1, 2, 3, 4, 5],
@@ -36,8 +47,7 @@ const Reviews = () => {
       text: `
       Спасибо команде за великолепную SEO оптимизацию!
       Подняли наш сайт в поисковых результатах, привлекли новых клиентов.
-      Результаты ощутимы, и это далеко не просто техническая работа 
-      - это настоящее волшебство в мире цифрового маркетинга!
+      Результаты ощутимы, рекомендую!
       `,
       author: "Anonimus",
     },
@@ -53,7 +63,7 @@ const Reviews = () => {
   ];
 
   return (
-    <section className={style.reviews}>
+    <section className={style.reviews} ref={ref}>
       <div className="container">
         <div className={style.reviews__wrapper}>
           <h2>Что наши клиенты говорят о нас?</h2>
@@ -61,17 +71,43 @@ const Reviews = () => {
             Отзывы наших клиентов - это лучшая награда. "Совершенно
             потрясающе!", "Профессионализм на высшем уровне!" - вот лишь малая
             часть теплых слов, которые подтверждают нашу преданность качеству и
-            уникальности. Присоединяйтесь к нашему списку довольных клиентов и
-            дайте свой голос в этой виртуальной симфонии успеха!
+            уникальности.Ознакомьтесь с последними из отзывов и присоединяйтесь
+            к нашему списку довольных клиентов и дайте свой голос в этой
+            виртуальной симфонии успеха!
           </p>
 
-          <div className={style.reviews__main}>
-            <aside className={style.reviews__main__list}>
-              <ul>
-                <li></li>
-              </ul>
-            </aside>
-          </div>
+          {inView && (
+            <div className={style.reviews__main}>
+              <aside className={style.reviews__main__list}>
+                <ul>
+                  {reviews.map(({ starsCount, text, author }, index) => (
+                    <li key={index}>
+                      <ul className={style.reviews__stars}>
+                        {starsCount.map((item) => (
+                          <li key={item}>
+                            <Star />
+                          </li>
+                        ))}
+
+                        <h3>{starsCount.length}.0</h3>
+                      </ul>
+
+                      <p>{text}</p>
+                      <h3>{author}</h3>
+                    </li>
+                  ))}
+
+                  <li className={style.reviews__portfolio}>
+                    <Link href="/portfolio">Посомтреть наше портфолио</Link>
+                  </li>
+                </ul>
+              </aside>
+
+              <aside className={style.reviews__main__image}>
+                <Image src={ReviewsImage} alt="statue" />
+              </aside>
+            </div>
+          )}
         </div>
       </div>
     </section>
