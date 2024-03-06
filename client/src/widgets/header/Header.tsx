@@ -1,9 +1,15 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import style from "./header.module.scss";
 import Link from "next/link";
 import Logo from "../../../public/logo.svg";
+import { paths } from "@/paths";
+import HeaderMenu from "@/shared/headerMenu/headerMenu";
 
 const Header = () => {
+  const [openMenu, setOpenMenu] = useState<boolean>(false);
+
   return (
     <div className={style.header__wrapper}>
       <nav>
@@ -15,7 +21,7 @@ const Header = () => {
           </li>
 
           <li>
-            <Link href="/portfolio">Наше портфолио</Link>
+            <Link href={paths.portfolio}>Наше портфолио</Link>
           </li>
         </ul>
       </nav>
@@ -27,11 +33,11 @@ const Header = () => {
       <nav>
         <ul>
           <li>
-            <Link href="/services">Услуги</Link>
+            <Link href={paths.services}>Услуги</Link>
           </li>
 
           <li>
-            <Link href="/about-us">О нас</Link>
+            <Link href={paths.about}>О нас</Link>
           </li>
 
           <li>
@@ -44,7 +50,14 @@ const Header = () => {
         </ul>
       </nav>
 
-      <div className={style.header__menu}>
+      <div
+        className={`${
+          !openMenu
+            ? `${style.header__menu}`
+            : `${style.header__menu} ${style.header__active}`
+        }`}
+        onClick={() => setOpenMenu(!openMenu)}
+      >
         <div className={style.header__menu__box}></div>
         <div className={style.header__menu__box}></div>
         <div className={style.header__menu__box}></div>
@@ -55,6 +68,8 @@ const Header = () => {
         <div className={style.header__menu__box}></div>
         <div className={style.header__menu__box}></div>
       </div>
+
+      {openMenu && <HeaderMenu />}
     </div>
   );
 };

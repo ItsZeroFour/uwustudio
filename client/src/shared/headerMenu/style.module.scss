@@ -1,0 +1,13 @@
+.menu {
+  position: absolute;
+
+  left: 0;
+  top: 150px;
+
+  width: 100vw;
+  height: 100vh;
+
+  backdrop-filter: blur(10px);
+
+  z-index: 9999;
+}

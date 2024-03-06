@@ -63,7 +63,7 @@ const Reviews = () => {
   ];
 
   return (
-    <section className={style.reviews} ref={ref}>
+    <section className={style.reviews} ref={ref} id="reviews">
       <div className="container">
         <div className={style.reviews__wrapper}>
           <h2>Что наши клиенты говорят о нас?</h2>
@@ -76,38 +76,40 @@ const Reviews = () => {
             виртуальной симфонии успеха!
           </p>
 
-          {inView && (
-            <div className={style.reviews__main}>
-              <aside className={style.reviews__main__list}>
-                <ul>
-                  {reviews.map(({ starsCount, text, author }, index) => (
-                    <li key={index}>
-                      <ul className={style.reviews__stars}>
-                        {starsCount.map((item) => (
-                          <li key={item}>
-                            <Star />
-                          </li>
-                        ))}
+          <div className={style.reviews__content}>
+            {inView && (
+              <div className={style.reviews__main}>
+                <aside className={style.reviews__main__list}>
+                  <ul>
+                    {reviews.map(({ starsCount, text, author }, index) => (
+                      <li key={index}>
+                        <ul className={style.reviews__stars}>
+                          {starsCount.map((item) => (
+                            <li key={item}>
+                              <Star />
+                            </li>
+                          ))}
 
-                        <h3>{starsCount.length}.0</h3>
-                      </ul>
+                          <h3>{starsCount.length}.0</h3>
+                        </ul>
 
-                      <p>{text}</p>
-                      <h3>{author}</h3>
+                        <p>{text}</p>
+                        <h3>{author}</h3>
+                      </li>
+                    ))}
+
+                    <li className={style.reviews__portfolio}>
+                      <Link href="/portfolio">Посомтреть наше портфолио</Link>
                     </li>
-                  ))}
+                  </ul>
+                </aside>
 
-                  <li className={style.reviews__portfolio}>
-                    <Link href="/portfolio">Посомтреть наше портфолио</Link>
-                  </li>
-                </ul>
-              </aside>
-
-              <aside className={style.reviews__main__image}>
-                <Image src={ReviewsImage} alt="statue" />
-              </aside>
-            </div>
-          )}
+                <aside className={style.reviews__main__image}>
+                  <Image src={ReviewsImage} alt="statue" />
+                </aside>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </section>
