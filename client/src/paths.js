@@ -1,0 +1,17 @@
+export const paths = {
+  home: "/",
+  about: "/about-us",
+  portfolio: "/portfolio",
+  presentation: "/presentation",
+  services: "/services",
+  faq: "/faq",
+  blog: "/blog",
+  contacts: "/#contacts",
+  support: "/support",
+  documents: "/documents",
+  stages: "/about-us/#stages",
+  stock: "/stock",
+  policy: "/policy",
+  whyWe: "/why-we",
+  reviews: "/#reviews",
+};

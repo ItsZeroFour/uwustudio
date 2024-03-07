@@ -7,6 +7,7 @@ import Advantages from "@/widgets/home/Advantages";
 import OurTeam from "@/widgets/home/OurTeam";
 import Reviews from "@/widgets/home/Reviews";
 import Contacts from "@/widgets/home/Contacts";
+import Blog from "@/widgets/home/Blog";
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
         <OurTeam />
         <Reviews />
         <Contacts />
+        <Blog />
       </Lines>
     </React.Fragment>
   );

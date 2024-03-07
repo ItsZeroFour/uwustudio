@@ -4,6 +4,7 @@ import React from "react";
 import style from "./style.module.scss";
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
+import { paths } from "@/paths";
 
 const Contacts = () => {
   const [ref, inView] = useInView({
@@ -31,7 +32,9 @@ const Contacts = () => {
                   <input type="checkbox" id="contacts-policy" />
                   <label htmlFor="contacts-policy">
                     Отправляя сообщение, я подтверждаю, что ознакомился с{" "}
-                    <Link href="/policy">Политикой конфеденциальности</Link>
+                    <Link href={paths.policy}>
+                      Политикой конфеденциальности
+                    </Link>
                   </label>
                 </div>
                 <button type="submit">Отправить</button>
