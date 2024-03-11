@@ -337,13 +337,57 @@
     color: var(--color-white);
 
     &:first-child {
-      padding: 20px 160px;
+      width: 435px;
+      // padding: 20px 160px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       background: var(--color-purple);
+
+      position: relative;
+      transition: all 0.3s linear;
+
+      &::before {
+        content: "";
+        position: absolute;
+
+        opacity: 0;
+
+        right: 25%;
+        top: 5%;
+
+        width: 57px;
+        height: 57px;
+
+        background: url("../../../public/icons/Arrow-Up.svg");
+        background-repeat: no-repeat;
+
+        transform: rotate(42deg);
+        transition: all 0.3s ease-in-out;
+      }
+
+      &:hover {
+        padding-right: 20px;
+        background: none;
+        color: var(--color-black);
+        border: 1px solid var(--color-purple);
+
+        &::before {
+          opacity: 1;
+          right: 30%;
+        }
+      }
     }
 
     &:last-child {
       padding: 20px 115px;
       background: var(--color-dark-gray);
+      transition: var(--transition);
+
+      &:hover {
+        background: var(--color-red);
+      }
     }
   }
 }

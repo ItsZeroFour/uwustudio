@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import style from "./style.module.scss";
 import User from "../../../public/icons/menu/User.svg";
 
@@ -16,41 +16,42 @@ import Lamp from "../../../public/icons/menu/Lamp.svg";
 
 import Link from "next/link";
 import { paths } from "@/paths";
+import Socials from "../socials/Socials";
 
 const HeaderMenu = () => {
   const firstList = [
     {
-      image: User,
+      image: <User />,
       title: "О нас",
       link: paths.about,
     },
 
     {
-      image: Category,
+      image: <Category />,
       title: "Портфолио",
       link: paths.portfolio,
     },
 
     {
-      image: Monitor,
+      image: <Monitor />,
       title: "Презентация",
       link: paths.presentation,
     },
 
     {
-      image: InfoCircle,
+      image: <InfoCircle />,
       title: "FAQ",
       link: paths.faq,
     },
 
     {
-      image: Row,
+      image: <Row />,
       title: "Блог",
       link: paths.blog,
     },
 
     {
-      image: Bag,
+      image: <Bag />,
       title: "Услуги",
       link: paths.services,
     },
@@ -58,19 +59,19 @@ const HeaderMenu = () => {
 
   const secondList = [
     {
-      image: Copy,
+      image: <Copy />,
       title: "Документы",
       link: paths.about,
     },
 
     {
-      image: Rocket,
+      image: <Rocket />,
       title: "Связаться с нами",
       link: paths.contacts,
     },
 
     {
-      image: ChartSquare,
+      image: <ChartSquare />,
       title: "Презентация",
       link: paths.stages,
     },
@@ -78,19 +79,19 @@ const HeaderMenu = () => {
 
   const thirdList = [
     {
-      image: Lable,
+      image: <Lable />,
       title: "Акции",
       link: paths.stock,
     },
 
     {
-      image: EmojiSmile,
+      image: <EmojiSmile />,
       title: "Отзывы о нас",
       link: paths.reviews,
     },
 
     {
-      image: Lamp,
+      image: <Lamp />,
       title: "Почему мы?",
       link: paths.whyWe,
     },
@@ -103,22 +104,82 @@ const HeaderMenu = () => {
           <aside className={style.menu__top}>
             <div className={style.menu__top__left}>
               <ul>
-                <li>
-                  <Link href={paths.about}>
-                    <div className={style.menu__image}>
-                      <User />
-                    </div>
+                {firstList.slice(0, 3).map(({ image, title, link }) => (
+                  <li className={style.menu__item} key={title}>
+                    <Link href={link}>
+                      <div className={style.menu__image}>{image}</div>
 
-                    <p>О нас</p>
-                  </Link>
+                      <p>{title}</p>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+
+              <ul>
+                {firstList
+                  .slice(3, firstList.length)
+                  .map(({ image, title, link }) => (
+                    <li className={style.menu__item} key={title}>
+                      <Link href={link}>
+                        <div className={style.menu__image}>{image}</div>
+
+                        <p>{title}</p>
+                      </Link>
+                    </li>
+                  ))}
+              </ul>
+            </div>
+            <div className={style.menu__top__right}>
+              <ul>
+                {secondList.map(({ image, title, link }) => (
+                  <li className={style.menu__item} key={title}>
+                    <Link href={link}>
+                      <div className={style.menu__image}>{image}</div>
+
+                      <p>{title}</p>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </aside>
+          <aside className={style.menu__bottom}>
+            <div className={style.menu__bottom__main}>
+              <ul>
+                {thirdList.slice(0, 2).map(({ image, title, link }) => (
+                  <li className={style.menu__item} key={title}>
+                    <Link href={link}>
+                      <div className={style.menu__image}>{image}</div>
+
+                      <p>{title}</p>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+
+              <ul>
+                {thirdList.slice(2, 3).map(({ image, title, link }) => (
+                  <li className={style.menu__item} key={title}>
+                    <Link href={link}>
+                      <div className={style.menu__image}>{image}</div>
+
+                      <p>{title}</p>
+                    </Link>
+                  </li>
+                ))}
+
+                <li>
+                  <Link href={paths.services}>Заказать</Link>
                 </li>
               </ul>
             </div>
-            <div className={style.menu__top__right}></div>
-          </aside>
-          <aside className={style.menu__bottom}>
-            <div className={style.menu__bottom__main}></div>
-            <div className={style.menu__bottom__other}></div>
+            <div className={style.menu__bottom__other}>
+              <Socials />
+              <Link className={style.menu__bottom__policy} href={paths.policy}>
+                Политика конфеденциальности
+              </Link>
+              <Link href="mailto:uwustudio@gmail.com">uwustudio@gmail.com</Link>
+            </div>
           </aside>
         </div>
       </div>

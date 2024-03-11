@@ -1,0 +1,148 @@
+.blog__panel {
+  margin-top: 100px;
+}
+
+.blog__panel__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  aside {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+
+    input {
+      padding: 30px;
+      width: 750px;
+      letter-spacing: 1.1px;
+
+      border: 1px solid var(--color-black);
+      border-radius: 42px;
+    }
+  }
+}
+
+.blog__select__main,
+.blog__date {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  gap: 10px;
+
+  padding: 5px 20px 5px 80px;
+  border: 1px solid var(--color-black);
+  border-radius: 42px;
+
+  p {
+    color: #7b7b7b;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 8%;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 32px 16.5px 0 16.5px;
+    border-color: #000000 transparent transparent transparent;
+    border-radius: 5px;
+  }
+}
+
+.blog__date {
+  &::before {
+    left: 20%;
+  }
+}
+
+.blog__list {
+  margin-top: 120px;
+}
+
+.blog__list__wrapper > ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 120px;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    img {
+      border-radius: var(--border-radius-sm);
+
+      width: 590px;
+      height: 620px;
+
+      object-fit: cover;
+    }
+  }
+}
+
+.blog__list__main {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  h2 {
+    font-size: 48px;
+    font-weight: bold;
+    font-family: "Raleway-bd", sans-serif;
+  }
+
+  ul {
+    display: flex;
+    gap: 35px;
+
+    li {
+      padding: 18px 60px;
+      border: 1px solid var(--color-black);
+      border-radius: 30px;
+    }
+  }
+}
+
+.blog__list__main > p {
+  text-indent: 20px;
+}
+
+.blog__buttons {
+  display: flex;
+  gap: 45px;
+
+  a {
+    width: 70%;
+    padding: 20px;
+    text-align: center;
+
+    background: var(--color-purple);
+    color: var(--color-white);
+
+    border: 1px solid var(--color-purple);
+    border-radius: 15px;
+
+    transition: var(--transition);
+
+    &:hover {
+      background: none;
+      color: var(--color-black);
+    }
+  }
+
+  button {
+    width: 30%;
+    background: var(--color-black);
+    color: var(--color-white);
+
+    border-radius: 15px;
+  }
+}

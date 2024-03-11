@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import style from "./header.module.scss";
 import Link from "next/link";
 import Logo from "../../../public/logo.svg";

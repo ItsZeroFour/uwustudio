@@ -11,3 +11,165 @@
 
   z-index: 9999;
 }
+
+.menu__top {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+
+  margin-top: 10px;
+}
+
+.menu__wrapper {
+  a {
+    &:hover {
+      .menu__image {
+        background: var(--color-purple);
+      }
+    }
+  }
+}
+
+.menu__top__left,
+.menu__top__right {
+  background: var(--color-white);
+  box-shadow: 3px 1px 35px rgba(0, 0, 0, 0.25);
+  padding: 30px;
+  border-radius: 40px;
+}
+
+.menu__top__left {
+  width: 900px;
+}
+
+.menu__top__right {
+  width: 600px;
+}
+
+.menu__image {
+  background: var(--color-black);
+  border-radius: var(--border-radius-lg);
+  width: 100px;
+  height: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: var(--transition);
+}
+
+.menu__item a {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  p {
+    font-size: 32px;
+    font-family: "Raleway-md", sans-serif;
+  }
+}
+
+.menu__top__left {
+  display: flex;
+  justify-content: space-between;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &:last-child {
+      margin-right: 150px;
+    }
+  }
+}
+
+.menu__top__right {
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+}
+
+.menu__bottom {
+  display: flex;
+  align-items: center;
+
+  background: var(--color-white);
+  border-radius: 40px;
+  margin-top: 30px;
+  width: 100%;
+  padding: 30px;
+  box-shadow: 3px 1px 35px rgba(0, 0, 0, 0.25);
+}
+
+.menu__bottom__main {
+  width: 60%;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    right: 0;
+
+    width: 1px;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.menu__bottom__main {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 100px;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &:last-child {
+      li {
+        &:last-child {
+          margin-top: 35px;
+          a {
+            padding: 33px 120px;
+            font-size: 32px;
+
+            background: var(--color-black);
+            color: var(--color-white);
+            border-radius: var(--border-radius-lg);
+            transition: var(--transition);
+            border: 1px solid var(--color-black);
+
+            &:hover {
+              background: none;
+              color: var(--color-black);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.menu__bottom__other {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-left: 30px;
+
+  a {
+    font-size: 32px;
+    font-family: "Raleway-md", sans-serif;
+  }
+}
+
+.menu__bottom__policy {
+  text-decoration: underline;
+}
