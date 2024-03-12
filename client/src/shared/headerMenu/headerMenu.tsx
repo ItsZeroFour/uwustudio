@@ -73,7 +73,7 @@ const HeaderMenu = () => {
     {
       image: <ChartSquare />,
       title: "Презентация",
-      link: paths.stages,
+      link: paths.presentation,
     },
   ];
 
