@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import style from "./style.module.scss";
 import Link from "next/link";
 import ArrowRight from "../../../public/icons/Arrow-Right.svg";
@@ -13,7 +13,7 @@ const ServicesList = () => {
       title: "Разработка сайта “Под ключ”",
       description:
         "Разработка сайта 'Под ключ' - наша главная услуга. Мы берем на себя всю работу, создавая для вас готовый и выразительный веб-сайт от концепции до запуска",
-      link: "",
+      link: "about-service/develop-website",
     },
 
     {
