@@ -174,6 +174,8 @@ const Quiz = () => {
   return (
     <section className={style.quiz}>
       <div className="container">
+        <h2>Подсчитаем стоимость сайта всего за 5 вопросов</h2>
+
         <div className={style.quiz__wrapper}>
           <aside className={style.quiz__info}>
             <p>1/{quizItems.length}</p>
@@ -187,11 +189,13 @@ const Quiz = () => {
             <ul>
               {quizItems[0].items.map(({ title, text, icon }, index) => (
                 <li className={style.quiz__option} key={index}>
-                  <Image src={icon} alt={title} />
+                  <div>
+                    <Image src={icon} alt={title} />
 
-                  <div className={style.quiz__option__text}>
-                    <h4>{title}</h4>
-                    <p>{text}</p>
+                    <div className={style.quiz__option__text}>
+                      <h4>{title}</h4>
+                      <p>{text}</p>
+                    </div>
                   </div>
 
                   <ArrowRight />
