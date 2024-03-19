@@ -8,6 +8,7 @@ import ArrowRight from "../../../public/icons/Arrow-Right.svg";
 import Image from "next/image";
 
 const Quiz = () => {
+
   const quizItems = [
     {
       questionTitle: "Какой тип сайта вам необходим?",
