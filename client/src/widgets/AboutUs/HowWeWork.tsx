@@ -44,7 +44,7 @@ const HowWeWork = () => {
   ];
 
   return (
-    <section className={style.how_we_work}>
+    <section className={style.how_we_work} id="stages">
       <div className="container">
         <div className={style.how_we_work__wrapper}>
           <aside className={style.how_we_work__left}>

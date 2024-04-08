@@ -12,6 +12,7 @@ const Quiz = () => {
 
   const [currentQuizIndex, setCurrentQuizIndex] = useState(0);
   const [finish, setFinish] = useState(false);
+  const [contactType, setContactType] = useState("email");
 
   const quizItems = [
     {
@@ -148,7 +149,8 @@ const Quiz = () => {
 
     {
       questionTitle: "Выберите подходящий ответ",
-      questionText: "Из 4-х вариантов выберите тот, который вам нужно",
+      questionText:
+        "Из 4-х вариантов, выберите тот, который вам больше всего подходит",
       items: [
         {
           title: "Мне нужен логотип",
@@ -198,10 +200,12 @@ const Quiz = () => {
       <div className="container">
         <h2>Подсчитаем стоимость сайта всего за 5 вопросов</h2>
 
-        {finish ? (
+        {!finish ? (
           <div className={style.quiz__wrapper}>
             <aside className={style.quiz__info}>
-              <p>1/{quizItems.length}</p>
+              <p>
+                {currentQuizIndex + 1}/{quizItems.length}
+              </p>
 
               <div className={style.quiz__info__main}>
                 <h3>{quizItems[currentQuizIndex].questionTitle}</h3>
@@ -239,21 +243,36 @@ const Quiz = () => {
             </aside>
           </div>
         ) : (
-          <div className={style.quiz__wrapper}>
+          <div className={style.quiz__wrapper__contact}>
             <h2>Спасибо!</h2>
-            <p>
-              Спасибо за ответы на все вопросы в нашем опроснике! Мы готовы
-              помочь вам создать сайт, который будет соответствовать вашим
-              потребностям. Оставьте, пожалуйста, ваш контакт и дополнительные
-              комментарии в форме ниже. Наша команда свяжется с вами в ближайшее
-              время для обсуждения деталей.
-            </p>
+
+            <div className={style.quiz__wrapper__text}>
+              <p>
+                Спасибо за ответы на все вопросы в нашем опроснике! Мы готовы
+                помочь вам создать сайт, который будет соответствовать вашим
+                потребностям. Оставьте, пожалуйста, ваш контакт и дополнительные
+                комментарии в форме ниже. Наша команда свяжется с вами в
+                ближайшее время для обсуждения деталей.
+              </p>
+            </div>
 
             <div className={style.quiz__wrapper__contact__type}>
               <form>
-                <input type="radio" name="contact-type" id="email" />
+                <input
+                  type="radio"
+                  name="contact-type"
+                  id="email"
+                  onClick={() => setContactType("email")}
+                  checked={contactType === "email"}
+                />
                 <label htmlFor="email">Связаться по почте</label>
-                <input type="radio" name="contact-type" id="telegram" />
+                <input
+                  type="radio"
+                  name="contact-type"
+                  id="telegram"
+                  onClick={() => setContactType("telegram")}
+                  checked={contactType === "telegram"}
+                />
                 <label htmlFor="telegram">Связаться по телеграму</label>
               </form>
 

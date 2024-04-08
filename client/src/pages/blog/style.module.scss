@@ -32,6 +32,7 @@
 
   gap: 10px;
 
+  height: 85px;
   padding: 5px 20px 5px 80px;
   border: 1px solid var(--color-black);
   border-radius: 42px;
@@ -43,18 +44,24 @@
   &::before {
     content: "";
     position: absolute;
-    left: 8%;
+    left: 5%;
     display: inline-block;
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 32px 16.5px 0 16.5px;
+    border-width: 20px 10px 0 10px;
     border-color: #000000 transparent transparent transparent;
     border-radius: 5px;
+  }
+
+  svg {
+    margin-left: 20px;
   }
 }
 
 .blog__date {
+  height: 85px;
+
   &::before {
     left: 20%;
   }

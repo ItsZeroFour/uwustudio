@@ -61,7 +61,7 @@ const HeaderMenu = () => {
     {
       image: <Copy />,
       title: "Документы",
-      link: paths.about,
+      link: paths.documents,
     },
 
     {
@@ -72,8 +72,8 @@ const HeaderMenu = () => {
 
     {
       image: <ChartSquare />,
-      title: "Презентация",
-      link: paths.presentation,
+      title: "Команда",
+      link: paths.comand,
     },
   ];
 

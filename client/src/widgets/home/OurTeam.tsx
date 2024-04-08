@@ -14,7 +14,7 @@ const OurTeam = () => {
   });
 
   return (
-    <section className={style.our__team} ref={ref}>
+    <section className={style.our__team} ref={ref} id="comand">
       <div className="container">
         <div className={style.our__team__wrapper}>
           {inView && (

@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const WhyChooseUs = () => {
   return (
-    <section className={style.why_choose_us}>
+    <section className={style.why_choose_us} id="why-we">
       <div className="container">
         <div className={style.why_choose_us__wrapper}>
           <h2>Почему выбирают нас?</h2>

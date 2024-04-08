@@ -34,20 +34,22 @@ export default function RootLayout({
   return (
     <html lang="ru">
       {/* <SmoothScroll> */}
-      <body className="#root">
-        <header className="header">
-          <div className="container">
-            <Header />
-          </div>
-        </header>
+      <body id="root">
+        <div className="page">
+          <header className="header">
+            <div className="container">
+              <Header />
+            </div>
+          </header>
 
-        <main className="main">{children}</main>
+          <main className="main">{children}</main>
 
-        <footer className="footer">
-          <div className="container">
-            <Footer />
-          </div>
-        </footer>
+          <footer className="footer">
+            <div className="container">
+              <Footer />
+            </div>
+          </footer>
+        </div>
 
         <Cursor />
       </body>

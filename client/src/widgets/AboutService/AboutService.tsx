@@ -8,6 +8,7 @@ import MainImage from "../../../public/images/aboutService/main-image.svg";
 import HeadImage from "../../../public/images/aboutService/head.png";
 import Image from "next/image";
 import Quiz from "@/shared/quiz/Quiz";
+import AboutServiceContactsImage from "../../../public/images/aboutService/about-service-contacts.svg";
 
 interface StageItem {
   image: any;
@@ -119,6 +120,42 @@ const AboutService: React.FC<{ data: ServiceData | null }> = ({ data }) => {
           </section>
 
           <Quiz />
+
+          <section className={style.about__service__contacts}>
+            <div className="container">
+              <div className={style.about__service__contacts__wrapper}>
+                <aside className={style.about__service__contacts__left}>
+                  <AboutServiceContactsImage />
+                </aside>
+                <aside className={style.about__service__contacts__right}>
+                  <h2>Давайте обсудим Ваш проект</h2>
+                  <p>
+                    Мы искренне заинтересованы в том, чтобы узнать о вашем
+                    проекте и прослушать ваши идеи. В нашей компании мы ценим
+                    индивидуальный подход к каждому клиенту, и ваш проект не
+                    является исключением. Мы готовы вложить все наши знания,
+                    опыт и творческий подход, чтобы сделать ваш проект успешным
+                    и эффективным. Открытость и прямая коммуникация - основные
+                    принципы нашей работы. Мы готовы обсудить все аспекты вашего
+                    проекта, ответить на ваши вопросы и предложить наилучшие
+                    решения. Независимо от того, на каком этапе разработки
+                    находится ваш проект, мы всегда готовы прислушаться к вашим
+                    пожеланиям и потребностям, чтобы обеспечить полное
+                    соответствие ваших ожиданий. Не стесняйтесь связаться с нами
+                    сегодня, чтобы начать обсуждение вашего будущего в
+                    интернете. Мы уверены, что совместными усилиями мы сможем
+                    создать проект, о котором вы мечтали, и достичь ваших целей
+                    и успеха в онлайн-мире.
+                  </p>
+
+                  <div className={style.about__service__contacts__buttons}>
+                    <Link href={paths.contacts}>Контакты</Link>
+                    <Link href={paths.about}>О нас</Link>
+                  </div>
+                </aside>
+              </div>
+            </div>
+          </section>
         </React.Fragment>
       )}
     </React.Fragment>

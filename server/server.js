@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import express from "express";
 import helmet from "helmet";
 import morgan from "morgan";
+import mailsRoutes from "./routes/mailsRoutes.js";
 
 dotenv.config({ path: "./.env" });
 const app = express();
@@ -26,6 +27,7 @@ app.use(
 );
 
 /* ROUTES */
+app.use("/email", mailsRoutes);
 
 /* START FUNCTION */
 async function start() {

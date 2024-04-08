@@ -60,7 +60,7 @@ const Blog = () => {
             )}
           </ul>
 
-          <Link href="/posts">Смотреть все посты</Link>
+          <Link href="/blog">Смотреть все посты</Link>
         </div>
       </div>
     </section>
