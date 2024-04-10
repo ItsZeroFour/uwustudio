@@ -14,7 +14,7 @@ const OurServices = () => {
 
   useEffect(() => {
     if (inView) {
-      const target1 = 11;
+      const target1 = 7;
       const target2 = 101;
       const duration = 3000;
 
@@ -82,7 +82,7 @@ const OurServices = () => {
           <aside className={style.our__services__advantages}>
             <p>
               Мы грамотно оцениваем поставленную перед нами задачу. Проводим
-              анализ и выстраиваем план по воплащению Ваших идей в реальность
+              анализ и выстраиваем план по воплощению Ваших идей в реальность
             </p>
 
             <ul>
