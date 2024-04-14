@@ -3,6 +3,13 @@
 }
 
 .faq__wrapper {
+  h1 {
+    margin-bottom: 60px;
+    font-size: 72px;
+    font-weight: 900;
+    font-family: "Raleway-bd", sans-serif;
+  }
+
   ul {
     display: flex;
     flex-direction: column;
@@ -53,7 +60,16 @@
       }
 
       p {
-        margin-top: 70px;
+        margin-top: 20px;
+        opacity: 0.8;
+        text-indent: 20px;
+        line-height: 180%;
+        font-size: 18px;
+        font-weight: 100;
+
+        &:nth-child(2) {
+          margin-top: 40px;
+        }
       }
     }
   }
