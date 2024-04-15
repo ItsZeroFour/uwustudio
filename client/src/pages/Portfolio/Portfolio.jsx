@@ -6,8 +6,8 @@ import PortfolioImage1 from "../../../public/images/blog/blog-image-1.png";
 import Image from "next/image";
 
 const Portfolio = () => {
-  const listRef = useRef<HTMLUListElement>();
-  const listRef2 = useRef<HTMLUListElement>();
+  const listRef = useRef();
+  const listRef2 = useRef();
 
   const portfolioList = [
     {

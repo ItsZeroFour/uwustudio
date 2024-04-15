@@ -4,9 +4,7 @@ import React, { useState } from "react";
 import style from "./style.module.scss";
 
 const FAQ = () => {
-  const [questionShowIndex, setQuestionShowIndex] = useState<number | null>(
-    null
-  );
+  const [questionShowIndex, setQuestionShowIndex] = useState(null);
 
   const faqItems = [
     {
@@ -139,7 +137,6 @@ const FAQ = () => {
     <section className={style.faq}>
       <div className="container">
         <div className={style.faq__wrapper}>
-          {/* <h1>FAQ</h1> */}
           <ul>
             {faqItems.map(({ question, answer }, index) => (
               <li
