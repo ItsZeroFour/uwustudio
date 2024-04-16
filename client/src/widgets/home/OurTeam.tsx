@@ -7,6 +7,7 @@ import OurTeamImage from "../../../public/images/home/our-team.png";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Link from "next/link";
+import { paths } from "@/paths";
 
 const OurTeam = () => {
   const [ref, inView] = useInView({
@@ -138,7 +139,7 @@ const OurTeam = () => {
             </li>
 
             <li>
-              <Link href="/about">О нас</Link>
+              <Link href={paths.about}>О нас</Link>
             </li>
           </ul>
         </div>
