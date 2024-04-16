@@ -12,7 +12,12 @@
 
   gap: 10px;
 
+  svg {
+    margin-bottom: 20px;
+  }
+
   a {
+    font-family: sans-serif;
     &:hover {
       text-decoration: underline;
     }
