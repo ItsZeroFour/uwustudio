@@ -1,11 +1,16 @@
+"use client";
+
 import React from "react";
 import style from "./style.module.scss";
 import Image from "next/image";
 import StatueImage from "../../../public/images/services/services-statue.png";
 import { paths } from "@/paths";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 const ContactUs = () => {
+  const { t } = useTranslation();
+
   return (
     <section className={style.services__contacts}>
       <div className="container">
@@ -15,15 +20,9 @@ const ContactUs = () => {
           </aside>
 
           <aside className={style.servies__contacts__text}>
-            <h3>Не нашли нужную Вам услугу?</h3>
-            <p>
-              Мы стремимся удовлетворить все ваши потребности. Если вы не нашли
-              конкретную услугу или у вас есть особые требования, не стесняйтесь
-              связаться с нами любым удобным для вас способом. Наша команда
-              готова выслушать вас и разработать персонализированное решение,
-              соответствующее вашим уникальным запросам.
-            </p>
-            <Link href={paths.contacts}>Связаться с нами</Link>
+            <h3>{t("servicesContactsTitle")}</h3>
+            <p>{t("servicesContactsDesc")}</p>
+            <Link href={paths.contacts}>{t("servicesContactsButton")}</Link>
           </aside>
         </div>
       </div>

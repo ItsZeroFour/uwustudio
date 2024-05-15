@@ -3,10 +3,13 @@
 import React, { useEffect, useState } from "react";
 import style from "./style.module.scss";
 import { useInView } from "react-intersection-observer";
+import { useTranslation } from "react-i18next";
 
 const OurServices = () => {
   const [count1, setCount1] = useState(0);
   const [count2, setCount2] = useState(0);
+
+  const { t } = useTranslation();
 
   const [ref, inView] = useInView({
     threshold: 0.6,
@@ -42,58 +45,39 @@ const OurServices = () => {
           <aside className={style.our__services__services}>
             <ul>
               <li>
-                <h2>Разработка сайтов</h2>
-                <p>
-                  Создаем сайты с нуля: анализ, дизайн, разработка.
-                  Интуитивно-понятные, стильные и функциональные веб-решения для
-                  вашего успеха
-                </p>
+                <h2>{t("webDevelop")}</h2>
+                <p>{t("webDevelopText")}</p>
               </li>
 
               <li>
-                <h2>UI/UX Дизайн</h2>
-                <p>
-                  Мы так же создаем уникальные и интуитивно-понятные интерфейсы,
-                  обеспечивая неповторимый пользовательский опыт для вашего
-                  сайта
-                </p>
+                <h2>{t("webDesign")}</h2>
+                <p>{t("webDesignText")}</p>
               </li>
 
               <li>
-                <h2>SEO оптимизация</h2>
-                <p>
-                  Улучшаем видимость вашего сайта в поиске. Ключевые слова,
-                  технический SEO, эффективные контент-стратегии для
-                  максимальных результатов
-                </p>
+                <h2>{t("SEO")}</h2>
+                <p>{t("SEOText")}</p>
               </li>
 
               <li>
-                <h2>Маркетинг</h2>
-                <p>
-                  С нашим маркетингом выделяйтесь в толпе. От стратегий до
-                  выполнения - создаем результативные кампании для привлечения
-                  внимания и удержания клиентов.
-                </p>
+                <h2>{t("marketing")}</h2>
+                <p>{t("marketingText")}</p>
               </li>
             </ul>
           </aside>
 
           <aside className={style.our__services__advantages}>
-            <p>
-              Мы грамотно оцениваем поставленную перед нами задачу. Проводим
-              анализ и выстраиваем план по воплощению Ваших идей в реальность
-            </p>
+            <p>{t("headAdvantages")}</p>
 
             <ul>
               <li>
                 <h3>{count1}+</h3>
-                <p>Выполненных работ</p>
+                <p>{t("completeWork")}</p>
               </li>
 
               <li>
                 <h3>{count2}%</h3>
-                <p>Довольных клиентов</p>
+                <p>{t("happyClient")}</p>
               </li>
             </ul>
           </aside>

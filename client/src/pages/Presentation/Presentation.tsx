@@ -8,6 +8,13 @@ import React from "react";
 const Presentation = () => {
   return (
     <React.Fragment>
+      <head>
+        <title>Презентация - UWUSTUDIO</title>
+        <meta
+          name="description"
+          content="Веб-студия в Крыму с опытом и инновациями. Гарантируем качество и индивидуальный подход."
+        />
+      </head>
       <PresentationTop />
       <PresentationValues />
       <PresentationIdea />

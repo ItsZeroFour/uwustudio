@@ -1,9 +1,14 @@
+"use client";
+
 import React from "react";
 import style from "./style.module.scss";
 import Image from "next/image";
 import AdvantagesIamge from "../../../public/images/home/advantages-image.png";
+import { useTranslation } from "react-i18next";
 
 const Advantages = () => {
+  const { t } = useTranslation();
+
   return (
     <section className={style.advantages}>
       <div className="container">
@@ -13,33 +18,14 @@ const Advantages = () => {
           </aside>
 
           <aside className={style.advantages__list}>
-            <h2>Наши преимущества</h2>
+            <h2>{t("ourAdvantages")}</h2>
 
             <ul>
-              <li>
-                Мы создаем веб-решения, отражающие уникальные потребности
-                каждого клиента, обеспечивая индивидуальный подход и эффективные
-                результаты
-              </li>
-
-              <li>
-                Наша команда экспертов применяет передовые технологии для
-                разработки веб-проектов, гарантируя высокий уровень технической
-                компетентности.
-              </li>
-              <li>
-                Расположенные в Крыму, мы обслуживаем клиентов во всех странах
-                СНГ, обеспечивая удобство сотрудничества.
-              </li>
-              <li>
-                Мы сочетаем креативный дизайн с передовыми технологиями,
-                создавая привлекательные и высокофункциональные веб-решения.
-              </li>
-              <li>
-                Мы не только разрабатываем сайты, но и предоставляем комплексные
-                решения в цифровом маркетинге, включая SEO оптимизацию, чтобы
-                выводить ваш сайт в топы
-              </li>
+              <li>{t("ourAdvantagesText1")}</li>
+              <li>{t("ourAdvantagesText2")}</li>
+              <li>{t("ourAdvantagesText3")}</li>
+              <li>{t("ourAdvantagesText4")}</li>
+              <li>{t("ourAdvantagesText5")}</li>
             </ul>
           </aside>
         </div>

@@ -3,11 +3,12 @@
 import React from "react";
 import style from "./style.module.scss";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const Head = () => {
-  const text = `
-    О нас
-  `;
+  const { t } = useTranslation();
+
+  const text = t("aboutUsTitle");
 
   const letters = Array.from(text);
 
@@ -61,13 +62,7 @@ const Head = () => {
             </motion.h1>
           </motion.div>
 
-          <p className={style.head__text}>
-            Эксперты в веб-разработке на полуострове, наша вэб-студия в Крыму
-            предоставляет уникальные и креативные решения для клиентов по всей
-            территории России и странам СНГ. Наша команда профессионалов готова
-            превратить ваши идеи в успешные онлайн-проекты, обеспечивая
-            выдающийся веб-опыт и результативное продвижение вашего бизнеса
-          </p>
+          <p className={style.head__text}>{t("abutUsDesc")}</p>
         </div>
       </div>
     </section>

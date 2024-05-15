@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import style from "./style.module.scss";
 import Link from "next/link";
@@ -9,36 +11,39 @@ import stagesImage4 from "../../../public/icons/about/stages-4.png";
 import stagesImage5 from "../../../public/icons/about/stages-5.png";
 import mainImage from "../../../public/images/about/how-we-work-image.png";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 const HowWeWork = () => {
+  const { t } = useTranslation();
+
   const stages = [
     {
-      title: "Изучение",
-      text: "Прежде чем приступить к вашему проекту, мы тщательно исследуем бизнес-рынок. Анализируем тренды, конкуренцию и потребительский запрос, чтобы разработать стратегию, которая выделяет ваш бизнес на фоне остальных. Это ключ к успешному воплощению идей в реальности.",
+      title: t("aboutWorkStagesItem1Title"),
+      text: t("aboutWorkStagesItem1Desc"),
       image: stagesImage1,
     },
 
     {
-      title: "Анализ",
-      text: "Перед тем как взяться за ваш проект, мы глубоко исследуем конкурентное поле. Анализируем стратегии, выделяем сильные стороны и находим уникальные возможности для вашего бизнеса. Специалисты нашей команды приступают к работе, чтобы ваш проект был не просто впечатляющим, а безусловным лидером.",
+      title: t("aboutWorkStagesItem2Title"),
+      text: t("aboutWorkStagesItem2Desc"),
       image: stagesImage2,
     },
 
     {
-      title: "Дизайн",
-      text: "В процессе разработки дизайна наша команда переводит вашу идею в визуальную реальность. Наши дизайнеры не только талантливы, но и преданы пониманию вашего бренда. Мы создаем уникальные и эстетичные дизайны, объединяя визуальное впечатление с эффективностью взаимодействия с пользователем.",
+      title: t("aboutWorkStagesItem3Title"),
+      text: t("aboutWorkStagesItem3Desc"),
       image: stagesImage3,
     },
 
     {
-      title: "Разработка",
-      text: "При разработке вашего сайта мы сочетаем опыт и передовые технологии. Наша команда гарантирует не только визуальную привлекательность, но и максимальную функциональность. Ваш сайт с нами станет не просто визитной карточкой, а эффективным инструментом для достижения ваших целей",
+      title: t("aboutWorkStagesItem4Title"),
+      text: t("aboutWorkStagesItem4Desc"),
       image: stagesImage4,
     },
 
     {
-      title: "Тестирование и запуск",
-      text: "Тщательное тестирование и бесперебойный запуск – наши обязательства. Профессиональная проверка и исправление дефектов перед запуском обеспечивают надежность вашего проекта. Мы гарантируем, что ваш сайт стартует успешно и предоставляет пользователям отличный опыт.",
+      title: t("aboutWorkStagesItem5Title"),
+      text: t("aboutWorkStagesItem5Desc"),
       image: stagesImage5,
     },
   ];
@@ -48,15 +53,9 @@ const HowWeWork = () => {
       <div className="container">
         <div className={style.how_we_work__wrapper}>
           <aside className={style.how_we_work__left}>
-            <h2>Как мы будем реализовывать ваш проект?</h2>
-            <p>
-              Воплощение вашей идеи в реальность - это наша миссия. Мы
-              предоставляем выдающийся сервис, который объединяет опыт,
-              творчество и технологии. Наша команда готова воплотить ваш проект
-              в жизнь, обеспечивая уникальность и эффективность в каждой детали.
-              Давайте вместе сделаем уникальный продукт!
-            </p>
-            <Link href={paths.portfolio}>Портфолио</Link>
+            <h2>{t("aboutWorkTitle")}</h2>
+            <p>{t("aboutWorkDesc")}</p>
+            <Link href={paths.portfolio}>{t("aboutWorkPortfolioButton")}</Link>
 
             <Image src={mainImage} alt="statue" />
           </aside>

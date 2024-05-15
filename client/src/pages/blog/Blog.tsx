@@ -1,35 +1,44 @@
+"use client";
+
 import React from "react";
 import style from "./style.module.scss";
 import Ticket from "../../../public/icons/blog/ticket.svg";
 import Calendar from "../../../public/icons/blog/Calendar.svg";
-import BlogImage from "../../../public/images/blog/blog-image-1.png";
+// import BlogImage from "../../../public/images/blog/blog-image-1.png";
+import IncreasedConversionImage from "../../../public/images/blog/increased-conversion/main-image.jpg";
+import promotionBusinessImage from "../../../public/images/blog/small-business-movement/main-image.jpg";
+import brandMainImage from "../../../public/images/blog/unique-brand/main-image.jpg";
+
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 const Blog = () => {
+  const { t } = useTranslation();
+
   const blogItems = [
     {
-      title: "В чем разница между Junior, Middle и Senior разработчиками?",
-      text: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available",
-      image: BlogImage,
-      readPostLink: "",
-      tags: ["Разработка", "Код", "Звания"],
+      title: t("blog1Title"),
+      text: t("blog1Text"),
+      image: brandMainImage,
+      readPostLink: "unique-brand",
+      tags: [t("blog3Tag1"), t("blog3Tag2")],
     },
 
     {
-      title: "В чем разница между Junior, Middle и Senior разработчиками?",
-      text: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available",
-      image: BlogImage,
-      readPostLink: "",
-      tags: ["Разработка", "Код", "Звания"],
+      title: t("blog2Title"),
+      text: t("blog2Text"),
+      image: promotionBusinessImage,
+      readPostLink: "small-business-movement",
+      tags: ["SEO", t("blog2Tag1"), t("blog2Tag2")],
     },
 
     {
-      title: "В чем разница между Junior, Middle и Senior разработчиками?",
-      text: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available",
-      image: BlogImage,
-      readPostLink: "",
-      tags: ["Разработка", "Код", "Звания"],
+      title: t("blog3Title"),
+      text: t("blog2Text"),
+      image: IncreasedConversionImage,
+      readPostLink: "increased-conversion",
+      tags: [t("blog1Tag1"), t("blog1Tag2"), t("blog1Tag3")],
     },
   ];
 
@@ -39,13 +48,13 @@ const Blog = () => {
         <div className="container">
           <div className={style.blog__panel__wrapper}>
             <aside>
-              <input type="text" placeholder="Поиск" />
+              <input type="text" placeholder={t("blogSearchPlaceholder")} />
             </aside>
 
             <aside>
               <div className={style.blog__select}>
                 <div className={style.blog__select__main}>
-                  <p>Поиск по тегам</p>
+                  <p>{t("blogTagSearch")}</p>
                   <Ticket />
                 </div>
 
@@ -82,8 +91,10 @@ const Blog = () => {
                       </ul>
 
                       <div className={style.blog__buttons}>
-                        <Link href={readPostLink}>Читать пост</Link>
-                        <button>Поделиться</button>
+                        <Link href={`/blog/${readPostLink}`}>
+                          {t("blogReadPost")}
+                        </Link>
+                        <button>{t("blogSendPost")}</button>
                       </div>
                     </aside>
                   </li>

@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import style from "./style.module.scss";
 import questionIcon1 from "../../../public/icons/quiz/quiz-image-1.png";
@@ -6,6 +8,7 @@ import questionIcon3 from "../../../public/icons/quiz/quiz-image-3.png";
 import questionOtherImage from "../../../public/icons/quiz/quiz-image-4.png";
 import ArrowRight from "../../../public/icons/Arrow-Right.svg";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 const Quiz = () => {
   const [quizResults, setQuizResults] = useState({});
@@ -14,33 +17,34 @@ const Quiz = () => {
   const [finish, setFinish] = useState(false);
   const [contactType, setContactType] = useState("email");
 
+  const { t } = useTranslation();
+
   const quizItems = [
     {
-      questionTitle: "Какой тип сайта вам необходим?",
-      questionText:
-        "При выборе типа сайта следует учитывать его цель: информационный, если требуется предоставить контент; интернет-магазин, для онлайн-продаж; или корпоративный, чтобы представить компанию. Важно также учесть потребности аудитории и техническую поддержку, чтобы определить оптимальный вариант для достижения ваших целей",
+      questionTitle: t("quiz1Title"),
+      questionText: t("quiz1Desc"),
       items: [
         {
-          title: "Лендинг",
-          text: "Одностраничный веб-ресурс, созданный для конкретной цели, такой как продажа товара или услуги, сбор контактной информации или регистрация на мероприятие",
+          title: t("quiz1ListItem1Title"),
+          text: t("quiz1ListItem1Desc"),
           icon: questionIcon1,
         },
 
         {
-          title: "Корпоративный сайт",
-          text: "веб-ресурс, созданный для представления компании в интернете. Он обычно содержит информацию о компании, ее услугах или продукции, контактные данные и др.",
+          title: t("quiz1ListItem2Title"),
+          text: t("quiz1ListItem2Desc"),
           icon: questionIcon2,
         },
 
         {
-          title: "Сайт-визитка",
-          text: "это небольшой веб-ресурс, содержащий основную информацию о человеке, компании или проекте, включая контактные данные и краткое описание предложений или услуг",
+          title: t("quiz1ListItem3Title"),
+          text: t("quiz1ListItem3Desc"),
           icon: questionIcon3,
         },
 
         {
-          title: "Другое",
-          text: "Если не нашли подходящую для вас позицию, нажмите сюда, но не забудьте указать в комментарии, что именно вы хотите",
+          title: t("quiz1ListItem4Title"),
+          text: t("quiz1ListItem4Desc"),
           icon: questionOtherImage,
         },
       ],
@@ -49,31 +53,30 @@ const Quiz = () => {
     },
 
     {
-      questionTitle: "Какова желаемая объемность сайта?",
-      questionText:
-        "При определении желаемой объемности сайта важно учитывать количество страниц или разделов, необходимых для представления всей необходимой информации или товаров. Это может быть небольшой сайт из нескольких страниц для стартапа или персонального портфолио, либо крупный портал с множеством разделов, функций и базой данных. Важно также учитывать будущий рост сайта и его способность масштабироваться по мере необходимости",
+      questionTitle: t("quiz2Title"),
+      questionText: t("quiz2Desc"),
       items: [
         {
-          title: "Не большой сайт",
-          text: "Небольшой сайт обычно состоит из нескольких страниц, содержащих основную информацию о компании, услугах или товарах. Такой формат подходит для небольших бизнесов, персональных блогов или портфолио.",
+          title: t("quiz2ListItem1Title"),
+          text: t("quiz2ListItem1Desc"),
           icon: questionIcon1,
         },
 
         {
-          title: "Средний объем",
-          text: "Средний сайт содержит несколько разделов с информацией о компании, услугах и контактах. Обычно он состоит из 10-50 страниц и может включать интерактивные элементы",
+          title: t("quiz2ListItem2Title"),
+          text: t("quiz2ListItem2Desc"),
           icon: questionIcon1,
         },
 
         {
-          title: "Большой",
-          text: "Большой сайт включает множество разделов с обширной информацией, возможно, с каталогом товаров или услуг, блогом, форумом и другими интерактивными функциями. Он содержит более 50 страниц и предоставляет обширный объем контента для пользователей",
+          title: t("quiz2ListItem3Title"),
+          text: t("quiz2ListItem3Desc"),
           icon: questionIcon1,
         },
 
         {
-          title: "Гигантский",
-          text: "Гигантский сайт – это масштабная платформа огромным колличеством страниц, обширной базой данных и высоким уровнем интерактивности, такие как интернет-магазины или социальные сети",
+          title: t("quiz2ListItem4Title"),
+          text: t("quiz2ListItem4Desc"),
           icon: questionIcon1,
         },
       ],
@@ -82,31 +85,30 @@ const Quiz = () => {
     },
 
     {
-      questionTitle: "Дополнительные услуги",
-      questionText:
-        "При обсуждении дополнительных услуг важно уточнить, какие дополнительные сервисы или возможности могут быть предоставлены помимо основных. Это может включать в себя разработку дизайна, SEO-оптимизацию, копирайтинг, настройку аналитики, поддержку и обслуживание сайта, а также интеграцию с социальными сетями или другими платформами",
+      questionTitle: t("quiz3Title"),
+      questionText: t("quiz3Desc"),
       items: [
         {
-          title: "Упаковка соц. сетей",
-          text: "Упаковка соцсетей включает создание и оптимизацию профилей компании в соцсетях, а также управление контентом и взаимодействие с аудиторией для повышения привлекательности бренда и его видимости в сети",
+          title: t("quiz3ListItem1Title"),
+          text: t("quiz3ListItem1Desc"),
           icon: questionIcon1,
         },
 
         {
-          title: "Разработка презентации",
-          text: "Разработка презентации бизнеса помогает выделить ключевые аспекты и эффективно донести их до аудитории, привлекая внимание и убеждая в ценности вашего предложения",
+          title: t("quiz3ListItem2Title"),
+          text: t("quiz3ListItem2Desc"),
           icon: questionIcon1,
         },
 
         {
-          title: "Разработка админ панели",
-          text: "Разработка административной панели - создание интерфейса для управления функциями и данными веб-приложения или сайта, обеспечивая удобное и эффективное администрирование онлайн-проекта",
+          title: t("quiz3ListItem3Title"),
+          text: t("quiz3ListItem3Desc"),
           icon: questionIcon1,
         },
 
         {
-          title: "Другое (или больше)",
-          text: "Если не нашли подходящую для вас позицию, или вам нужно больше, нажмите сюда, но не забудьте указать в комментарии, что именно вы хотите",
+          title: t("quiz3ListItem4Title"),
+          text: t("quiz3ListItem4Desc"),
           icon: questionIcon1,
         },
       ],
@@ -115,31 +117,30 @@ const Quiz = () => {
     },
 
     {
-      questionTitle: "Каков ваш предпочтительный дизайн сайта",
-      questionText:
-        "При выборе дизайна сайта уточните предпочтения: минимализм, современность, корпоративный стиль и т.д. Минималистичный - простота и чистота; современный - смелые цвета и интерактивность; корпоративный - строгое брендирование и профессионализм",
+      questionTitle: t("quiz4Title"),
+      questionText: t("quiz4Desc"),
       items: [
         {
-          title: "Минималистичный",
-          text: "Минималистичный дизайн сайта привлекает своей простотой и элегантностью, удаляя лишние детали и сосредотачивая внимание на ключевой информации и функциях.",
+          title: t("quiz4ListItem1Title"),
+          text: t("quiz4ListItem1Desc"),
           icon: questionIcon1,
         },
 
         {
-          title: "Современный",
-          text: "Современный дизайн сайта характеризуется смелыми цветами, интерактивностью и инновационными элементами, придающими проекту свежий и современный вид.",
+          title: t("quiz4ListItem2Title"),
+          text: t("quiz4ListItem2Desc"),
           icon: questionIcon1,
         },
 
         {
-          title: "Корпоративный",
-          text: "Корпоративный дизайн сайта ориентирован на создание профессионального образа компании с помощью чистых линий, строгих цветовых схем и акцентов на брендирование",
+          title: t("quiz4ListItem3Title"),
+          text: t("quiz4ListItem3Desc"),
           icon: questionIcon1,
         },
 
         {
-          title: "Другой",
-          text: "Если не нашли подходящую для вас позицию, нажмите сюда, но не забудьте указать в комментарии, что именно вы хотите",
+          title: t("quiz4ListItem4Title"),
+          text: t("quiz4ListItem4Desc"),
           icon: questionIcon1,
         },
       ],
@@ -148,31 +149,30 @@ const Quiz = () => {
     },
 
     {
-      questionTitle: "Выберите подходящий ответ",
-      questionText:
-        "Из 4-х вариантов, выберите тот, который вам больше всего подходит",
+      questionTitle: t("quiz5Title"),
+      questionText: t("quiz5Desc"),
       items: [
         {
-          title: "Мне нужен логотип",
-          text: "Логотип играет ключевую роль в создании узнаваемой визуальной идентичности и помогает выделиться среди конкурентов. Создание качественного логотипа требует учета множества факторов, включая брендовые ценности, целевую аудиторию и особенности деятельности компании",
+          title: t("quiz5ListItem1Title"),
+          text: t("quiz5ListItem1Desc"),
           icon: questionIcon1,
         },
 
         {
-          title: "Платежные системы",
-          text: "Подключение платежных систем - это интеграция специальных сервисов или API для приема онлайн-платежей через различные методы оплаты, такие как кредитные карты или электронные кошельки, обеспечивающая удобство для клиентов и безопасность транзакций",
+          title: t("quiz5ListItem2Title"),
+          text: t("quiz5ListItem2Desc"),
           icon: questionIcon1,
         },
 
         {
-          title: "Квиз опросник",
-          text: "Квиз-опросник - это интерактивная форма с вопросами и вариантами ответов, используемая для сбора информации или маркетинга",
+          title: t("quiz5ListItem3Title"),
+          text: t("quiz5ListItem3Desc"),
           icon: questionIcon1,
         },
 
         {
-          title: "Другой (или больше)",
-          text: "Если не нашли подходящую для вас позицию или вам требуется больше, нажмите сюда, но не забудьте указать в комментарии, что именно вы хотите",
+          title: t("quiz5ListItem4Title"),
+          text: t("quiz5ListItem4Desc"),
           icon: questionIcon1,
         },
       ],
@@ -198,7 +198,7 @@ const Quiz = () => {
   return (
     <section className={style.quiz}>
       <div className="container">
-        <h2>Подсчитаем стоимость сайта всего за 5 вопросов</h2>
+        <h2>{t("quizTitle")}</h2>
 
         {!finish ? (
           <div className={style.quiz__wrapper}>
@@ -244,16 +244,10 @@ const Quiz = () => {
           </div>
         ) : (
           <div className={style.quiz__wrapper__contact}>
-            <h2>Спасибо!</h2>
+            <h2>{t("quizThanks")}</h2>
 
             <div className={style.quiz__wrapper__text}>
-              <p>
-                Спасибо за ответы на все вопросы в нашем опроснике! Мы готовы
-                помочь вам создать сайт, который будет соответствовать вашим
-                потребностям. Оставьте, пожалуйста, ваш контакт и дополнительные
-                комментарии в форме ниже. Наша команда свяжется с вами в
-                ближайшее время для обсуждения деталей.
-              </p>
+              <p>{t("quizThanksDesc")}</p>
             </div>
 
             <div className={style.quiz__wrapper__contact__type}>
@@ -265,7 +259,7 @@ const Quiz = () => {
                   onClick={() => setContactType("email")}
                   checked={contactType === "email"}
                 />
-                <label htmlFor="email">Связаться по почте</label>
+                <label htmlFor="email">{t("quizContactEmail")}</label>
                 <input
                   type="radio"
                   name="contact-type"
@@ -273,19 +267,20 @@ const Quiz = () => {
                   onClick={() => setContactType("telegram")}
                   checked={contactType === "telegram"}
                 />
-                <label htmlFor="telegram">Связаться по телеграму</label>
+                <label htmlFor="telegram">{t("quizContactTelegram")}</label>
               </form>
 
               <p>
-                Или позвоните нам: <a href="+79788224212">+7(978)-822-42-12</a>
+                {t("quizContactPhone")}:{" "}
+                <a href="tel:+79788224212">+7(978)-822-42-12</a>
               </p>
             </div>
 
             <form>
-              <input type="text" placeholder="Ваше имя" />
-              <input type="text" placeholder="Ваша почта" />
-              <textarea placeholder="Сообщение" />
-              <button>Отправить</button>
+              <input type="text" placeholder={t("quizNamePlaceholder")} />
+              <input type="text" placeholder={t("quizEmailPlaceholder")} />
+              <textarea placeholder={t("quizMessagePlaceholder")} />
+              <button>{t("quizContactSendButton")}</button>
             </form>
           </div>
         )}

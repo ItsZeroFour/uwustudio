@@ -4,10 +4,13 @@ import React, { useEffect, useRef } from "react";
 import style from "./style.module.scss";
 import PortfolioImage1 from "../../../public/images/blog/blog-image-1.png";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 const Portfolio = () => {
   const listRef = useRef();
   const listRef2 = useRef();
+
+  const { t } = useTranslation();
 
   const portfolioList = [
     {
@@ -89,20 +92,15 @@ const Portfolio = () => {
 
   return (
     <React.Fragment>
+      <head>
+        <title>Портфолио - UWUSTUDIO</title>
+        <meta name="description" content="Изучите наши работы в области веб-разработки, дизайна и маркетинга, чтобы увидеть разнообразие наших навыков и экспертизу. Каждый проект представлен с кратким описанием и изображениями, чтобы вы могли лучше понять наш подход и качество работы. Погрузитесь в наше портфолио и убедитесь, что мы можем воплотить ваши идеи в реальность." />
+      </head>
       <section className={style.portfolio__top}>
         <div className="container">
           <div className={style.portfolio__top__wrapper}>
-            <h1>Наше портфолио</h1>
-            <p>
-              Здесь вы найдете эстетически привлекательные дизайны,
-              инновационные технологические решения и успешные стратегии
-              привлечения аудитории. Наше портфолио отражает нашу способность не
-              только понимать уникальные потребности каждого клиента, но и
-              трансформировать их в результативные веб-проекты. Мы приглашаем
-              вас окунуться в этот цифровой мир, где каждый элемент несет смысл
-              и цель. Познакомьтесь с нашим опытом, дайте себе вдохновение, и
-              давайте вместе создадим ваше следующее веб-приключение!
-            </p>
+            <h1>{t("portfolioTitle")}</h1>
+            <p>{t("portfolioText")}</p>
           </div>
         </div>
       </section>

@@ -1,114 +1,126 @@
+"use client";
+
 import React from "react";
 import style from "./style.module.scss";
 import ArrowRight from "../../../public/icons/Arrow-Right.svg";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
+import { paths } from "../../paths";
 
 const Documents = () => {
+  const { t } = useTranslation();
+
   const documentsList = [
     {
-      title: "Реквизиты ИП",
+      title: t("documentsListItem1"),
       link: "",
     },
 
     {
-      title: "П-Дизайн и разработка",
+      title: t("documentsListItem2"),
       link: "",
     },
 
     {
-      title: "Договор",
+      title: t("documentsListItem3"),
       link: "",
     },
 
     {
-      title: "Реквизиты",
+      title: t("documentsListItem4"),
       link: "",
     },
 
     {
-      title: "П-SEO",
+      title: t("documentsListItem5"),
       link: "",
     },
 
     {
-      title: "Договор самозанятым",
+      title: t("documentsListItem6"),
       link: "",
     },
 
     {
-      title: "П-Агрегация",
+      title: t("documentsListItem7"),
       link: "",
     },
 
     {
-      title: "Реквизиты физ. лицам",
+      title: t("documentsListItem8"),
       link: "",
     },
 
     {
-      title: "Презентация",
-      link: "",
+      title: t("documentsListItem9"),
+      link: paths.presentation,
     },
   ];
 
   const documentsStages = [
-    "Знакомство с компанией, сбор и анализ информации",
-    "Заключание договора о создании сайта",
-    "Составление технического задания на разработку сайта, cоздание макета и дизайна сайта, yтверждение макета с клиентом.",
-    "Непосредственное создание кода и функционала сайта, тестирование работы сайта на различных устройствах и браузерах",
-    "Окончательное согласование сайта с клиентом, подготовка всех необходимых документов и передача сайта клиенту",
-    "Разработка документации по использованию и управлению сайтом, архивирование всех документов, связанных с проектом",
+    t("documentsStage1"),
+    t("documentsStage2"),
+    t("documentsStage3"),
+    t("documentsStage4"),
+    t("documentsStage5"),
+    t("documentsStage6"),
+    t("documentsStage7"),
   ];
 
   return (
-    <section className={style.documents}>
-      <div className="container">
-        <div className={style.documents__wrapper}>
-          <h1>Документы UWUSTUDIO</h1>
-          <p>
-            Мы уверены, что предоставляемая здесь информация будет полезна для
-            вас. Если у вас возникли вопросы или вам требуется дополнительная
-            информация, не стесняйтесь связаться с нами. Мы всегда готовы
-            помочь.
-          </p>
+    <React.Fragment>
+      <head>
+        <title>Документы - UWUSTUDIO</title>
+        <meta
+          name="description"
+          content="
+Документы UWUSTUDIO: реквизиты ИП, договоры, презентации. Подготовка, создание, подписание, хранение, распределение и мониторинг документов."
+        />
+      </head>
+      <section className={style.documents}>
+        <div className="container">
+          <div className={style.documents__wrapper}>
+            <h1>{t("documentsTitle")}</h1>
+            <p>{t("documentsDescription")}</p>
 
-          <aside className={style.documents__list}>
-            <h2>Наш перечень документов</h2>
+            <aside className={style.documents__list}>
+              <h2>{t("documentsListTitle")}</h2>
 
-            <ul>
-              {documentsList.map(({ title, link }, index) => (
-                <li key={index}>
-                  <Link href={link}>
-                    <p>{title}</p>
-                    <ArrowRight />
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </aside>
+              <ul>
+                {documentsList.map(({ title, link }, index) => (
+                  <li key={index}>
+                    <Link href={link}>
+                      <p>{title}</p>
+                      <ArrowRight />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </aside>
 
-          <aside className={style.documents__stages}>
-            <h2>Документообробот</h2>
-            <ul>
-              {documentsStages.map((item, index) => (
-                <li key={index}>
-                  <p>
-                    {index + 1 >= 10 ? (
-                      <span>{index + 1}</span>
-                    ) : (
-                      <>
-                        0<span>{index + 1}</span>
-                      </>
-                    )}
-                  </p>
-                  <p>{item}</p>
-                </li>
-              ))}
-            </ul>
-          </aside>
+            <aside className={style.documents__stages}>
+              <h2>{t("documentsSatgesTitle")}</h2>
+              <ul>
+                {documentsStages.map((item, index) => (
+                  <li key={index}>
+                    <p>
+                      {index + 1 >= 10 ? (
+                        <span>{index + 1}</span>
+                      ) : (
+                        <>
+                          0<span>{index + 1}</span>
+                        </>
+                      )}
+                    </p>
+                    <p>{item}</p>
+                  </li>
+                ))}
+              </ul>
+            </aside>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </React.Fragment>
   );
 };
 

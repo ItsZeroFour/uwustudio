@@ -17,24 +17,27 @@ import Lamp from "../../../public/icons/menu/Lamp.svg";
 import Link from "next/link";
 import { paths } from "@/paths";
 import Socials from "../socials/Socials";
+import { useTranslation } from "react-i18next";
 
 const HeaderMenu = () => {
+  const { t } = useTranslation();
+
   const firstList = [
     {
       image: <User />,
-      title: "О нас",
+      title: t("about"),
       link: paths.about,
     },
 
     {
       image: <Category />,
-      title: "Портфолио",
+      title: t("portfolio"),
       link: paths.portfolio,
     },
 
     {
       image: <Monitor />,
-      title: "Презентация",
+      title: t("presentation"),
       link: paths.presentation,
     },
 
@@ -46,13 +49,13 @@ const HeaderMenu = () => {
 
     {
       image: <Row />,
-      title: "Блог",
+      title: t("blog"),
       link: paths.blog,
     },
 
     {
       image: <Bag />,
-      title: "Услуги",
+      title: t("service"),
       link: paths.services,
     },
   ];
@@ -60,19 +63,19 @@ const HeaderMenu = () => {
   const secondList = [
     {
       image: <Copy />,
-      title: "Документы",
+      title: t("documents"),
       link: paths.documents,
     },
 
     {
       image: <Rocket />,
-      title: "Связаться с нами",
+      title: t("contact"),
       link: paths.contacts,
     },
 
     {
       image: <ChartSquare />,
-      title: "Команда",
+      title: t("team"),
       link: paths.comand,
     },
   ];
@@ -80,19 +83,19 @@ const HeaderMenu = () => {
   const thirdList = [
     {
       image: <Lable />,
-      title: "Акции",
+      title: t("sales"),
       link: paths.stock,
     },
 
     {
       image: <EmojiSmile />,
-      title: "Отзывы о нас",
+      title: t("reviews"),
       link: paths.reviews,
     },
 
     {
       image: <Lamp />,
-      title: "Почему мы?",
+      title: t("whywe"),
       link: paths.whyWe,
     },
   ];
@@ -169,14 +172,14 @@ const HeaderMenu = () => {
                 ))}
 
                 <li>
-                  <Link href={paths.services}>Заказать</Link>
+                  <Link href={paths.services}>{t("order")}</Link>
                 </li>
               </ul>
             </div>
             <div className={style.menu__bottom__other}>
               <Socials />
               <Link className={style.menu__bottom__policy} href={paths.policy}>
-                Политика конфеденциальности
+                {t("policy")}
               </Link>
               <Link href="mailto:uwustudio@gmail.com">uwustudio@gmail.com</Link>
             </div>

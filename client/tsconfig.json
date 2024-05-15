@@ -38,7 +38,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-, "src/paths.js", "src/pages/FAQ/FAQ.jsx", "src/pages/Portfolio/Portfolio.jsx"  ],
+, "src/paths.js", "src/pages/FAQ/FAQ.jsx", "src/pages/Portfolio/Portfolio.jsx", "src/features/Loader.jsx"  ],
   "exclude": [
     "node_modules"
   ]

@@ -153,3 +153,143 @@
     border-radius: 15px;
   }
 }
+
+/* PERSONAL POST PAGE STYLES */
+.blog__head {
+  margin-top: 120px;
+}
+
+.blog__head__wrapper {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #d9d9d9;
+  padding-bottom: 250px;
+
+  .blog__head__left {
+    width: 850px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    h1 {
+      font-size: 64px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid var(--color-purple);
+    }
+
+    p {
+      line-height: 120%;
+
+      &:last-child {
+        font-family: "Raleway-md", sans-serif;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .blog__head__right {
+    margin-top: auto;
+    margin-bottom: -60px;
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 32px;
+      font-family: "Raleway-md", sans-serif;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-left: 20px;
+
+      li {
+        a {
+          position: relative;
+          font-size: 20px;
+          transition: all 0.2s ease;
+
+          &::before {
+            content: "";
+            position: absolute;
+
+            left: -10px;
+            top: 10%;
+
+            width: 3px;
+            height: 20px;
+
+            background: var(--color-purple);
+            transition: all 0.2s ease;
+            z-index: -1;
+          }
+        }
+
+        &:hover {
+          a {
+            color: var(--color-white);
+
+            &::before {
+              width: 105%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.blog__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 60px;
+}
+
+.blog__main__wrapper {
+  width: 1000px;
+  border-left: 1px solid #d9d9d9;
+  padding-left: 20px;
+
+  border-right: 1px solid #d9d9d9;
+  padding-right: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    li {
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+      }
+
+      p {
+        line-height: 160%;
+
+        span {
+          font-family: "Raleway-sb", sans-serif;
+          font-weight: 600;
+        }
+
+        i {
+          font-style: italic;
+        }
+      }
+
+      h3 {
+        font-size: 40px;
+        font-family: "Raleway-bd", sans-serif;
+        font-weight: 700;
+      }
+    }
+  }
+}

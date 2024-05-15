@@ -1,3 +1,5 @@
+"use client";
+
 /**
  * @access Public
  * @authors t.me/ItsZeroFour, t.me/...
@@ -8,55 +10,70 @@
  * @public True
  **/
 
-import React from "react";
-import type { Metadata } from "next";
+import React, { useEffect, useState } from "react";
+import metadata from "./metadata";
 import "./scss/index.scss";
 import Header from "@/widgets/header/Header";
 import Footer from "@/widgets/footer/Footer";
 import Cursor from "@/shared/cursor/Cursor";
 // import SmoothScroll from "@/features/SmoothScroll";
 
-export const metadata: Metadata = {
-  title: "UWUSTUDIO",
-  description: `
-    Лидеры в веб-разработке на полуострове, наша вэб-студия в Крыму
-    предоставляет уникальные и креативные решения для клиентов по всей территории России и странам СНГ.
-    Наша команда профессионалов готова превратить ваши идеи в успешные онлайн-проекты, обеспечивая
-    выдающийся веб-опыт и результативное продвижение вашего бизнеса
-  `,
-  icons: {
-    icon: "/icon.ico",
-  },
-};
+import "../utils/i18n";
+import { useTranslation } from "react-i18next";
+import Loader from "@/features/Loader";
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const { i18n } = useTranslation();
+  const [loadingLanguage, setLoadingLanguage] = useState(true);
+
+  useEffect(() => {
+    i18n.changeLanguage(i18n.language).then(() => {
+      setLoadingLanguage(false);
+    });
+  }, [i18n]);
+
   return (
-    <html lang="ru">
-      {/* <SmoothScroll> */}
-      <body id="root">
-        <div className="page">
-          <header className="header">
-            <div className="container">
-              <Header />
-            </div>
-          </header>
+    <React.Fragment>
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>UWUSTUDIO</title>{" "}
+        {metadata.icons && <link rel="icon" href={metadata.icons.icon} />}
+      </head>
 
-          <main className="main">{children}</main>
+      <html lang={i18n.language}>
+        {/* <SmoothScroll> */}
+        <body id="root">
+          <div className="page">
+            {/* {loadingLanguage ? ( */}
+            <React.Fragment>
+              <header className="header">
+                <div className="container">
+                  <Header />
+                </div>
+              </header>
 
-          <footer className="footer">
-            <div className="container">
-              <Footer />
-            </div>
-          </footer>
-        </div>
+              <main className="main">{children}</main>
 
-        <Cursor />
-      </body>
-      {/* </SmoothScroll> */}
-    </html>
+              <footer className="footer">
+                <div className="container">
+                  <Footer />
+                </div>
+              </footer>
+            </React.Fragment>
+            {/* ) : ( */}
+            <Loader loadingLanguage={loadingLanguage} />
+            {/* )} */}
+          </div>
+
+          <Cursor />
+        </body>
+        {/* </SmoothScroll> */}
+      </html>
+    </React.Fragment>
   );
 }

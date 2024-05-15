@@ -6,9 +6,27 @@ import Link from "next/link";
 import Logo from "../../../public/logo.svg";
 import { paths } from "@/paths";
 import HeaderMenu from "@/shared/headerMenu/headerMenu";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
+  const [openLangaugeList, setOpenLangaugeList] = useState<boolean>(false);
+  const [language, setLanguage] = useState(() => {
+    const lang = window.localStorage.getItem("language");
+
+    return lang ? lang : "ru";
+  });
+
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (language: string) => {
+    setLanguage(language);
+  };
+
+  useEffect(() => {
+    i18n.changeLanguage(language === "en" ? "en" : "ru");
+    window.localStorage.setItem("language", language);
+  }, [language]);
 
   return (
     <div className={style.header__wrapper}>
@@ -16,12 +34,12 @@ const Header = () => {
         <ul>
           <li className={style.header__contact}>
             <Link href="/#contacts">
-              <span>Связаться с нами</span>
+              <span>{t("contact")}</span>
             </Link>
           </li>
 
           <li>
-            <Link href={paths.portfolio}>Наше портфолио</Link>
+            <Link href={paths.portfolio}>{t("portfolio")}</Link>
           </li>
         </ul>
       </nav>
@@ -33,18 +51,46 @@ const Header = () => {
       <nav>
         <ul>
           <li>
-            <Link href={paths.services}>Услуги</Link>
+            <Link href={paths.services}>{t("service")}</Link>
           </li>
 
           <li>
-            <Link href={paths.about}>О нас</Link>
+            <Link href={paths.about}>{t("about")}</Link>
           </li>
 
           <li>
             <div className={style.header__language}>
-              <div className={style.current__language}>
-                <p>РУС</p>
+              <div
+                className={style.current__language}
+                onClick={() => setOpenLangaugeList(!openLangaugeList)}
+              >
+                <p>{language === "en" ? "ENG" : "РУС"}</p>
               </div>
+
+              {openLangaugeList && (
+                <ul className={style.header__language__list}>
+                  <li>
+                    <button
+                      onClick={() => {
+                        changeLanguage("ru");
+                        setOpenLangaugeList(false);
+                      }}
+                    >
+                      РУС
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      onClick={() => {
+                        changeLanguage("en");
+                        setOpenLangaugeList(false);
+                      }}
+                    >
+                      ENG
+                    </button>
+                  </li>
+                </ul>
+              )}
             </div>
           </li>
         </ul>

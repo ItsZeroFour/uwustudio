@@ -5,11 +5,14 @@ import style from "./style.module.scss";
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
 import { paths } from "@/paths";
+import { useTranslation } from "react-i18next";
 
 const Contacts = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
   });
+
+  const { t } = useTranslation();
 
   return (
     <section className={style.contacts} id="contacts" ref={ref}>
@@ -25,31 +28,23 @@ const Contacts = () => {
           <div className={style.contacts__wrapper__main}>
             <aside className={style.contacts__form}>
               <form>
-                <input type="text" placeholder="Ваше имя" />
-                <input type="text" placeholder="Ваш e-mail" />
-                <textarea placeholder="Ваше сообщение" />
+                <input type="text" placeholder={t("nameInput")} />
+                <input type="text" placeholder={t("emailInput")} />
+                <textarea placeholder={t("messageInput")} />
                 <div className={style.contacts__policy}>
                   <input type="checkbox" id="contacts-policy" />
                   <label htmlFor="contacts-policy">
-                    Отправляя сообщение, я подтверждаю, что ознакомился с{" "}
-                    <Link href={paths.policy}>
-                      Политикой конфеденциальности
-                    </Link>
+                    {t("contactsPolicyText")}{" "}
+                    <Link href={paths.policy}>{t("contactsPolicy")}</Link>
                   </label>
                 </div>
-                <button type="submit">Отправить</button>
+                <button type="submit">{t("sendButton")}</button>
               </form>
             </aside>
 
             <aside className={style.contacts__text}>
-              <h2>Свяжитесь с нами</h2>
-              <p>
-                Нужен всего 1 шаг, что бы получить проект мечты. Мы готовы
-                превратить ваши идеи в визуальные шедевры, обеспечивая
-                выдающийся пользовательский опыт. Если у вас есть вопросы,
-                предложения или вы хотите обсудить свой следующий проект,
-                свяжитесь с нами прямо сейчас!
-              </p>
+              <h2>{t("contactsTitle")}</h2>
+              <p>{t("contactsText")}</p>
             </aside>
           </div>
         </div>

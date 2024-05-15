@@ -8,11 +8,14 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Link from "next/link";
 import { paths } from "@/paths";
+import { useTranslation } from "react-i18next";
 
 const OurTeam = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
   });
+
+  const { t } = useTranslation();
 
   return (
     <section className={style.our__team} ref={ref} id="comand">
@@ -35,15 +38,8 @@ const OurTeam = () => {
         </div>
 
         <div className={style.our__team__text}>
-          <h2>Наша команда</h2>
-          <p>
-            Мы - объединение творческих профессионалов, стремящихся к инновациям
-            и выдающимся результатам. Состоящие из экспертов в различных
-            областях, мы поднимаем ваши идеи на новый уровень. Уникальные навыки
-            каждого члена команды дополняют друг друга, обеспечивая гармоничное
-            взаимодействие. Мы предлагаем стильные и инновационные веб-решения,
-            созданные с любовью к деталям.
-          </p>
+          <h2>{t("ourTeam")}</h2>
+          <p>{t("ourTeamText")}</p>
         </div>
 
         <div className={style.our__team__list}>
@@ -54,14 +50,14 @@ const OurTeam = () => {
                   <h3>Даниил Андреев</h3>
 
                   <ul>
-                    <li>Генеральный директор</li>
+                    <li>CEO UWUSTUDIO</li>
                     <li>Fullstack разработчик</li>
                     <li>Дизайнер</li>
                   </ul>
                 </div>
 
                 <div>
-                  <p>Стаж: 4+ лет</p>
+                  <p>Опыт: 4+ лет</p>
                 </div>
               </div>
             </li>
@@ -79,7 +75,7 @@ const OurTeam = () => {
                 </div>
 
                 <div>
-                  <p>Стаж: 4+ лет</p>
+                  <p>Опыт: 4+ лет</p>
                 </div>
               </div>
             </li>
@@ -97,7 +93,7 @@ const OurTeam = () => {
                 </div>
 
                 <div>
-                  <p>Стаж: 4+ лет</p>
+                  <p>Опыт: 4+ лет</p>
                 </div>
               </div>
             </li>
@@ -115,7 +111,7 @@ const OurTeam = () => {
                 </div>
 
                 <div>
-                  <p>Стаж: 4+ лет</p>
+                  <p>Опыт: 4+ лет</p>
                 </div>
               </div>
             </li>
@@ -133,13 +129,13 @@ const OurTeam = () => {
                 </div>
 
                 <div>
-                  <p>Стаж: 4+ лет</p>
+                  <p>Опыт: 4+ лет</p>
                 </div>
               </div>
             </li>
 
             <li>
-              <Link href={paths.about}>О нас</Link>
+              <Link href={paths.about}>{t("about")}</Link>
             </li>
           </ul>
         </div>

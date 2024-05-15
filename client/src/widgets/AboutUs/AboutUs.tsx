@@ -6,8 +6,11 @@ import Image from "next/image";
 import AboutImage from "../../../public/images/about/about-image-1.png";
 import Link from "next/link";
 import { paths } from "@/paths";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+  const { t } = useTranslation();
+
   const componentRef = useRef();
 
   useEffect(() => {
@@ -39,51 +42,30 @@ const About = () => {
 
           <aside className={style.about__wrapper__main}>
             <div className={style.about__wrapper__text}>
-              <p>
-                Мы — команда энтузиастов, страстно преданных искусству
-                веб-разработки и дизайна. Наша история началась с цели изменить
-                взгляд на веб-пространство, делая его не просто функциональным,
-                но и визуально захватывающим. Мы не просто создаем сайты; мы
-                строим виртуальные миры, которые воплощают и усиливают
-                уникальность вашего бренда.
-              </p>
-              <p>
-                В основе нашего подхода лежат ценности, которые отражают наше
-                стремление к совершенству. Мы верим в бесконечные возможности
-                технологии и используем инновации, чтобы ваш бизнес выделялся на
-                фоне конкурентов. Наше творчество не имеет границ – мы видим в
-                каждом проекте шанс воплотить уникальные идеи в жизнь. Наши
-                клиенты не просто получают веб-решение; они достигают
-                результатов, которые преобразуют их онлайн-присутствие.
-              </p>
-              <p>
-                Наш коллектив - единое целое, направленное на помощь вашему
-                бизнесу в цифровом мире. От опытных веб-дизайнеров до гениальных
-                разработчиков и опытных SEO-специалистов, мы создаем
-                партнерства, основанные на доверии, инновациях и успешных
-                результатах. Давайте вместе сделаем ваш бизнес выдающимся!
-              </p>
+              <p>{t("aboutUsText1")}</p>
+              <p>{t("aboutUsText2")}</p>
+              <p>{t("aboutUsText3")}</p>
             </div>
 
             <div className={style.about__wrapper__progress}>
               <div className={style.about__wrapper__progress_1}>
-                <p>Удобство пользования</p>
+                <p>{t("aboutProgress1")}</p>
               </div>
 
               <div className={style.about__wrapper__progress_2}>
-                <p>Лучшая практика</p>
+                <p>{t("aboutProgress2")}</p>
               </div>
 
               <div className={style.about__wrapper__progress_3}>
-                <p>Производительность</p>
+                <p>{t("aboutProgress3")}</p>
               </div>
 
               <div className={style.about__wrapper__progress_4}>
-                <p>SEO оптимизация</p>
+                <p>{t("aboutProgress4")}</p>
               </div>
             </div>
 
-            <Link href={paths.presentation}>Презентация</Link>
+            <Link href={paths.presentation}>{t("aboutProgressButton")}</Link>
           </aside>
         </div>
       </div>

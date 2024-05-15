@@ -1,0 +1,39 @@
+.loader {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+
+  background: var(--color-white);
+
+  transition: top 3s ease;
+  z-index: 99;
+}
+
+.loader__wrapper {
+  svg {
+    width: 250px;
+    height: auto;
+
+    animation-name: animateLogo;
+    animation-duration: 3s;
+  }
+}
+
+@keyframes animateLogo {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

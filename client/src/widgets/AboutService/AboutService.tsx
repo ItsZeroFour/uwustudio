@@ -9,6 +9,7 @@ import HeadImage from "../../../public/images/aboutService/head.png";
 import Image from "next/image";
 import Quiz from "@/shared/quiz/Quiz";
 import AboutServiceContactsImage from "../../../public/images/aboutService/about-service-contacts.svg";
+import { useTranslation } from "react-i18next";
 
 interface StageItem {
   image: any;
@@ -29,6 +30,8 @@ interface ServiceData {
 }
 
 const AboutService: React.FC<{ data: ServiceData | null }> = ({ data }) => {
+  const { t } = useTranslation();
+
   const componentRef = useRef();
 
   useEffect(() => {
@@ -54,6 +57,9 @@ const AboutService: React.FC<{ data: ServiceData | null }> = ({ data }) => {
     <React.Fragment>
       {data && (
         <React.Fragment>
+          <head>
+            <title>{data.title}</title>
+          </head>
           <section className={style.about__service__top}>
             <div className="container">
               <div className={style.about__service__top__wrapper}>
@@ -67,7 +73,9 @@ const AboutService: React.FC<{ data: ServiceData | null }> = ({ data }) => {
                     ))}
                   </ul>
 
-                  <Link href={paths.contacts}>Обсудить проект</Link>
+                  <Link href={paths.contacts}>
+                    {t("aboutServiceButtonDiscus")}
+                  </Link>
                 </aside>
 
                 <aside className={style.about__service__top__left}>
@@ -128,20 +136,16 @@ const AboutService: React.FC<{ data: ServiceData | null }> = ({ data }) => {
                   <AboutServiceContactsImage />
                 </aside>
                 <aside className={style.about__service__contacts__right}>
-                  <h2>Давайте обсудим Ваш проект</h2>
-                  <p>
-                    Мы готовы внимательно выслушать ваши идеи и обеспечить
-                    персонализированное сотрудничество. Наш подход основан на
-                    открытой коммуникации и прямом взаимодействии. Независимо от
-                    текущего статуса вашего проекта, мы готовы предложить
-                    наилучшие решения и обсудить все его аспекты. Свяжитесь с
-                    нами уже сегодня, чтобы начать обсуждение вашего проекта и
-                    воплотить его в жизнь вместе.
-                  </p>
+                  <h2>{t("aboutServiceContactsTitle")}</h2>
+                  <p>{t("aboutServiceContactsDesc")}</p>
 
                   <div className={style.about__service__contacts__buttons}>
-                    <Link href={paths.contacts}>Контакты</Link>
-                    <Link href={paths.about}>О нас</Link>
+                    <Link href={paths.contacts}>
+                      {t("aboutServiceContactsButtonContacts")}
+                    </Link>
+                    <Link href={paths.about}>
+                      {t("aboutServiceContactsButtonAbout")}
+                    </Link>
                   </div>
                 </aside>
               </div>
