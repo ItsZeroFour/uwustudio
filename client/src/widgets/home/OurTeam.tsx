@@ -3,7 +3,7 @@
 import React from "react";
 import style from "./style.module.scss";
 import Image from "next/image";
-import OurTeamImage from "../../../public/images/home/our-team.png";
+import OurTeamImage from "../../../public/images/home/our-team.jpg";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Link from "next/link";
@@ -32,7 +32,7 @@ const OurTeam = () => {
                 ease: [0, 0.71, 0.2, 1.01],
               }}
             >
-              <Image src={OurTeamImage} alt="our team" />
+              <Image src={OurTeamImage} alt="our team" priority={true} />
             </motion.div>
           )}
         </div>
@@ -65,12 +65,11 @@ const OurTeam = () => {
             <li>
               <div className={style.our__team__list__item}>
                 <div>
-                  <h3>Даниил Андреев</h3>
+                  <h3>Михаил Бобров</h3>
 
                   <ul>
-                    <li>Генеральный директор</li>
-                    <li>Fullstack разработчик</li>
-                    <li>Дизайнер</li>
+                    <li>Маркетолог</li>
+                    <li>Бренд-менеджер</li>
                   </ul>
                 </div>
 
@@ -83,12 +82,12 @@ const OurTeam = () => {
             <li>
               <div className={style.our__team__list__item}>
                 <div>
-                  <h3>Даниил Андреев</h3>
+                  <h3>Данила Власенко</h3>
 
                   <ul>
-                    <li>Генеральный директор</li>
-                    <li>Fullstack разработчик</li>
-                    <li>Дизайнер</li>
+                    <li>Frontend Разработчик</li>
+                    <li>UI/UX Дизайнер</li>
+                    <li>SEO специалист</li>
                   </ul>
                 </div>
 
@@ -101,17 +100,16 @@ const OurTeam = () => {
             <li>
               <div className={style.our__team__list__item}>
                 <div>
-                  <h3>Даниил Андреев</h3>
+                  <h3>Сейдалиев Амет</h3>
 
                   <ul>
-                    <li>Генеральный директор</li>
-                    <li>Fullstack разработчик</li>
-                    <li>Дизайнер</li>
+                    <li>Backend разработчик</li>
+                    <li>Аналитик</li>
                   </ul>
                 </div>
 
                 <div>
-                  <p>Опыт: 4+ лет</p>
+                  <p>Опыт: 3+ лет</p>
                 </div>
               </div>
             </li>
@@ -119,17 +117,17 @@ const OurTeam = () => {
             <li>
               <div className={style.our__team__list__item}>
                 <div>
-                  <h3>Даниил Андреев</h3>
+                  <h3>Семиволос Дарья</h3>
 
                   <ul>
-                    <li>Генеральный директор</li>
-                    <li>Fullstack разработчик</li>
-                    <li>Дизайнер</li>
+                    <li>Frontend разработчик</li>
+                    <li>Бренд-менеджер</li>
+                    <li>Аналитик</li>
                   </ul>
                 </div>
 
                 <div>
-                  <p>Опыт: 4+ лет</p>
+                  <p>Опыт: 3+ лет</p>
                 </div>
               </div>
             </li>
