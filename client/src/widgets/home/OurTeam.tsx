@@ -104,6 +104,7 @@ const OurTeam = () => {
 
                   <ul>
                     <li>Backend разработчик</li>
+                    <li>DevOps</li>
                     <li>Аналитик</li>
                   </ul>
                 </div>

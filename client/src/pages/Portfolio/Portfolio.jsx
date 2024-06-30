@@ -1,125 +1,166 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useState } from "react";
 import style from "./style.module.scss";
-import PortfolioImage1 from "../../../public/images/blog/blog-image-1.png";
+import headImage1 from "../../../public/images/portfolio/head/1.png";
+import headImage2 from "../../../public/images/portfolio/head/2.png";
+import headImage3 from "../../../public/images/portfolio/head/3.png";
+import headImage4 from "../../../public/images/portfolio/head/4.png";
+import headImage5 from "../../../public/images/portfolio/head/5.png";
+import headImage6 from "../../../public/images/portfolio/head/6.png";
+
+import Cases from "./Cases";
+
+import ArrowRight from "../../../public/icons/Arrow-Right.svg";
+import ArrowFromTopToRight from "../../../public/icons/ArrowFromTopToRight.svg";
+
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
+import Link from "next/link";
+import { getLastBlogItems } from "@/data/blog";
+import { paths } from "@/paths";
 
 const Portfolio = () => {
-  const listRef = useRef();
-  const listRef2 = useRef();
-
+  const [hoveredItem, setHoveredItem] = useState(null);
   const { t } = useTranslation();
+  const lastBlogItems = getLastBlogItems(t);
 
-  const portfolioList = [
+  const servicesItems = [
     {
-      image: PortfolioImage1,
-      title: "Portfolio",
-      link: "/",
+      title: t("servicesDevelop"),
+      description: t("servicesDevelopDesc"),
+      link: "about-service/develop-website",
     },
 
     {
-      image: PortfolioImage1,
-      title: "Portfolio",
-      link: "/",
+      title: t("servicesDesign"),
+      description: t("servicesDesignDesc"),
+      link: "about-service/design",
     },
 
     {
-      image: PortfolioImage1,
-      title: "Portfolio",
-      link: "/",
+      title: t("servicesSEO"),
+      description: t("servicesSEODesc"),
+      link: "about-service/seo",
     },
 
     {
-      image: PortfolioImage1,
-      title: "Portfolio",
-      link: "/",
-    },
-
-    {
-      image: PortfolioImage1,
-      title: "Portfolio",
-      link: "/",
-    },
-
-    {
-      image: PortfolioImage1,
-      title: "Portfolio",
-      link: "/",
-    },
-
-    {
-      image: PortfolioImage1,
-      title: "Portfolio",
-      link: "/",
+      title: t("servicesSocial"),
+      description: t("servicesSocialDesc"),
+      link: "about-service/socials",
     },
   ];
 
-  useEffect(() => {
-    const handleScroll = () => {
-      // Получаем текущую позицию прокрутки
-      const scrollY = window.scrollY;
+  const handleMouseEnter = (index) => {
+    setHoveredItem(index);
+  };
 
-      if (listRef.current) {
-        listRef.current.style.transform = `translateX(-${scrollY}px)`;
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      // Получаем текущую позицию прокрутки
-      const scrollY = window.scrollY;
-
-      if (listRef2.current) {
-        listRef2.current.style.transform = `translateX(${scrollY}px)`;
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const handleMouseLeave = () => {
+    setHoveredItem(null);
+  };
 
   return (
     <React.Fragment>
-      <head>
-        <title>Портфолио - UWUSTUDIO</title>
-        <meta name="description" content="Изучите наши работы в области веб-разработки, дизайна и маркетинга, чтобы увидеть разнообразие наших навыков и экспертизу. Каждый проект представлен с кратким описанием и изображениями, чтобы вы могли лучше понять наш подход и качество работы. Погрузитесь в наше портфолио и убедитесь, что мы можем воплотить ваши идеи в реальность." />
-      </head>
-      <section className={style.portfolio__top}>
+      <section className={style.portfolio__head}>
         <div className="container">
-          <div className={style.portfolio__top__wrapper}>
-            <h1>{t("portfolioTitle")}</h1>
-            <p>{t("portfolioText")}</p>
+          <div className={style.portfolio__head__top}>
+            <h1>Наши реализованные проекты</h1>
+
+            <div>
+              <p>
+                Добро пожаловать в наше портфолио! Здесь вы найдете примеры
+                наших работ, демонстрирующие наше мастерство и творческий подход
+                к каждому проекту.
+              </p>
+
+              <ul>
+                <li>Разработка</li>
+                <li>Дизайн</li>
+                <li>Продвижение</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className={style.portfolio__head__images}>
+            <Image src={headImage1} alt="portfolio head image" />
+
+            <div>
+              <Image src={headImage2} alt="portfolio head image 2" />
+              <Image src={headImage3} alt="portfolio head image 3" />
+            </div>
+
+            <div>
+              <Image src={headImage4} alt="portfolio head image 4" />
+              <Image src={headImage5} alt="portfolio head image 5" />
+            </div>
+
+            <Image src={headImage6} alt="portfolio head image 6" />
           </div>
         </div>
       </section>
-      <section className={style.portfolio__list}>
-        <ul ref={listRef}>
-          {portfolioList.map(({ image }, index) => (
-            <li key={index}>
-              <Image src={image} alt={`portfolio image ${index + 1}`} />
-            </li>
-          ))}
-        </ul>
 
-        <ul ref={listRef2}>
-          {portfolioList.map(({ image }, index) => (
-            <li key={index}>
-              <Image src={image} alt={`portfolio image ${index + 1}`} />
-            </li>
-          ))}
-        </ul>
+      <section className={style.portfolio__services}>
+        <div className="container">
+          <div className={style.portfolio__services__wrapper}>
+            <h3 className={style.portfolio__block__title}>
+              <ArrowFromTopToRight /> НАШИ УСЛУГИ
+            </h3>
+
+            <ul>
+              {servicesItems.map(({ title, description, link }, index) => (
+                <li
+                  key={title}
+                  onMouseEnter={() => handleMouseEnter(index)}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <Link href={link}>
+                    <h2>{title}</h2>
+                    <p style={{ opacity: hoveredItem === index ? 1 : 0 }}>
+                      {description}
+                    </p>
+                    <ArrowRight />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <Cases />
+
+      <section className={style.blog}>
+        <div className="container">
+          <div className={style.blog__wrapper}>
+            <ul>
+              {lastBlogItems.map(
+                ({ title, text, date, imagePath, link }, index) => (
+                  <li key={index}>
+                    <Link href={`/blog/${link}`}>
+                      <Image src={imagePath} alt={title} />
+
+                      <h3>{title}</h3>
+                      <p>
+                        {text.length > 300 ? `${text.slice(0, 300)}...` : text}
+                      </p>
+                      <h4>{date}</h4>
+                    </Link>
+                  </li>
+                )
+              )}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className={style.portfolio__getintouch}>
+        <div className="container">
+          <div className={style.portfolio__getintouch__wrapper}>
+            <h4>СВЯЖИСЬ С НАМИ</h4>
+            <h2>Давайте воплатим Ваши идеи в реальность!</h2>
+            <Link href={paths.contacts}>Связаться с нами</Link>
+          </div>
+        </div>
       </section>
     </React.Fragment>
   );

@@ -8,7 +8,6 @@ import OurTeam from "@/widgets/home/OurTeam";
 import Reviews from "@/widgets/home/Reviews";
 import Contacts from "@/widgets/home/Contacts";
 import Blog from "@/widgets/home/Blog";
-import metadata from "../../app/metadata";
 
 const Home = () => {
   return (
