@@ -10,10 +10,10 @@
   display: flex;
   flex-direction: column;
 
-  gap: 10px;
+  gap: .5rem;
 
   svg {
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
   }
 
   a {
@@ -25,26 +25,26 @@
 }
 
 .footer__navs {
-  margin-top: 40px;
+  margin-top: 2rem;
 }
 
 .footer__navs nav {
   display: flex;
-  gap: 100px;
+  gap: 5rem;
   text-align: center;
 
   ul {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1rem;
   }
 }
 
 .footer__socials {
-  margin-top: 40px;
+  margin-top: 2rem;
 
   ul {
-    margin-top: 25px;
+    margin-top: 1.25rem;
   }
 
   svg {
@@ -57,7 +57,7 @@
 .footer__copyright {
   position: relative;
 
-  margin-top: 100px;
+  margin-top: 5rem;
 
   &::before {
     content: "";
@@ -69,20 +69,20 @@
     transform: translate(-50%, 50%);
 
     width: 100vw;
-    height: 1px;
+    height: .05rem;
 
     background: rgba(255, 255, 255, 0.3);
   }
 
   aside {
-    margin-top: 25px;
+    margin-top: 1.25rem;
 
     &:first-child {
       p {
         font-family: sans-serif;
         &:first-child {
-          font-size: 16px;
-          margin-bottom: 10px;
+          font-size: .8rem;
+          margin-bottom: .5rem;
         }
       }
     }
@@ -91,4 +91,9 @@
       text-decoration: underline;
     }
   }
+}
+
+.footer__logo {
+  width: 19.15rem;
+  height: 5.25rem;
 }

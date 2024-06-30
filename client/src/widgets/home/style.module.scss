@@ -1,5 +1,6 @@
 .head {
-  margin-top: 50px;
+  margin-top: 2.5rem;
+  overflow: hidden;
 }
 
 .lines__wrapper {
@@ -16,16 +17,16 @@
     position: absolute;
 
     width: 100%;
-    height: 9300px;
-    margin-top: 73px;
+    height: 465rem;
+    margin-top: 3.65rem;
 
     li {
       height: 100%;
-      width: 1px;
+      width: .05rem;
       background: rgba(122, 122, 122, 0.3);
 
       &:nth-child(3) {
-        margin-right: 14px;
+        margin-right: .7rem;
       }
     }
   }
@@ -35,55 +36,64 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .head__left {
   display: flex;
   flex-direction: column;
-  gap: 50px;
-
-  @media (max-width: 1900px) {
-    gap: 40px;
-  }
+  gap: 2rem;
 }
 
 .head__left h1 {
-  font-size: 128px;
+  font-size: 6.4rem;
   font-family: "Raleway-eb", sans-serif;
   line-height: 103%;
+  width: 35.6rem;
   letter-spacing: 2%;
-  width: 712px;
+
+  @media (max-width: 768px) {
+    font-size: 15rem;
+    margin-top: 10rem;
+    width: auto;
+  }
 }
 
 .head__left p {
-  font-size: 20px;
+  font-size: 1rem;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
-  width: 712px;
+  width: 35.6rem;
   line-height: 120%;
   letter-spacing: 2%;
 
-  @media (min-width: 1900px) {
-    font-size: 16px;
+  @media (max-width: 768px) {
+    font-size: 3rem;
+    width: auto;
+    margin-top: 3rem;
   }
 }
 
 .head__links {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 1rem;
 }
 
 .head__links a {
-  border-radius: 40px;
+  border-radius: 2rem;
   font-family: "Raleway-md";
 }
 
 .head__links a:first-child {
-  padding: 30px 120px;
+  padding: 1.5rem 6rem;
   background: var(--color-purple);
   color: var(--color-white);
-  border: 1px solid var(--color-purple);
+  border: .05rem solid var(--color-purple);
 
   transition: var(--transition);
 
@@ -91,11 +101,23 @@
     background: none;
     color: var(--color-dark);
   }
+
+  @media (max-width: 768px) {
+    padding: 2rem 13rem;
+    margin-top: 2rem;
+    font-size: 3rem;
+  }
 }
 
 .head__links a:last-child {
-  padding: 30px 70px;
-  border: 1px solid var(--color-purple);
+  @media (max-width: 768px) {
+    padding: 2rem 13rem;
+    margin-top: 2rem;
+    font-size: 3rem;
+  }
+
+  padding: 1.5rem 3.5rem;
+  border: .05rem solid var(--color-purple);
   position: relative;
   overflow: hidden;
 
@@ -104,7 +126,7 @@
     position: absolute;
 
     width: 100%;
-    height: 100px;
+    height: 5rem;
     background: var(--color-yellow);
     top: 0;
     left: -100%;
@@ -114,7 +136,7 @@
   }
 
   &:hover {
-    border: 1px solid var(--color-yellow);
+    border: .05rem solid var(--color-yellow);
 
     &::before {
       left: 0%;
@@ -127,7 +149,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 5rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin-top: 12rem;
+  }
 }
 
 .our__services__services {
@@ -141,7 +168,7 @@
     top: -5%;
 
     width: 100vw;
-    height: 1px;
+    height: .05rem;
 
     background: rgba(122, 122, 122, 0.6);
   }
@@ -150,27 +177,42 @@
 .our__services__services ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 60px 150px;
-  margin-top: 40px;
+  gap: 3rem 7.5rem;
+  margin-top: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    font-size: 3rem;
+
+    flex-wrap: nowrap;
+  }
 }
 
 .our__services__services ul > li {
-  width: 380px;
+  width: 19rem;
+
+  @media (max-width: 768px) {
+      width: auto;
+  }
 
   h2 {
-    font-size: 36px;
+    font-size: 1.8rem;
     font-family: "Raleway-eb", sans-serif;
 
     position: relative;
+
+    @media (max-width: 768px) {
+      font-size: 3rem;
+    }
 
     &::before {
       content: "";
       position: absolute;
 
-      left: -20px;
+      left: -1rem;
 
-      height: 70px;
-      width: 10px;
+      height: 3.5rem;
+      width: .5rem;
 
       background: var(--color-purple);
     }
@@ -179,7 +221,7 @@
   p {
     font-weight: 400;
     line-height: 120%;
-    margin-top: 10px;
+    margin-top: .5rem;
   }
 }
 
@@ -210,9 +252,13 @@
 .our__services__advantages {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 2.5rem;
 
   position: relative;
+
+  @media (max-width: 768px) {
+      margin-top: 10rem;
+  }
 
   &::before {
     content: "";
@@ -220,8 +266,8 @@
 
     bottom: -55%;
 
-    width: 1px;
-    height: 1000px;
+    width: .05rem;
+    height: 50rem;
 
     background: rgba(122, 122, 122, 0.6);
 
@@ -230,31 +276,45 @@
 }
 
 .our__services__advantages > p {
-  width: 500px;
-  letter-spacing: 2px;
+  width: 25rem;
+  letter-spacing: .1rem;
   opacity: 0.5;
-  margin-left: 20px;
+  margin-left: 1rem;
+
+  @media (max-width: 768px) {
+    font-size: 5rem;
+    width: auto;
+  }
 }
 
 .our__services__advantages > ul {
   display: flex;
-  width: 530px;
-  border: 1px solid rgba(122, 122, 122, 0.6);
+  width: 26.5rem;
+  border: .05rem solid rgba(122, 122, 122, 0.6);
+
+  @media (max-width: 768px) {
+    width: 56.5rem;
+  }
 }
 
 .our__services__advantages > ul > li {
-  padding: 35px;
+  padding: 1.75rem;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: .5rem;
 
   h3 {
-    font-size: 64px;
+    font-size: 3.2rem;
     font-weight: normal;
+
+    @media (max-width: 768px) {
+      font-size: 6rem;
+      margin-top: 5rem;
+    }
   }
 
   p {
-    font-size: 18px;
+    font-size: .9rem;
   }
 }
 
@@ -268,7 +328,7 @@
     top: 0;
     left: 0;
 
-    width: 1px;
+    width: .05rem;
     height: 100%;
 
     background: rgba(122, 122, 122, 0.6);
@@ -279,9 +339,14 @@
 .whoweare__wrapper {
   display: flex;
   justify-content: space-between;
-  margin-top: 72px;
-  padding-top: 100px;
+  margin-top: 3.6rem;
+  padding-top: 5rem;
   position: relative;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+      flex-direction: column;
+  }
 
   &::after {
     content: "";
@@ -291,7 +356,7 @@
     left: -50%;
 
     width: 200%;
-    height: 1px;
+    height: .05rem;
 
     background: rgba(122, 122, 122, 0.6);
   }
@@ -300,11 +365,17 @@
 .whoweare__text {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  width: 900px;
-  margin-left: 60px;
+  gap: .75rem;
+  width: 45rem;
+  margin-left: 3rem;
 
   position: relative;
+
+  @media (max-width: 768px) {
+      width: auto;
+      font-size: 3rem;
+      gap: 3rem;
+  }
 
   p {
     line-height: 140%;
@@ -314,10 +385,10 @@
     content: "";
     position: absolute;
 
-    left: -30px;
+    left: -1.5rem;
 
-    height: 110px;
-    width: 10px;
+    height: 5.5rem;
+    width: .5rem;
 
     background: var(--color-purple);
   }
@@ -326,27 +397,29 @@
 .whoweare__main {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 1.5rem;
 }
 
 .whoweare__main h2 {
-  font-size: 96px;
+  font-size: 4.8rem;
   font-family: "Raleway-bl", sans-serif;
+
+
 }
 
 .whoweare__links {
-  margin-left: 60px;
+  margin-left: 3rem;
 
   display: flex;
-  gap: 60px;
+  gap: 3rem;
 
   a {
     border-radius: var(--border-radius-md);
     color: var(--color-white);
 
     &:first-child {
-      width: 435px;
-      // padding: 20px 160px;
+      width: 21.75rem;
+      // padding: 1rem 8rem;
       text-align: center;
       display: flex;
       justify-content: center;
@@ -355,6 +428,12 @@
 
       position: relative;
       transition: all 0.3s linear;
+
+      @media (max-width: 768px) {
+        width: 45%;
+        text-align: center;
+        font-size: 2.2rem;
+      }
 
       &::before {
         content: "";
@@ -365,8 +444,8 @@
         right: 25%;
         top: 5%;
 
-        width: 57px;
-        height: 57px;
+        width: 2.85rem;
+        height: 2.85rem;
 
         background: url("../../../public/icons/Arrow-Up.svg");
         background-repeat: no-repeat;
@@ -376,10 +455,10 @@
       }
 
       &:hover {
-        padding-right: 20px;
+        padding-right: 1rem;
         background: none;
         color: var(--color-black);
-        border: 1px solid var(--color-purple);
+        border: .05rem solid var(--color-purple);
 
         &::before {
           opacity: 1;
@@ -389,7 +468,13 @@
     }
 
     &:last-child {
-      padding: 20px 115px;
+      @media (max-width: 768px) {
+        width: 45%;
+        text-align: center;
+        font-size: 2.2rem;
+      }
+
+      padding: 1rem 5.75rem;
       background: var(--color-dark-gray);
       transition: var(--transition);
 
@@ -402,17 +487,20 @@
 
 // Advantages
 .advantages {
-  margin-top: 100px;
+  margin-top: 5rem;
 }
 
 .advantages__wrapper {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 
   h2 {
-    font-size: 64px;
+    font-size: 3.2rem;
     font-family: "Raleway-th", sans-serif;
+
+    @media (max-width: 768px) {
+      font-size: 7.2rem;
+    }
 
     position: relative;
 
@@ -423,8 +511,8 @@
       left: -1%;
       top: 35%;
 
-      height: 30px;
-      width: 175px;
+      height: 1.5rem;
+      width: 8.75rem;
 
       background: var(--color-yellow);
 
@@ -436,18 +524,23 @@
 .advantages__list {
   display: flex;
   flex-direction: column;
-  width: 725px;
-  gap: 50px;
+  width: 36.25rem;
+  gap: 2.5rem;
+
+  @media (max-width: 768px) {
+    width: auto;
+    font-size: 3rem;
+  }
 }
 
 .advantages__list ul {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1rem;
 }
 
 .advantages__list ul li {
-  text-indent: 20px;
+  text-indent: 1rem;
 
   position: relative;
   line-height: 120%;
@@ -459,8 +552,8 @@
     right: 101%;
     top: 15%;
 
-    width: 5px;
-    height: 5px;
+    width: .25rem;
+    height: .25rem;
 
     background: var(--color-purple);
   }
@@ -468,11 +561,15 @@
 
 // Our team
 .our__team {
-  margin-top: 200px;
+  margin-top: 10rem;
+
+  @media (max-width: 768px) {
+    margin-top: 15rem;
+  }
 }
 
 .our__team__wrapper {
-  min-height: 700px;
+  min-height: 35rem;
 }
 
 .our__team__wrapper__top {
@@ -480,9 +577,14 @@
   width: 100%;
 
   img {
-    width: 1200px;
-    height: 700px;
+    width: 60rem;
+    height: 35rem;
     object-fit: cover;
+
+    @media (max-width: 768px) {
+      width: 80rem;
+      height: 55rem;
+    }
   }
 
   &::before {
@@ -492,51 +594,64 @@
     left: 5%;
     top: 5%;
 
-    width: 1161px;
+    width: 58.05rem;
     height: 100%;
 
-    border: 1px solid var(--color-black);
+    border: .05rem solid var(--color-black);
     z-index: -1;
   }
 }
 
 .our__team__text {
-  margin-top: 150px;
+  margin-top: 7.5rem;
 
   h2 {
-    font-size: 64px;
+    font-size: 3.2rem;
     font-family: "Raleway-bl", sans-serif;
     font-weight: 900;
+
+    @media (max-width: 768px) {
+      font-size: 7.2rem;
+    }
   }
 
   p {
-    margin-left: 60px;
-    margin-top: 20px;
-    font-size: 20px;
+    margin-left: 3rem;
+    margin-top: 1rem;
+    font-size: 1rem;
     line-height: 140%;
-    width: 730px;
+    width: 36.5rem;
 
-    @media (min-width: 1900px) {
-      font-size: 16px;
+    @media (max-width: 768px) {
+      font-size: 3rem;
+      width: auto;
     }
   }
 }
 
 .our__team__list {
-  margin-top: 100px;
+  margin-top: 5rem;
+  @media (max-width: 768px) {
+    margin-top: 12rem;
+  }
 }
 
 .our__team__list > ul {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 5rem;
+  }
 }
 
 .our__team__list > ul > li:last-child {
-  margin-left: 170px;
+  margin-left: 8.5rem;
 
   a {
-    font-size: 48px;
+    font-size: 2.4rem;
     position: relative;
 
     &::before {
@@ -546,8 +661,8 @@
       top: 40%;
       right: -10%;
 
-      width: 160px;
-      height: 20px;
+      width: 8rem;
+      height: 1rem;
 
       background: var(--color-yellow);
       transition: var(--transition);
@@ -561,8 +676,8 @@
 
       bottom: 30%;
 
-      width: 60px;
-      height: 60px;
+      width: 3rem;
+      height: 3rem;
 
       background-image: url("../../../public/icons/Arrow-Up.svg");
       background-position: center;
@@ -586,15 +701,20 @@
 }
 
 .our__team__list > ul > li:not(:last-child) {
-  width: 520px;
-  height: 600px;
-  padding: 20px;
+  width: 26rem;
+  height: 30rem;
+  padding: 1rem;
 
   display: flex;
   flex-direction: column;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 90rem;
+  }
 
   &:nth-child(1) {
     background-image: url("../../../public/images/home/team/team-1.jpg");
@@ -624,12 +744,17 @@
     margin-top: auto;
 
     width: 100%;
-    height: 150px;
-    padding: 15px;
-    border: 1px solid var(--color-white);
+    height: 7.5rem;
+
+    @media (max-width: 768px) {
+      height: 15rem;
+    }
+
+    padding: .75rem;
+    border: .05rem solid var(--color-white);
     border-radius: var(--border-radius-sm);
 
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(.5rem);
     background: rgba(0, 0, 0, 0.1);
 
     & div:first-child {
@@ -641,7 +766,7 @@
 
         left: 115%;
 
-        width: 2px;
+        width: .1rem;
         height: 100%;
 
         background: var(--color-white);
@@ -650,21 +775,29 @@
 
     h3,
     li {
-      font-size: 20px;
+      font-size: 1rem;
       color: var(--color-white);
+
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
     }
 
     p {
-      font-size: 24px;
+      font-size: 1.2rem;
       color: var(--color-white);
+
+      @media (max-width: 768px) {
+        font-size: 3rem;
+      }
     }
 
     ul {
-      margin-top: 15px;
+      margin-top: .75rem;
       display: flex;
       flex-direction: column;
-      gap: 8px;
-      margin-left: 20px;
+      gap: .4rem;
+      margin-left: 1rem;
 
       li {
         position: relative;
@@ -676,8 +809,8 @@
           left: -8%;
           top: 25%;
 
-          width: 10px;
-          height: 10px;
+          width: .5rem;
+          height: .5rem;
 
           background: var(--color-white);
         }
@@ -688,7 +821,7 @@
 
 // Reviews
 .reviews {
-  margin-top: 100px;
+  margin-top: 5rem;
 
   p {
     line-height: 140%;
@@ -696,13 +829,17 @@
 }
 
 .reviews__content {
-  min-height: 1800px;
+  min-height: 90rem;
 }
 
 .reviews__main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 768px) {
+      display: block;
+  }
 
   position: relative;
 
@@ -720,7 +857,7 @@
     background-position: center;
     background-repeat: no-repeat;
 
-    z-index: -2;
+    z-index: -100;
 
     animation-name: drow;
     animation-duration: 3s;
@@ -740,7 +877,7 @@
     background-position: center;
     background-repeat: no-repeat;
 
-    z-index: -2;
+    z-index: -100;
 
     animation-name: drow;
     animation-duration: 3s;
@@ -767,58 +904,83 @@
 }
 
 .reviews__wrapper > h2 {
-  font-size: 64px;
+  font-size: 3.2rem;
   font-family: "Raleway-bl", sans-serif;
   font-weight: 900;
   line-height: 120%;
-  width: 645px;
+  width: 32.25rem;
 }
 
 .reviews__wrapper > p {
-  margin-left: 60px;
-  margin-top: 30px;
-  width: 645px;
+  margin-left: 3rem;
+  margin-top: 1.5rem;
+  width: 32.25rem;
+
+  @media (max-width: 768px) {
+    width: auto;
+    font-size: 2rem;
+  }
 }
 
 .reviews__main__list {
-  width: 1035px;
-  margin-top: 50px;
+  width: 51.75rem;
+  margin-top: 2.5rem;
+
+  @media (max-width: 768px) {
+    width: auto;
+  }
 }
 
 .reviews__main__list > ul {
   display: flex;
   flex-direction: column;
-  gap: 33px;
+  gap: 1.65rem;
+
+
 }
 
 .reviews__main__list > ul > li:not(:last-child) {
   display: flex;
   flex-direction: column;
 
-  padding: 30px;
-  width: 500px;
-  min-height: 550px;
+  padding: 1.5rem;
+  width: 25rem;
+  min-height: 27.5rem;
 
-  border: 1px solid var(--color-black);
+  @media (max-width: 768px) {
+    width: auto;
+    min-height: 0;
+    font-size: 2rem;
+  }
+
+  border: .05rem solid var(--color-black);
   border-radius: var(--border-radius-md);
   background: var(--color-white);
 
   .reviews__stars {
     display: flex;
-    gap: 10px !important;
+    gap: .5rem !important;
     align-items: center;
   }
 
   p {
-    width: 450px;
-    margin-top: 35px;
+    width: 22.5rem;
+    margin-top: 1.75rem;
     line-height: 160%;
+
+    @media (max-width: 768px) {
+      width: auto;
+    }
   }
 
   h3 {
     font-family: "Raleway-bd";
-    margin-top: 10px;
-    font-size: 20px;
+    margin-top: .5rem;
+    font-size: 1rem;
+
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
   }
 }
 
@@ -831,6 +993,10 @@
 .reviews__main__list > ul > li:nth-child(6) {
   position: absolute;
   right: 0;
+
+  @media (max-width: 768px) {
+    position: static;
+  }
 }
 
 .reviews__main__list > ul > li:nth-child(2) {
@@ -846,27 +1012,38 @@
   left: 52%;
 
   a {
-    font-size: 24px;
-    border-bottom: 1px solid var(--color-black);
+    font-size: 1.2rem;
+    border-bottom: .05rem solid var(--color-black);
     transition: var(--transition);
 
     &:hover {
-      border-bottom: 1px solid var(--color-purple);
+      border-bottom: .05rem solid var(--color-purple);
+    }
+
+    @media (max-width: 768px) {
+      font-size: 3rem;
+      margin-top: 5rem;
     }
   }
 }
 
 .reviews__stars > h3 {
-  font-size: 36px !important;
+  font-size: 1.8rem !important;
   font-weight: 900;
   font-family: "Raleway-bl", sans-serif !important;
+
+  // @media (max-width: 768px) {
+  //   font-size: 150rem;
+  // }
 }
 
 // Contacts
 .contacts {
   background: #181818;
-  padding: 60px;
-  margin-top: 100px;
+  padding: 3rem;
+  margin-top: 5rem;
+
+  overflow: hidden;
 
   h2,
   p,
@@ -879,47 +1056,67 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 1260px;
-  margin-top: -100px;
+  height: 63rem;
+  margin-top: -5rem;
+
+  
 }
 
 .contacts__form {
-  width: 560px;
+  width: 28rem;
   z-index: 9;
 
   form {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 1.5rem;
+
+    @media (max-width: 768px) {
+      gap: 3rem;
+    }
 
     input[type="text"],
     textarea {
       background: none;
-      padding-bottom: 15px;
-      border-bottom: 1px solid var(--color-white);
-      font-size: 20px;
+      padding-bottom: .75rem;
+      border-bottom: .05rem solid var(--color-white);
+      font-size: 1rem;
       color: var(--color-white);
-      letter-spacing: 1.1px;
+      letter-spacing: .055rem;
       width: 100%;
 
+      @media (max-width: 768px) {
+        font-size: 3rem;
+        border-radius: 0;
+      }
+
       &::placeholder {
-        font-size: 24px;
+        font-size: 1.2rem;
         color: var(--color-white);
         font-family: "Raleway-th", sans-serif;
+
+        @media (max-width: 768px) {
+          font-size: 3.2rem;
+        }
       }
     }
 
     textarea {
-      height: 150px;
+      height: 7.5rem;
       resize: none;
     }
   }
 
   button {
     width: 100%;
-    padding: 17px;
+    padding: .85rem;
     background: var(--color-white);
-    font-size: 24px;
+    font-size: 1.2rem;
+
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
+      margin-top: 5rem;
+    }
 
     position: relative;
 
@@ -933,7 +1130,7 @@
       width: 100%;
       height: 100%;
 
-      border: 1px solid var(--color-black);
+      border: .05rem solid var(--color-black);
 
       z-index: -1;
 
@@ -953,28 +1150,32 @@
   display: flex;
   align-items: start;
   justify-content: start;
-  gap: 10px;
+  gap: .5rem;
 
   label {
-    font-size: 16px;
+    font-size: .8rem;
 
     a {
       text-decoration: underline;
+
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
     }
   }
 }
 
 .contacts__text {
-  width: 660px;
+  width: 33rem;
   z-index: 9;
 
   h2 {
-    font-size: 96px;
+    font-size: 4.8rem;
     line-height: 100%;
     font-weight: 900;
     font-family: "Raleway-bl", sans-serif;
-    width: 570px;
-    margin-left: 90px;
+    width: 28.5rem;
+    margin-left: 4.5rem;
 
     position: relative;
 
@@ -982,8 +1183,8 @@
       content: "";
       position: absolute;
 
-      width: 170px;
-      height: 3px;
+      width: 8.5rem;
+      height: .15rem;
 
       background: var(--color-white);
       right: 10%;
@@ -992,7 +1193,7 @@
   }
 
   p {
-    margin-top: 70px;
+    margin-top: 3.5rem;
   }
 }
 
@@ -1068,7 +1269,7 @@
 
 // Blog
 .blog {
-  margin-top: 150px;
+  margin-top: 7.5rem;
 }
 
 .blog__wrapper {
@@ -1077,8 +1278,8 @@
     justify-content: space-between;
     align-items: center;
 
-    margin-top: 60px;
-    margin-bottom: 100px;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
 
     li {
       display: flex;
@@ -1086,27 +1287,27 @@
 
       img {
         width: 100%;
-        height: 449px;
+        height: 22.45rem;
         object-fit: cover;
       }
 
       a {
         display: flex;
         flex-direction: column;
-        gap: 20px;
-        width: 500px;
-        min-height: 800px;
+        gap: 1rem;
+        width: 25rem;
+        min-height: 40rem;
         background: #f1f1f1;
-        padding: 20px;
+        padding: 1rem;
         transition: var(--transition);
 
         h3 {
-          font-size: 24px;
+          font-size: 1.2rem;
           font-weight: "Raleway-bl", sans-serif;
         }
 
         h4 {
-          font-size: 20px;
+          font-size: 1rem;
           font-weight: "Raleway", sans-serif;
           color: #666666;
           margin-top: auto;
@@ -1121,13 +1322,13 @@
 }
 
 .blog__wrapper > a {
-  padding: 20px 100px;
-  margin-left: 25px;
+  padding: 1rem 5rem;
+  margin-left: 1.25rem;
 
   background: var(--color-purple);
   color: var(--color-white);
   border-radius: var(--border-radius-sm);
-  border: 1px solid var(--color-purple);
+  border: .05rem solid var(--color-purple);
 
   transition: var(--transition);
 
@@ -1138,15 +1339,15 @@
 }
 
 .blog__wrapper > h2 {
-  font-size: 96px;
+  font-size: 4.8rem;
   font-weight: 900;
   font-family: "Raleway-bl", sans-serif;
 }
 
 .blog__wrapper > p {
-  width: 660px;
-  margin-left: 60px;
-  margin-top: 25px;
+  width: 33rem;
+  margin-left: 3rem;
+  margin-top: 1.25rem;
 
   position: relative;
 
@@ -1156,9 +1357,58 @@
 
     left: -4%;
 
-    width: 10px;
-    height: 45px;
+    width: .5rem;
+    height: 2.25rem;
 
     background: var(--color-purple);
   }
+}
+
+.head__figure {
+  width: 35.3rem;
+  height: 38.85rem;
+
+  margin-left: auto;
+
+  @media (max-width: 768px) {
+    width: 85.3rem;
+    height: 88.85rem;
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    margin-top: 10rem;
+  }
+}
+
+.about_statue {
+  width: 26.35rem;
+  height: 28.7rem;
+
+  @media (max-width: 768px) {
+    width: 56.35rem;
+    height: 58.7rem;
+
+    margin-top: 7rem;
+  }
+}
+
+.adv_statue_iamge {
+  width: 32.9rem;
+  height: 33rem;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.home_star_svg {
+  width: 2.5rem;
+  height: 2.4rem;
+}
+
+.review__statie_image {
+  width: 29.05rem;
+  height: 37.25rem;
 }

@@ -2,14 +2,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 40px;
+  padding-top: 2rem;
 
-  font-size: 16px;
+  font-size: .8rem;
 }
 
 .header__wrapper nav > ul {
   display: flex;
-  gap: 35px;
+  gap: 1.75rem;
 }
 
 .header__wrapper nav > ul > li > a {
@@ -22,7 +22,7 @@
     bottom: 0;
 
     width: 0%;
-    height: 1px;
+    height: .05rem;
 
     background: var(--color-black);
 
@@ -41,29 +41,29 @@
 }
 
 .header__logo svg {
-  width: 350px;
+  width: 17.5rem;
   height: auto;
 
-  @media (max-width: 535px) {
-    width: 300px;
+  @media (max-width: 26.75rem) {
+    width: 15rem;
   }
 
-  @media (max-width: 404px) {
-    width: 200px;
+  @media (max-width: 20.2rem) {
+    width: 10rem;
   }
 }
 
 .header__wrapper nav {
-  @media (max-width: 1380px) {
+  @media (max-width: 69rem) {
     display: none;
   }
 }
 
 .header__contact a {
-  padding: 16px 35px;
+  padding: .8rem 1.75rem;
   background: var(--color-black);
   color: #fff;
-  border-radius: 36px;
+  border-radius: 1.8rem;
   position: relative;
   overflow: hidden;
   transition: 0.3s linear;
@@ -72,8 +72,8 @@
   &::before {
     content: "";
     position: absolute;
-    width: 40px !important;
-    height: 40px !important;
+    width: 2rem !important;
+    height: 2rem !important;
     background: radial-gradient(
       circle,
       rgb(156, 68, 244) 0%,
@@ -109,23 +109,23 @@
 }
 
 .header__menu {
-  width: 50px;
+  width: 2.5rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: .5rem;
   cursor: pointer;
 }
 
 .header__menu__box {
   background: var(--color-black);
-  width: 10px;
-  height: 10px;
+  width: .5rem;
+  height: .5rem;
 }
 
 .current__language {
-  padding: 10px 30px 10px 10px;
-  border: 1px solid var(--color-black);
-  border-radius: 20px;
+  padding: .5rem 1.5rem .5rem .5rem;
+  border: .05rem solid var(--color-black);
+  border-radius: 1rem;
 
   position: relative;
   cursor: pointer;
@@ -137,10 +137,10 @@
     right: 15%;
     top: 35%;
 
-    width: 0px;
-    height: 0px;
+    width: 0rem;
+    height: 0rem;
     border-style: solid;
-    border-width: 10px 6.5px 0 6.5px;
+    border-width: .5rem .325rem 0 .325rem;
     border-color: #000000 transparent transparent transparent;
     transform: rotate(0deg);
   }
@@ -175,19 +175,19 @@
 
 .header__language__list {
   position: absolute;
-  top: 50px;
+  top: 2.5rem;
 
-  border: 1px solid var(--color-black);
+  border: .05rem solid var(--color-black);
   width: 100%;
-  border-radius: 10px;
-  padding: 10px;
+  border-radius: .5rem;
+  padding: .5rem;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  gap: 10px;
+  gap: .5rem;
 
   li {
     button {

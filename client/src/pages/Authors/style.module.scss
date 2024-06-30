@@ -1,17 +1,17 @@
 .authors {
   h2 {
-    font-size: 62px;
-    margin-top: 40px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 10px;
+    font-size: 3.1rem;
+    margin-top: 2rem;
+    border-bottom: .05rem solid #eee;
+    padding-bottom: .5rem;
   }
 }
 
 .authors__wrapper {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  margin-top: 40px;
+  gap: 1rem;
+  margin-top: 2rem;
 
   a {
     &:hover {

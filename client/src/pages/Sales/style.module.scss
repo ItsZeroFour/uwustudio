@@ -1,27 +1,27 @@
 .sales__wrapper {
-  margin-top: 100px;
+  margin-top: 5rem;
 
   h1 {
-    font-size: 48px;
+    font-size: 2.4rem;
     font-weight: 500;
   }
 
   p {
-    margin-top: 25px;
-    font-size: 20px;
+    margin-top: 1.25rem;
+    font-size: 1rem;
 
     span {
       color: var(--color-purple);
       font-weight: bold;
-      font-size: 48px;
+      font-size: 2.4rem;
     }
   }
 
   ul {
     display: flex;
     flex-direction: column;
-    gap: 70px;
-    margin-top: 100px;
+    gap: 3.5rem;
+    margin-top: 5rem;
 
     li {
       display: flex;
@@ -29,14 +29,14 @@
       align-items: center;
 
       .sales__left {
-        width: 590px;
+        width: 29.5rem;
 
         p {
-          font-size: 16px;
+          font-size: .8rem;
         }
 
         h2 {
-          font-size: 36px;
+          font-size: 1.8rem;
           font-family: "Raleway-bd", sans-serif;
           font-weight: 900;
         }
@@ -45,8 +45,8 @@
           display: block;
           background: var(--color-yellow);
           width: 100%;
-          padding: 25px;
-          margin-top: 20px;
+          padding: 1.25rem;
+          margin-top: 1rem;
           text-align: center;
           transition: var(--transition);
 

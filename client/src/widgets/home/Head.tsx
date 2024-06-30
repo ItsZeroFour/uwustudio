@@ -53,7 +53,7 @@ const Head: React.FC = () => {
                         : "none",
                   }}
                 >
-                  <Image src={Figure} alt="Abstract figure" />
+                  <Image className={style.head__figure} src={Figure} alt="Abstract figure" />
                 </div>
               </ReactParallax>
             </aside>

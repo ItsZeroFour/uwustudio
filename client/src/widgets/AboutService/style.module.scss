@@ -1,5 +1,5 @@
 .about__service__top {
-  margin-top: 30px;
+  margin-top: 1.5rem;
 }
 
 .about__service__top__wrapper {
@@ -7,31 +7,31 @@
   justify-content: space-between;
   align-items: center;
 
-  gap: 60px;
+  gap: 3rem;
 
   .about__service__top__left {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1rem;
 
     h1 {
-      font-size: 64px;
+      font-size: 3.2rem;
       font-weight: 900;
       font-family: "Raleway-bl", sans-serif;
-      width: 673px;
+      width: 33.65rem;
     }
 
     p {
-      padding-bottom: 50px;
-      border-bottom: 1px solid var(--color-black);
+      padding-bottom: 2.5rem;
+      border-bottom: .05rem solid var(--color-black);
     }
 
     ul {
       display: flex;
-      gap: 50px;
-      font-size: 21px;
-      margin-left: 30px;
-      margin-top: 20px;
+      gap: 2.5rem;
+      font-size: 1.05rem;
+      margin-left: 1.5rem;
+      margin-top: 1rem;
 
       li {
         position: relative;
@@ -43,8 +43,8 @@
           top: -50%;
           left: -10%;
 
-          width: 5px;
-          height: 45px;
+          width: .25rem;
+          height: 2.25rem;
 
           background: var(--color-purple);
         }
@@ -65,11 +65,11 @@
 
     a {
       text-align: center;
-      width: 492px;
-      padding: 20px;
-      margin-top: 50px;
-      border: 1px solid var(--color-black);
-      border-radius: 5px;
+      width: 24.6rem;
+      padding: 1rem;
+      margin-top: 2.5rem;
+      border: .05rem solid var(--color-black);
+      border-radius: .25rem;
 
       position: relative;
       overflow: hidden;
@@ -103,13 +103,13 @@
 
 .about__service__types {
   width: 100vw;
-  padding: 40px;
+  padding: 2rem;
   background: var(--color-black);
   color: var(--color-white);
 
-  margin-top: 140px;
+  margin-top: 7rem;
 
-  @media (min-width: 2500px) {
+  @media (min-width: 125rem) {
     height: 100vh;
   }
 }
@@ -127,10 +127,10 @@
     height: 100%;
 
     li {
-      padding: 30px 100px;
-      border: 1px solid var(--color-white);
+      padding: 1.5rem 5rem;
+      border: .05rem solid var(--color-white);
       background: rgba(255, 255, 255, 0.1);
-      border-radius: 15px;
+      border-radius: .75rem;
 
       text-align: center;
 
@@ -149,8 +149,8 @@
         width: 100%;
         height: 100%;
 
-        backdrop-filter: blur(20px);
-        border-radius: 15px;
+        backdrop-filter: blur(1rem);
+        border-radius: .75rem;
         z-index: -1;
       }
 
@@ -188,23 +188,23 @@
 }
 
 .about__service__stages {
-  margin-top: 100px;
+  margin-top: 5rem;
 }
 
 .about__service__stages__wrapper {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 2rem;
 
   h2 {
-    font-size: 64px;
+    font-size: 3.2rem;
     font-weight: 900;
     font-family: "Raleway-bl", sans-serif;
-    width: 600px;
+    width: 30rem;
   }
 
   p {
-    width: 700px;
+    width: 35rem;
   }
 
   ul {
@@ -213,50 +213,50 @@
     justify-content: center;
     align-items: center;
 
-    gap: 40px 120px;
+    gap: 2rem 6rem;
 
     li {
       display: flex;
       flex-direction: column;
       position: relative;
-      gap: 20px;
+      gap: 1rem;
 
-      width: 720px;
-      height: 260px;
-      padding: 20px;
-      border: 1px solid #a6a6a6;
+      width: 36rem;
+      height: 13rem;
+      padding: 1rem;
+      border: .05rem solid #a6a6a6;
       border-radius: var(--border-radius-md);
 
       p {
-        padding-right: 80px;
+        padding-right: 4rem;
       }
 
       img {
-        width: 70px;
-        height: 70px;
+        width: 3.5rem;
+        height: 3.5rem;
 
-        padding: 5px;
+        padding: .25rem;
         background: var(--color-white);
         border-radius: var(--border-radius-md);
-        box-shadow: 0px 0 10px 2px rgba(0, 0, 0, 0.4);
+        box-shadow: 0rem 0 .5rem .1rem rgba(0, 0, 0, 0.4);
       }
 
       .about__service__stages__item__top {
         display: flex;
         align-items: center;
-        gap: 20px;
+        gap: 1rem;
 
         h3 {
-          font-size: 24px;
+          font-size: 1.2rem;
         }
       }
 
       &::before {
         position: absolute;
-        -webkit-text-stroke: 1px rgba(0, 0, 0, 0.2); /* Ширина и цвет границы */
-        text-stroke: 1px black;
+        -webkit-text-stroke: .05rem rgba(0, 0, 0, 0.2); /* Ширина и цвет границы */
+        text-stroke: .05rem black;
         color: transparent; /* Сделаем цвет текста прозрачным, чтобы не видеть фон через текст */
-        font-size: 128px;
+        font-size: 6.4rem;
         font-weight: 600;
         font-family: "Raleway-sb", sans-serif;
         right: 2%;
@@ -306,29 +306,29 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 130px;
+  margin-top: 6.5rem;
 
   .about__service__contacts__right {
-    width: 750px;
+    width: 37.5rem;
 
     h2 {
-      font-size: 64px;
+      font-size: 3.2rem;
       font-family: "Raleway-bl", sans-serif;
       font-weight: 900;
-      width: 700px;
+      width: 35rem;
     }
 
     p {
-      margin-top: 25px;
-      margin-left: 30px;
+      margin-top: 1.25rem;
+      margin-left: 1.5rem;
       position: relative;
 
       &::before {
         content: "";
         position: absolute;
         left: -3%;
-        width: 10px;
-        height: 50px;
+        width: .5rem;
+        height: 2.5rem;
         background: var(--color-purple);
       }
     }
@@ -336,17 +336,17 @@
 }
 
 .about__service__contacts__buttons {
-  margin-top: 60px;
+  margin-top: 3rem;
   display: flex;
   justify-content: space-between;
 
   a {
     &:first-child {
-      padding: 20px 150px;
+      padding: 1rem 7.5rem;
       background: var(--color-yellow);
       border-radius: var(--border-radius-sm);
       transition: var(--transition);
-      border: 1px solid var(--color-yellow);
+      border: .05rem solid var(--color-yellow);
 
       &:hover {
         background: none;
@@ -354,9 +354,9 @@
     }
 
     &:last-child {
-      padding: 20px 130px;
+      padding: 1rem 6.5rem;
       background: none;
-      border: 1px solid var(--color-black);
+      border: .05rem solid var(--color-black);
       border-radius: var(--border-radius-sm);
       transition: var(--transition);
 

@@ -2,12 +2,12 @@
   position: absolute;
 
   left: 0;
-  top: 150px;
+  top: 7.5rem;
 
   width: 100vw;
   height: 100vh;
 
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(.5rem);
 
   z-index: 9999;
 }
@@ -17,7 +17,7 @@
   align-items: stretch;
   justify-content: space-between;
 
-  margin-top: 10px;
+  margin-top: .5rem;
 }
 
 .menu__wrapper {
@@ -33,24 +33,24 @@
 .menu__top__left,
 .menu__top__right {
   background: var(--color-white);
-  box-shadow: 3px 1px 35px rgba(0, 0, 0, 0.25);
-  padding: 30px;
-  border-radius: 40px;
+  box-shadow: .15rem .05rem 1.75rem rgba(0, 0, 0, 0.25);
+  padding: 1.5rem;
+  border-radius: 2rem;
 }
 
 .menu__top__left {
-  width: 900px;
+  width: 45rem;
 }
 
 .menu__top__right {
-  width: 600px;
+  width: 30rem;
 }
 
 .menu__image {
   background: var(--color-black);
   border-radius: var(--border-radius-lg);
-  width: 100px;
-  height: 100px;
+  width: 5rem;
+  height: 5rem;
 
   display: flex;
   justify-content: center;
@@ -62,10 +62,10 @@
 .menu__item a {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 1rem;
 
   p {
-    font-size: 32px;
+    font-size: 1.6rem;
     font-family: "Raleway-md", sans-serif;
   }
 }
@@ -77,10 +77,10 @@
   ul {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1rem;
 
     &:last-child {
-      margin-right: 150px;
+      margin-right: 7.5rem;
     }
   }
 }
@@ -89,7 +89,7 @@
   ul {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 1.25rem;
   }
 }
 
@@ -98,11 +98,11 @@
   align-items: center;
 
   background: var(--color-white);
-  border-radius: 40px;
-  margin-top: 30px;
+  border-radius: 2rem;
+  margin-top: 1.5rem;
   width: 100%;
-  padding: 30px;
-  box-shadow: 3px 1px 35px rgba(0, 0, 0, 0.25);
+  padding: 1.5rem;
+  box-shadow: .15rem .05rem 1.75rem rgba(0, 0, 0, 0.25);
 }
 
 .menu__bottom__main {
@@ -116,7 +116,7 @@
 
     right: 0;
 
-    width: 1px;
+    width: .05rem;
     height: 100%;
 
     background: rgba(0, 0, 0, 0.5);
@@ -126,26 +126,26 @@
 .menu__bottom__main {
   display: flex;
   justify-content: space-between;
-  padding-right: 100px;
+  padding-right: 5rem;
 
   ul {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1rem;
 
     &:last-child {
       li {
         &:last-child {
-          margin-top: 35px;
+          margin-top: 1.75rem;
           a {
-            padding: 33px 120px;
-            font-size: 32px;
+            padding: 1.65rem 6rem;
+            font-size: 1.6rem;
 
             background: var(--color-black);
             color: var(--color-white);
             border-radius: var(--border-radius-lg);
             transition: var(--transition);
-            border: 1px solid var(--color-black);
+            border: .05rem solid var(--color-black);
 
             &:hover {
               background: none;
@@ -161,11 +161,11 @@
 .menu__bottom__other {
   display: flex;
   flex-direction: column;
-  gap: 25px;
-  margin-left: 30px;
+  gap: 1.25rem;
+  margin-left: 1.5rem;
 
   a {
-    font-size: 32px;
+    font-size: 1.6rem;
     font-family: "Raleway-md", sans-serif;
   }
 }
