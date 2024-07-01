@@ -41,6 +41,28 @@ const Authors = () => {
             <a href="https://www.freepik.com/free-vector/graphic-design-geometric-wallpaper_7088577.htm#fromView=search&page=1&position=0&uuid=7b143674-a9c2-40c2-bc11-b81cb480c2d6">
               Image by pikisuperstar on Freepik
             </a>
+            <a href="https://www.freepik.com/free-vector/realistic-grainy-texture_21846586.htm#fromView=search&page=1&position=0&uuid=8ff78be0-46a5-4fe3-8ff9-3ce84c161865">
+              Image by freepik
+            </a>
+            <a href="https://www.freepik.com/free-photo/background-paint-still-life_18492041.htm#fromView=search&page=1&position=1&uuid=ef961d17-0ff2-464b-b698-984eab521d32">
+              Image by freepik
+            </a>
+            <a href="https://www.freepik.com/free-ai-image/3d-shapes-glowing-with-bright-holographic-colors_151971648.htm#fromView=search&page=1&position=4&uuid=7812ff77-5b9e-433d-9aa4-72a33658520c">
+              Image by freepik
+            </a>
+            <a href="https://www.freepik.com/free-photo/metallic-holographic-iridescent-gradient-wallpaper-7_39994314.htm#fromView=search&page=1&position=9&uuid=394791be-2941-45a2-b9d0-f330cb9a0173">
+              Image by Vaynakh on Freepik
+            </a>
+            <a href="https://www.freepik.com/free-photo/3d-view-holographic-layering_45202222.htm#fromView=search&page=1&position=3&uuid=7f549cab-69cc-456f-b3bd-96aea4172f02">
+              Image by pikisuperstar on Freepik
+            </a>
+            <a href="https://www.freepik.com/free-psd/running-shoes-sneakers-transparent-background_143790753.htm#fromView=search&page=1&position=0&uuid=4ee15b8e-de4c-4491-a892-75dda5da26a6">Image by muhammad.abdullah on Freepik</a>
+            <a href="https://www.freepik.com/search?color=purple&format=search&last_filter=color&last_value=purple&query=abstract+3d+figure&selection=1">
+              Image by kjpargeter on Freepik
+            </a>
+            <a href="https://www.freepik.com/search?color=white&format=search&last_filter=query&last_value=abstract+abstract+3d&query=abstract+abstract+3d&selection=1">
+              Image by freepik
+            </a>
             <p>
               Eye by Fahmi Ramdani from{" "}
               <a

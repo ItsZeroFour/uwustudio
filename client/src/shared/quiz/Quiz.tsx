@@ -272,13 +272,13 @@ const Quiz = () => {
 
               <p>
                 {t("quizContactPhone")}:{" "}
-                <a href="tel:+79788224212">+7(978)-822-42-12</a>
+                <a href="tel:+79788224212">+7(978)-568-85-35</a>
               </p>
             </div>
 
             <form>
               <input type="text" placeholder={t("quizNamePlaceholder")} />
-              <input type="text" placeholder={t("quizEmailPlaceholder")} />
+              <input type="text" placeholder={contactType === "email" ? t("quizEmailPlaceholder") : t("quizTelegramPlaceholder")} />
               <textarea placeholder={t("quizMessagePlaceholder")} />
               <button>{t("quizContactSendButton")}</button>
             </form>

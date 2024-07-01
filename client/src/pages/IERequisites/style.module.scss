@@ -1,0 +1,40 @@
+.requisites__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 110px;
+}
+
+.requisites__left,
+.requisites__right {
+  h2 {
+    font-size: 32px;
+    text-transform: uppercase;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 55px;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      width: 625px;
+
+      p {
+        font-size: 20px;
+
+        &:first-child {
+          width: 225px;
+        }
+
+        &:last-child {
+          width: 310px;
+        }
+      }
+    }
+  }
+}

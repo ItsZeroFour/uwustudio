@@ -13,47 +13,56 @@ const Documents = () => {
   const documentsList = [
     {
       title: t("documentsListItem1"),
-      link: "",
+      link: "/IERequisites",
+      isFile: false,
     },
 
     {
       title: t("documentsListItem2"),
-      link: "",
+      link: "/PDesignAndDevelop.pdf",
+      isFile: true,
     },
 
     {
       title: t("documentsListItem3"),
-      link: "",
+      link: "/ShablonDogovora.pdf",
+      isFile: true,
     },
 
-    {
-      title: t("documentsListItem4"),
-      link: "",
-    },
+    // {
+    //   title: t("documentsListItem4"),
+    //   link: "",
+    //   isFile: false,
+    // },
 
     {
       title: t("documentsListItem5"),
-      link: "",
+      link: "/PSEO.pdf",
+      isFile: true,
     },
 
     {
       title: t("documentsListItem6"),
-      link: "",
+      link: "/ShablonDogovoraSsamozanyatim.pdf",
+      isFile: true,
     },
 
     {
       title: t("documentsListItem7"),
-      link: "",
+      link: "/PAgregatsia.pdf",
+      isFile: true,
     },
 
-    {
-      title: t("documentsListItem8"),
-      link: "",
-    },
+    // {
+    //   title: t("documentsListItem8"),
+    //   link: "",
+    //   isFile: false,
+    // },
 
     {
       title: t("documentsListItem9"),
       link: paths.presentation,
+      isFile: false,
     },
   ];
 
@@ -87,12 +96,19 @@ const Documents = () => {
               <h2>{t("documentsListTitle")}</h2>
 
               <ul>
-                {documentsList.map(({ title, link }, index) => (
+                {documentsList.map(({ title, link, isFile }, index) => (
                   <li key={index}>
-                    <Link href={link}>
-                      <p>{title}</p>
-                      <ArrowRight />
-                    </Link>
+                    {isFile ? (
+                      <Link href={`/documents/${link}`} target="_blank">
+                        <p>{title}</p>
+                        <ArrowRight />
+                      </Link>
+                    ) : (
+                      <Link href={link}>
+                        <p>{title}</p>
+                        <ArrowRight />
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>
