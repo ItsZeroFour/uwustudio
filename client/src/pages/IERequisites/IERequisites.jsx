@@ -56,8 +56,8 @@ const IERequisites = () => {
                 <li>
                   <p>Почта</p>
                   <p>
-                    <Link href="mailto:hello@uwustudio.ru">
-                      hello@uwustudio.ru
+                    <Link href="mailto:uwustudio@gmail.com">
+                      uwustudio@gmail.com
                     </Link>
                   </p>
                 </li>
