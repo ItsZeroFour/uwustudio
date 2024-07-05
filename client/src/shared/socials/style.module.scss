@@ -3,9 +3,54 @@
   align-items: center;
   gap: 1.5rem;
 
+  & li:nth-child(1) {
+    // telegram
+    width: 1.65rem;
+    height: 1.45rem;
+
+    @media (max-width: 768px) {
+      width: 4.95rem;
+      height: 4.2rem;
+    }
+  }
+
+  & li:nth-child(2) {
+    // vk
+    width: 1.45rem;
+    height: 1.45rem;
+
+    @media (max-width: 768px) {
+      width: 4.2rem;
+      height: 4.2rem;
+    }
+  }
+
+  & li:nth-child(3) {
+    // insta
+    width: 1.45rem;
+    height: 1.4rem;
+
+    @media (max-width: 768px) {
+      width: 4.5rem;
+      height: 4.2rem;
+    }
+  }
+
+  & li:nth-child(4) {
+    // youtube
+    width: 2.05rem;
+    height: 1.4rem;
+
+    @media (max-width: 768px) {
+      width: 6rem;
+      height: 4.2rem;
+    }
+  }
+
+
   @media (max-width: 768px) {
-    gap: 2rem;
-    margin-top: 2rem;
+    gap: 3rem;
+    margin-top: 4.5rem;
   }
 
   svg {
