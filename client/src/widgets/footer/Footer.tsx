@@ -17,7 +17,7 @@ const Footer = () => {
         <aside className={style.footer__left}>
           <Logo />
           <Link href="tel:+79785688535">+7(978) 568-85-35</Link>
-          <Link href="mailto:uwustudio@gmail.com">uwustudio@gmail.com</Link>
+          <Link href="mailto:uwustudio@yandex.ru">uwustudio@yandex.ru</Link>
           <Link href="/authors">{t("footerAuthors")}</Link>
         </aside>
 

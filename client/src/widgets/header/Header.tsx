@@ -28,6 +28,18 @@ const Header = () => {
     window.localStorage.setItem("language", language);
   }, [language]);
 
+  useEffect(() => {
+    if (openMenu) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+
+    return () => {
+      document.body.classList.remove("no-scroll");
+    };
+  }, [openMenu]);
+
   return (
     <div className={style.header__wrapper}>
       <nav>
@@ -115,7 +127,7 @@ const Header = () => {
         <div className={style.header__menu__box}></div>
       </div>
 
-      {openMenu && <HeaderMenu />}
+      {openMenu && <HeaderMenu openMenu={openMenu} />}
     </div>
   );
 };

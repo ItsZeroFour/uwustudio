@@ -13,11 +13,33 @@
     font-size: 64px;
     font-weight: 400;
     font-family: "Raleway", sans-serif;
+
+    @media (max-width: 520px) {
+      font-size: 48px;
+      text-align: center;
+    }
+
+    @media (max-width: 425px) {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
   }
 
   p {
     text-align: center;
     width: 1220px;
+
+    @media (max-width: 1240px) {
+      width: 100%;
+    }
+
+    @media (max-width: 520px) {
+      font-size: 16px;
+    }
+
+    @media (max-width: 425px) {
+      font-size: 14px;
+    }
   }
 
   ul {
@@ -57,6 +79,20 @@
 
             z-index: -1;
           }
+
+          @media (max-width: 520px) {
+            font-size: 24px;
+            width: 330px;
+          }
+
+          @media (max-width: 425px) {
+            font-size: 20px;
+            width: 280px;
+          }
+
+          @media (max-width: 326px) {
+            width: 250px;
+          }
         }
 
         svg {
@@ -69,6 +105,18 @@
           width: 800px;
           text-align: left;
           transition: var(--transition);
+
+          @media (max-width: 1220px) {
+            width: 600px;
+          }
+
+          @media (max-width: 920px) {
+            width: 400px;
+          }
+
+          @media (max-width: 640px) {
+            display: none;
+          }
         }
 
         &:hover {
@@ -89,11 +137,21 @@
 
 .services__contacts {
   margin-top: 250px;
+
+  @media (max-width: 1220px) {
+    margin-top: 100px;
+  }
 }
 
 .services__contacts__wrapper {
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 1528px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .servies__contacts__text {
@@ -104,6 +162,14 @@
     width: 430px;
     font-family: "Raleway-sb", sans-serif;
     font-weight: 600;
+
+    @media (max-width: 878px) {
+      width: 100%;
+    }
+
+    @media (max-width: 520px) {
+      font-size: 32px;
+    }
   }
 
   p {
@@ -122,6 +188,18 @@
       height: 60px;
 
       background: var(--color-purple);
+
+      @media (max-width: 425px) {
+        left: -5%;
+      }
+    }
+
+    @media (max-width: 878px) {
+      width: 90%;
+    }
+
+    @media (max-width: 425px) {
+      font-size: 14px;
     }
   }
 
@@ -142,6 +220,19 @@
       background: var(--color-purple);
       color: var(--color-white);
     }
+
+    @media (max-width: 878px) {
+      width: 100%;
+    }
+
+    @media (max-width: 520px) {
+      padding: 15px;
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 878px) {
+    width: 100%;
   }
 }
 
@@ -174,5 +265,9 @@
     border: 1px solid var(--color-black);
 
     z-index: -2;
+  }
+
+  @media (max-width: 1528px) {
+    display: none;
   }
 }

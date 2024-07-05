@@ -9,6 +9,7 @@ import questionOtherImage from "../../../public/icons/quiz/quiz-image-4.png";
 import ArrowRight from "../../../public/icons/Arrow-Right.svg";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
+import axios from "../../utils/axios";
 
 const Quiz = () => {
   const [quizResults, setQuizResults] = useState({});
@@ -16,6 +17,10 @@ const Quiz = () => {
   const [currentQuizIndex, setCurrentQuizIndex] = useState(0);
   const [finish, setFinish] = useState(false);
   const [contactType, setContactType] = useState("email");
+
+  const [name, setName] = useState("");
+  const [contact, setContact] = useState("");
+  const [message, setMessage] = useState("");
 
   const { t } = useTranslation();
 
@@ -195,6 +200,33 @@ const Quiz = () => {
     }
   };
 
+  const submitForm = async (event) => {
+    event.preventDefault();
+
+    if (!name || !contact || !message || !contactType || !quizResults) {
+      alert("Пожалуйста, заполните все поля");
+      return;
+    }
+    try {
+      await axios.post(
+        `${process.env.NEXT_PUBLIC_SERVER_URL}/email/sendQuizMail`,
+        {
+          name,
+          contact,
+          message,
+          services: quizResults,
+          contactType: contactType,
+        }
+      );
+      alert("Письмо успешно отправлено!");
+      setName("");
+      setMessage("");
+      setContact("");
+    } catch (error) {
+      alert(`Произошла ошибка, ${error}`);
+    }
+  };
+
   return (
     <section className={style.quiz}>
       <div className="container">
@@ -277,10 +309,28 @@ const Quiz = () => {
             </div>
 
             <form>
-              <input type="text" placeholder={t("quizNamePlaceholder")} />
-              <input type="text" placeholder={contactType === "email" ? t("quizEmailPlaceholder") : t("quizTelegramPlaceholder")} />
-              <textarea placeholder={t("quizMessagePlaceholder")} />
-              <button>{t("quizContactSendButton")}</button>
+              <input
+                type="text"
+                onChange={(event) => setName(event.target.value)}
+                value={name}
+                placeholder={t("quizNamePlaceholder")}
+              />
+              <input
+                type="text"
+                onChange={(event) => setContact(event.target.value)}
+                value={contact}
+                placeholder={
+                  contactType === "email"
+                    ? t("quizEmailPlaceholder")
+                    : t("quizTelegramPlaceholder")
+                }
+              />
+              <textarea
+                onChange={(event) => setMessage(event.target.value)}
+                value={message}
+                placeholder={t("quizMessagePlaceholder")}
+              />
+              <button onClick={submitForm}>{t("quizContactSendButton")}</button>
             </form>
           </div>
         )}

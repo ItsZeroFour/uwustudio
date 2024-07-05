@@ -44,6 +44,13 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+
+  swcMinify: true, // если вы хотите использовать SWC для минификации
+  compiler: {
+    react: {
+      throwIfNamespace: false, // Отключение выбрасывания ошибки при использовании пространства имен JSX
+    },
+  },
 };
 
 export default nextConfig;

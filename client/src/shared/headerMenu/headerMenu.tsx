@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import style from "./style.module.scss";
 import User from "../../../public/icons/menu/User.svg";
 
@@ -19,8 +19,9 @@ import { paths } from "@/paths";
 import Socials from "../socials/Socials";
 import { useTranslation } from "react-i18next";
 
-const HeaderMenu = () => {
+const HeaderMenu = (openMenu: boolean) => {
   const { t } = useTranslation();
+  const [animationClass, setAnimationClass] = useState("");
 
   const firstList = [
     {
@@ -100,8 +101,16 @@ const HeaderMenu = () => {
     },
   ];
 
+  useEffect(() => {
+    if (openMenu) {
+      setAnimationClass(style["menu-show"]);
+    } else {
+      setAnimationClass(style["menu-hide"]);
+    }
+  }, [openMenu]);
+
   return (
-    <section className={style.menu}>
+    <section className={`${style.menu} ${animationClass}`}>
       <div className="container">
         <div className={style.menu__wrapper}>
           <aside className={style.menu__top}>
@@ -181,7 +190,7 @@ const HeaderMenu = () => {
               <Link className={style.menu__bottom__policy} href={paths.policy}>
                 {t("policy")}
               </Link>
-              <Link href="mailto:uwustudio@gmail.com">uwustudio@gmail.com</Link>
+              <Link href="mailto:uwustudio@yandex.ru">uwustudio@yandex.ru</Link>
             </div>
           </aside>
         </div>

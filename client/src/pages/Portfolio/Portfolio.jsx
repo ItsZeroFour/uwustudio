@@ -84,12 +84,12 @@ const Portfolio = () => {
           <div className={style.portfolio__head__images}>
             <Image src={headImage1} alt="portfolio head image" />
 
-            <div>
+            <div className={style.portfolio__head__images__block1}>
               <Image src={headImage2} alt="portfolio head image 2" />
               <Image src={headImage3} alt="portfolio head image 3" />
             </div>
 
-            <div>
+            <div className={style.portfolio__head__images__block2}>
               <Image src={headImage4} alt="portfolio head image 4" />
               <Image src={headImage5} alt="portfolio head image 5" />
             </div>

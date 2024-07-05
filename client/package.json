@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@next/font": "^14.1.0",
+    "axios": "^1.7.2",
     "framer-motion": "^11.0.8",
     "i18next": "^23.11.3",
     "i18next-browser-languagedetector": "^7.2.1",

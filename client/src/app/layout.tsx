@@ -16,7 +16,7 @@ import "./scss/index.scss";
 import Header from "@/widgets/header/Header";
 import Footer from "@/widgets/footer/Footer";
 import Cursor from "@/shared/cursor/Cursor";
-import SmoothScroll from 'smoothscroll-for-websites'
+import SmoothScroll from "smoothscroll-for-websites";
 
 import "../utils/i18n";
 import { useTranslation } from "react-i18next";
@@ -27,7 +27,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   const { i18n } = useTranslation();
   const [loadingLanguage, setLoadingLanguage] = useState(true);
 
@@ -37,7 +36,7 @@ export default function RootLayout({
     });
   }, [i18n]);
 
-  SmoothScroll({ stepSize: 50 })
+  SmoothScroll({ stepSize: 50 });
 
   return (
     <React.Fragment>
@@ -69,7 +68,7 @@ export default function RootLayout({
             <Loader loadingLanguage={loadingLanguage} />
           </div>
 
-          <Cursor />
+          {window.innerWidth > 768 && <Cursor />}
         </body>
       </html>
     </React.Fragment>

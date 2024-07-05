@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from "react";
 import style from "./style.module.scss";
 import Link from "next/link";
 import { paths } from "@/paths";
-import MainImage from "../../../public/images/aboutService/main-image.svg";
+import mainImage from "../../../public/images/aboutService/main-image.png";
 import HeadImage from "../../../public/images/aboutService/head.png";
 import Image from "next/image";
 import Quiz from "@/shared/quiz/Quiz";
@@ -79,7 +79,7 @@ const AboutService: React.FC<{ data: ServiceData | null }> = ({ data }) => {
                 </aside>
 
                 <aside className={style.about__service__top__left}>
-                  <MainImage />
+                  <Image src={mainImage} alt="main img" />
                 </aside>
               </div>
             </div>

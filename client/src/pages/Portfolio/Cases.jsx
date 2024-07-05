@@ -3,6 +3,7 @@ import style from "./style.module.scss";
 import ArrowFromTopToRight from "../../../public/icons/ArrowFromTopToRight.svg";
 
 import case1Image from "../../../public/images/portfolio/portfolio/1.png";
+import case2Image from "../../../public/images/portfolio/portfolio/2.png";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -12,14 +13,14 @@ const Cases = () => {
       title: "Магазин кроссовок в Симферополе",
       image: case1Image,
       tags: ["Разработка", "Дизайн", "Проектирование"],
-      linkTo: "/",
+      linkTo: "/sneakers",
     },
 
     {
-      title: "Магазин кроссовок в Симферополе",
-      image: case1Image,
+      title: "Симферопольский Политехнический колледж",
+      image: case2Image,
       tags: ["Разработка", "Дизайн", "Проектирование"],
-      linkTo: "/",
+      linkTo: "/simfpoliteh",
     },
 
     {
@@ -62,7 +63,7 @@ const Cases = () => {
           <ul>
             {casesList.map(({ title, image, tags, linkTo }, index) => (
               <li key={index}>
-                <Link href={linkTo}>
+                <Link href={`/portfolio/cases/${linkTo}`}>
                   <Image src={image} />
 
                   <div>
