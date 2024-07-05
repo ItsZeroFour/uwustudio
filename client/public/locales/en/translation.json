@@ -308,6 +308,7 @@
   "quizMessagePlaceholder": "Message",
   "quizNamePlaceholder": "Your Name",
   "quizEmailPlaceholder": "Your Email",
+  "quizTelegramPlaceholder": "Your Telegram",
   "quiz1Title": "What type of website do you need?",
   "quiz1Desc": "When choosing the type of website, consider its purpose: informational if you need to provide content; an online store for e-commerce; or corporate to represent your company. It's also important to consider audience needs and technical support to determine the best option for achieving your goals.",
   "quiz1ListItem1Title": "Landing Page",
@@ -610,7 +611,7 @@
   "documentsListTitle": "Our list of documents",
   "documentsListItem1": "Individual Entrepreneur Details",
   "documentsListItem2": "Design and Development Proposal",
-  "documentsListItem3": "Contract",
+  "documentsListItem3": "Framework Agreement",
   "documentsListItem4": "Details",
   "documentsListItem5": "SEO Proposal",
   "documentsListItem6": "Self-Employed Contract",
@@ -889,12 +890,12 @@
   "reputationImportance1": "One of the important aspects of brand reputation management is crisis management. In case of scandals, negative reviews, or other issues, it is necessary to react quickly and effectively to minimize damage to the brand's reputation. In addition to reacting to negative situations, companies also actively work on creating positive impressions of their brand by holding events, developing interesting content, and participating in public and charitable initiatives.",
   "reputationImportance2": "Social media plays a significant role in brand reputation management, allowing companies to communicate with the audience, share information, and respond to questions and comments. Effective use of social media helps improve the perception of the brand and strengthen its connection with customers.",
   "reputationImportance3": "The benefits of brand reputation management include improving brand perception, increasing customer loyalty, protecting against potential crises, strengthening competitive advantage, and building long-term relationships with the audience. Overall, brand reputation management is an important tool for successfully promoting the brand and achieving its business goals.",
-  
+
   "blog3conclusionTitle": "Conclusion",
   "blog3conclusionText1": "In conclusion, it is important to emphasize the key aspects of brand reputation management and its importance for the successful development of a company. Brand reputation management is not just a communication tool with the audience but also a strategic process aimed at creating long-term and positive relationships with customers, partners, and society as a whole.",
   "blog3conclusionText2": "This process includes not only reacting to negative situations but also actively shaping a positive perception of the brand through creating engaging stories, attractive content, and participating in social and charitable initiatives.",
   "blog3conclusionText3": "Brand reputation management is an important element of any company's marketing and communication strategy and plays a key role in its success in the market.",
-  
+
   "blog1confidenceTitle": "Increasing Website Trust",
   "blog1confidenceText1": "In today's internet world, where competition is becoming increasingly fierce, trust in a website plays a critical role in attracting and retaining users. Users want to be sure that the information presented on a website is reliable and transactions are secure. Therefore, strategies aimed at increasing trust become an integral part of any website's business strategy.",
   "blog1confidenceText2": "One of the key strategies is creating a professional and high-quality design. The aesthetics and functionality of a website play an important role in forming the first impression on visitors. A clean, modern design not only attracts attention but also creates a sense of reliability.",
@@ -919,7 +920,7 @@
   "blog2Tag2": "Business",
   "blog3Tag1": "Brand",
   "blog3Tag2": "Business",
-  
+
   "blogTagSearch": "Search by Tags",
   "blogSearchPlaceholder": "Search",
   "blogReadPost": "Read Post",
