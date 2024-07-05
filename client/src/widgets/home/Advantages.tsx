@@ -14,7 +14,7 @@ const Advantages = () => {
       <div className="container">
         <div className={style.advantages__wrapper}>
           <aside className={style.advantages__image}>
-            <Image src={AdvantagesIamge} alt="advantages statue" />
+            <Image src={AdvantagesIamge} alt="advantages statue" className={style.adv_statue_iamge} />
           </aside>
 
           <aside className={style.advantages__list}>

@@ -1,10 +1,10 @@
 .quiz {
-  margin-top: 100px;
+  margin-top: 5rem;
 
   h2 {
-    font-size: 64px;
-    margin-bottom: 60px;
-    width: 1035px;
+    font-size: 3.2rem;
+    margin-bottom: 3rem;
+    width: 51.75rem;
     font-weight: 900;
     font-family: "Raleway-bl", sans-serif;
   }
@@ -17,10 +17,10 @@
 
 .quiz__options {
   width: 100%;
-  border: 1px solid #a2a2a2;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  height: 800px;
+  border: .05rem solid #a2a2a2;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  height: 40rem;
 
   position: relative;
   overflow: hidden;
@@ -33,9 +33,9 @@
   ul {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 2rem;
     width: 100%;
-    padding: 40px;
+    padding: 2rem;
   }
 
   li {
@@ -43,8 +43,8 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    border: 1px solid #b4b4b4;
-    padding: 15px;
+    border: .05rem solid #b4b4b4;
+    padding: .75rem;
     border-radius: var(--border-radius-sm);
     position: relative;
 
@@ -53,17 +53,17 @@
     transform-style: preserve-3d;
 
     .quiz__option__text {
-      width: 580px;
-      margin-left: 60px;
+      width: 29rem;
+      margin-left: 3rem;
 
       h4 {
-        font-size: 36px;
+        font-size: 1.8rem;
         font-weight: 700;
         font-family: "Raleway-bd", sans-serif;
       }
 
       p {
-        font-size: 16px;
+        font-size: .8rem;
       }
     }
 
@@ -76,16 +76,16 @@
 
       background: rgba(255, 255, 255, 0.1);
       border-radius: var(--border-radius-sm);
-      backdrop-filter: blur(20px);
+      backdrop-filter: blur(1rem);
 
-      transform: translateZ(-1px);
+      transform: translateZ(-0.05rem);
 
       top: 0;
       left: 0;
     }
 
     svg {
-      margin-right: 20px;
+      margin-right: 1rem;
       transition: var(--transition);
     }
 
@@ -117,22 +117,22 @@
 
 .quiz__info {
   text-align: center;
-  width: 640px;
+  width: 32rem;
   background: var(--color-yellow);
-  padding: 35px;
-  height: 800px;
-  border-bottom-left-radius: 20px;
-  border-top-left-radius: 20px;
+  padding: 1.75rem;
+  height: 40rem;
+  border-bottom-left-radius: 1rem;
+  border-top-left-radius: 1rem;
 }
 
 .quiz__info > p {
 }
 
 .quiz__info__main {
-  margin-top: 180px;
+  margin-top: 9rem;
 
   h3 {
-    font-size: 36px;
+    font-size: 1.8rem;
     font-weight: 900;
     font-family: "Raleway-bl", sans-serif;
     text-align: center;
@@ -140,7 +140,7 @@
   }
 
   p {
-    margin-top: 10px;
+    margin-top: .5rem;
   }
 }
 
@@ -150,9 +150,9 @@
   justify-content: center;
   align-items: center;
   background: var(--color-yellow);
-  padding: 60px;
+  padding: 3rem;
 
-  gap: 20px;
+  gap: 1rem;
 
   text-align: center;
 
@@ -163,7 +163,7 @@
 
   .quiz__wrapper__text {
     p {
-      width: 1050px;
+      width: 52.5rem;
     }
   }
 }
@@ -176,7 +176,7 @@
 
   form {
     display: flex;
-    gap: 10px;
+    gap: .5rem;
   }
 }
 
@@ -184,15 +184,15 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 20px;
+  gap: 1rem;
 
   input,
   textarea {
-    padding: 20px;
+    padding: 1rem;
     width: 100%;
-    border-radius: 10px;
-    border: 1px solid var(--color-black);
-    font-size: 20px;
+    border-radius: .5rem;
+    border: .05rem solid var(--color-black);
+    font-size: 1rem;
     font-weight: 400;
 
     &::placeholder {
@@ -202,14 +202,14 @@
   }
 
   textarea {
-    height: 210px;
+    height: 10.5rem;
     resize: none;
   }
 
   button {
-    padding: 20px;
-    border-radius: 10px;
-    font-size: 24px;
+    padding: 1rem;
+    border-radius: .5rem;
+    font-size: 1.2rem;
     font-family: "Raleway", sans-serif;
     color: var(--color-white);
     background: var(--color-purple);

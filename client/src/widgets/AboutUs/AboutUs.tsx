@@ -36,7 +36,7 @@ const About = () => {
     <section className={style.about} ref={componentRef}>
       <div className="container">
         <div className={style.about__wrapper}>
-          <aside className={style.about__wrapper__image}>
+          <aside>
             <Image src={AboutImage} alt="statue" />
           </aside>
 

@@ -1,5 +1,5 @@
 .services {
-  margin-top: 80px;
+  margin-top: 4rem;
 }
 
 .servies__wrapper {
@@ -9,8 +9,8 @@
   align-items: center;
 
   h1 {
-    margin-bottom: 25px;
-    font-size: 64px;
+    margin-bottom: 1.25rem;
+    font-size: 3.2rem;
     font-weight: 400;
     font-family: "Raleway", sans-serif;
 
@@ -43,17 +43,17 @@
   }
 
   ul {
-    margin-top: 100px;
+    margin-top: 5rem;
     width: 100%;
 
     display: flex;
     flex-direction: column;
 
-    gap: 60px;
+    gap: 3rem;
 
     li {
-      border-bottom: 2px solid var(--color-black);
-      padding-bottom: 10px;
+      border-bottom: 0.1rem solid var(--color-black);
+      padding-bottom: 0.5rem;
 
       a {
         width: 100%;
@@ -72,7 +72,7 @@
             top: 15%;
 
             width: 0;
-            height: 20px;
+            height: 1rem;
 
             background: var(--color-yellow);
             transition: var(--transition);
@@ -96,13 +96,13 @@
         }
 
         svg {
-          margin-right: 10px;
+          margin-right: 0.5rem;
           transition: var(--transition);
         }
 
         p {
-          font-size: 14px;
-          width: 800px;
+          font-size: 0.7rem;
+          width: 40rem;
           text-align: left;
           transition: var(--transition);
 
@@ -155,11 +155,11 @@
 }
 
 .servies__contacts__text {
-  width: 800px;
+  width: 40rem;
 
   h3 {
-    font-size: 48px;
-    width: 430px;
+    font-size: 2.4rem;
+    width: 21.5rem;
     font-family: "Raleway-sb", sans-serif;
     font-weight: 600;
 
@@ -173,10 +173,10 @@
   }
 
   p {
-    margin-top: 20px;
-    margin-left: 30px;
+    margin-top: 1rem;
+    margin-left: 1.5rem;
     position: relative;
-    width: 780px;
+    width: 39rem;
 
     &::before {
       content: "";
@@ -184,8 +184,8 @@
 
       left: -3%;
 
-      width: 10px;
-      height: 60px;
+      width: 0.5rem;
+      height: 3rem;
 
       background: var(--color-purple);
 
@@ -207,14 +207,14 @@
     display: block;
 
     text-align: center;
-    width: 650px;
-    margin-top: 40px;
+    width: 32.5rem;
+    margin-top: 2rem;
 
     background: var(--color-yellow);
-    padding: 20px;
+    padding: 1rem;
 
     transition: var(--transition);
-    border-radius: 5px;
+    border-radius: 0.25rem;
 
     &:hover {
       background: var(--color-purple);
@@ -245,8 +245,8 @@
 
     top: -10%;
 
-    width: 625px;
-    height: 720px;
+    width: 31.25rem;
+    height: 36rem;
 
     background: var(--color-purple);
 
@@ -259,10 +259,10 @@
     left: 10%;
     bottom: 5%;
 
-    width: 625px;
-    height: 720px;
+    width: 31.25rem;
+    height: 36rem;
 
-    border: 1px solid var(--color-black);
+    border: 0.05rem solid var(--color-black);
 
     z-index: -2;
   }

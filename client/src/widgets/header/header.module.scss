@@ -48,8 +48,12 @@
     width: 300px;
   }
 
-  @media (max-width: 404px) {
+  @media (max-width: 498px) {
     width: 200px;
+  }
+
+  @media (max-width: 347px) {
+    width: 150px;
   }
 }
 
@@ -114,12 +118,22 @@
   flex-wrap: wrap;
   gap: 10px;
   cursor: pointer;
+
+  @media (max-width: 684px) {
+    width: 44px;
+    gap: 6px;
+  }
 }
 
 .header__menu__box {
   background: var(--color-black);
   width: 10px;
   height: 10px;
+
+  @media (max-width: 684px) {
+    width: 8px;
+    height: 8px;
+  }
 }
 
 .current__language {

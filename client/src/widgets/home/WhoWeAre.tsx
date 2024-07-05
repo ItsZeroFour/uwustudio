@@ -32,7 +32,7 @@ const WhoWeAre = () => {
           </aside>
 
           <aside className={style.whoweare__image}>
-            <Image src={WhoWeAreImage} alt="statue" />
+            <Image src={WhoWeAreImage} alt="statue" className={style.about_statue} />
           </aside>
         </div>
       </div>

@@ -1,8 +1,8 @@
 .presentation__top {
-  margin-top: 60px;
+  margin-top: 3rem;
 
   h1 {
-    font-size: 96px;
+    font-size: 4.8rem;
     font-family: "Raleway-bl", sans-serif;
     font-weight: 900;
     text-align: center;
@@ -15,18 +15,18 @@
   justify-content: center;
   align-items: center;
 
-  gap: 100px;
+  gap: 5rem;
 
-  margin-top: 40px;
+  margin-top: 2rem;
 }
 
 .presentation__top__text {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 2.5rem;
 
   p {
-    text-indent: 20px;
+    text-indent: 1rem;
   }
 }
 
@@ -35,10 +35,10 @@
   flex-direction: column;
   width: 100%;
 
-  margin-top: 125px;
+  margin-top: 6.25rem;
 
   h2 {
-    font-size: 64px;
+    font-size: 3.2rem;
     font-family: "Raleway-bl", sans-serif;
     font-weight: 900;
     text-align: left;
@@ -48,34 +48,34 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-top: 80px;
+    margin-top: 4rem;
 
     li {
-      width: 480px;
+      width: 24rem;
       height: auto;
       text-align: center;
 
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      gap: .75rem;
 
       .presentation__image {
-        width: 480px;
-        height: 480px;
+        width: 24rem;
+        height: 24rem;
         overflow: hidden;
-        border-radius: 30px;
+        border-radius: 1.5rem;
 
         img {
-          width: 480px;
-          height: 480px;
+          width: 24rem;
+          height: 24rem;
           object-fit: cover;
-          border-radius: 30px;
+          border-radius: 1.5rem;
           transition: 0.3s ease-in;
         }
       }
 
       h3 {
-        font-size: 36px;
+        font-size: 1.8rem;
         font-weight: 900;
         font-family: "Raleway-bl", sans-serif;
       }
@@ -90,30 +90,30 @@
 }
 
 .presentation__idea {
-  margin-top: 120px;
+  margin-top: 6rem;
 
   h2 {
-    font-size: 48px;
+    font-size: 2.4rem;
     font-weight: 900;
     font-family: "Raleway-bl", sans-serif;
   }
 }
 
 .presentation__idea__wrapper {
-  margin-top: 60px;
+  margin-top: 3rem;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 50px;
+  gap: 2.5rem;
 
   .presentation__left__image {
     display: flex;
-    gap: 30px;
+    gap: 1.5rem;
   }
 
   p {
-    text-indent: 20px;
+    text-indent: 1rem;
   }
 }
 
@@ -121,67 +121,67 @@
 .presentation__right {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 2rem;
 }
 
 .presentation__right {
-  gap: 20px;
+  gap: 1rem;
 
   p {
-    margin-left: 30px;
+    margin-left: 1.5rem;
   }
 }
 
 .presentation__deposits {
-  margin-top: 120px;
+  margin-top: 6rem;
 }
 
 .presentation__deposits__wrapper {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: 30px;
+  gap: 1.5rem;
 
   .presentation__deposits__left {
     h2 {
-      font-size: 48px;
+      font-size: 2.4rem;
       font-weight: 900;
       font-family: "Raleway-bl", sans-serif;
-      margin-bottom: 20px;
+      margin-bottom: 1rem;
     }
 
     ul {
       display: flex;
       flex-direction: column;
-      gap: 30px;
+      gap: 1.5rem;
     }
   }
 }
 
 .presentation__ambitions {
-  margin-top: 120px;
+  margin-top: 6rem;
 }
 
 .presentation__ambitions__wrapper {
   display: flex;
   justify-content: space-between;
-  gap: 100px;
+  gap: 5rem;
 }
 
 .presentation__ambitions__left {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  margin-top: 100px;
+  gap: 1.5rem;
+  margin-top: 5rem;
 }
 
 .presentation__ambitions__right {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 1.5rem;
 
   h2 {
-    font-size: 48px;
+    font-size: 2.4rem;
     font-weight: 900;
     font-family: "Raleway-bl", sans-serif;
   }

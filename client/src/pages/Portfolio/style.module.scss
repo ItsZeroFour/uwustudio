@@ -1,5 +1,5 @@
 .portfolio__head {
-  margin-top: 60px;
+  margin-top: 3rem;
 }
 
 .portfolio__head__top {
@@ -8,7 +8,7 @@
   justify-content: space-between;
 
   h1 {
-    font-size: 90px;
+    font-size: 4.5rem;
     font-family: "Raleway-bd", sans-serif;
     font-weight: 700;
     width: 1000px;
@@ -28,10 +28,10 @@
   }
 
   div {
-    width: 515px;
+    width: 25.75rem;
 
     p {
-      font-size: 24px;
+      font-size: 1.2rem;
       font-family: "Raleway-sb", sans-serif;
       font-weight: 600;
     }
@@ -69,9 +69,9 @@
 .portfolio__head__images {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: .75rem;
 
-  margin-top: 100px;
+  margin-top: 5rem;
 
   div {
     display: flex;
@@ -124,15 +124,15 @@
 }
 
 .portfolio__services {
-  margin-top: 100px;
+  margin-top: 5rem;
 }
 
 .portfolio__block__title {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 24px;
-  letter-spacing: 6px;
+  gap: .5rem;
+  font-size: 1.2rem;
+  letter-spacing: .3rem;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
@@ -144,17 +144,17 @@
 
 .portfolio__services__wrapper {
   ul {
-    margin-top: 55px;
+    margin-top: 2.75rem;
     width: 100%;
 
     display: flex;
     flex-direction: column;
 
-    gap: 60px;
+    gap: 3rem;
 
     li {
-      border-bottom: 2px solid var(--color-black);
-      padding-bottom: 10px;
+      border-bottom: .1rem solid var(--color-black);
+      padding-bottom: .5rem;
 
       a {
         width: 100%;
@@ -173,7 +173,7 @@
             top: 15%;
 
             width: 0;
-            height: 20px;
+            height: 1rem;
 
             background: var(--color-yellow);
             transition: var(--transition);
@@ -191,13 +191,13 @@
         }
 
         svg {
-          margin-right: 10px;
+          margin-right: .5rem;
           transition: var(--transition);
         }
 
         p {
-          font-size: 14px;
-          width: 800px;
+          font-size: .7rem;
+          width: 40rem;
           text-align: left;
           transition: var(--transition);
 
@@ -235,7 +235,7 @@
 }
 
 .portfolio__cases {
-  margin-top: 60px;
+  margin-top: 3rem;
 
   .portfolio__cases__wrapper > ul {
     display: flex;
@@ -254,12 +254,12 @@
     display: flex;
     flex-direction: column;
 
-    width: 750px;
-    height: 800px;
-    padding: 30px;
+    width: 37.5rem;
+    height: 40rem;
+    padding: 1.5rem;
 
     background: #ededed;
-    border-radius: 50px;
+    border-radius: 2.5rem;
 
     img {
       display: flex;
@@ -268,10 +268,10 @@
       align-items: center; /* Center the image vertically */
       margin: auto; /* Center the image both horizontally and vertically */
 
-      width: 395px;
-      height: 395px;
+      width: 19.75rem;
+      height: 19.75rem;
       object-fit: cover;
-      border-radius: 40px;
+      border-radius: 2rem;
 
       transition: transform 0.2s ease;
 
@@ -295,7 +295,7 @@
       margin-top: auto;
 
       h2 {
-        font-size: 32px;
+        font-size: 1.6rem;
         font-family: "Raleway-sb", sans-serif;
         font-weight: 600;
 
@@ -305,7 +305,7 @@
       }
 
       ul {
-        margin-top: 25px;
+        margin-top: 1.25rem;
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
@@ -349,13 +349,13 @@
   .portfolio__cases__wrapper > a {
     display: block;
     text-align: center;
-    margin-top: 60px;
+    margin-top: 3rem;
     width: 100%;
-    padding: 20px;
-    border: 2px solid var(--color-black);
+    padding: 1rem;
+    border: .1rem solid var(--color-black);
     text-transform: uppercase;
-    letter-spacing: 3px;
-    border-radius: 40px;
+    letter-spacing: .15rem;
+    border-radius: 2rem;
 
     transition: all 0.3s linear;
 
@@ -378,8 +378,8 @@
     justify-content: space-between;
     align-items: center;
 
-    margin-top: 60px;
-    margin-bottom: 100px;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
 
     li {
       display: flex;
@@ -387,7 +387,7 @@
 
       img {
         width: 100%;
-        height: 449px;
+        height: 22.45rem;
         object-fit: cover;
 
         @media (max-width: 1560px) {
@@ -403,20 +403,20 @@
       a {
         display: flex;
         flex-direction: column;
-        gap: 20px;
-        width: 500px;
-        min-height: 800px;
+        gap: 1rem;
+        width: 25rem;
+        min-height: 40rem;
         background: #f1f1f1;
-        padding: 20px;
+        padding: 1rem;
         transition: var(--transition);
 
         h3 {
-          font-size: 24px;
+          font-size: 1.2rem;
           font-weight: "Raleway-bl", sans-serif;
         }
 
         h4 {
-          font-size: 20px;
+          font-size: 1rem;
           font-weight: "Raleway", sans-serif;
           color: #666666;
           margin-top: auto;
@@ -458,13 +458,13 @@
 }
 
 .blog__wrapper > a {
-  padding: 20px 100px;
-  margin-left: 25px;
+  padding: 1rem 5rem;
+  margin-left: 1.25rem;
 
   background: var(--color-purple);
   color: var(--color-white);
   border-radius: var(--border-radius-sm);
-  border: 1px solid var(--color-purple);
+  border: .05rem solid var(--color-purple);
 
   transition: var(--transition);
 
@@ -475,15 +475,15 @@
 }
 
 .blog__wrapper > h2 {
-  font-size: 96px;
+  font-size: 4.8rem;
   font-weight: 900;
   font-family: "Raleway-bl", sans-serif;
 }
 
 .blog__wrapper > p {
-  width: 660px;
-  margin-left: 60px;
-  margin-top: 25px;
+  width: 33rem;
+  margin-left: 3rem;
+  margin-top: 1.25rem;
 
   position: relative;
 
@@ -493,8 +493,8 @@
 
     left: -4%;
 
-    width: 10px;
-    height: 45px;
+    width: .5rem;
+    height: 2.25rem;
 
     background: var(--color-purple);
   }
@@ -502,28 +502,28 @@
 
 .portfolio__getintouch__wrapper {
   width: 100%;
-  height: 720px;
+  height: 36rem;
 
   background: #232323;
   color: var(--color-white);
 
-  border-radius: 70px;
+  border-radius: 3.5rem;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  gap: 40px;
+  gap: 2rem;
 
   h4 {
-    font-size: 20px;
+    font-size: 1rem;
     font-family: "Raleway-md", sans-serif;
     font-weight: 500;
   }
 
   h2 {
-    font-size: 64px;
+    font-size: 3.2rem;
     font-family: "Raleway-bd", sans-serif;
     font-weight: 700;
     text-align: center;
@@ -546,9 +546,9 @@
   }
 
   a {
-    padding: 40px 180px;
-    border: 2px solid var(--color-white);
-    border-radius: 57px;
+    padding: 2rem 9rem;
+    border: .1rem solid var(--color-white);
+    border-radius: 2.85rem;
     transition: background 0.3s ease-in;
 
     &:hover {

@@ -26,7 +26,7 @@ const Blog = () => {
                     <Image src={imagePath} alt={title} />
 
                     <h3>{title}</h3>
-                    <p>
+                    <p className={style.blog__article_subtitle}>
                       {text.length > 300 ? `${text.slice(0, 300)}...` : text}
                     </p>
                     <h4>{date}</h4>

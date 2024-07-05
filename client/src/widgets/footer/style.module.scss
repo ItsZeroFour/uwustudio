@@ -16,7 +16,12 @@
   display: flex;
   flex-direction: column;
 
-  gap: 10px;
+  gap: 0.5rem;
+
+  @media (max-width: 768px) {
+    display: block;
+    margin-bottom: 3rem;
+  }
 
   svg {
     margin-bottom: 20px;
@@ -35,6 +40,12 @@
 
   a {
     font-family: sans-serif;
+
+    @media (max-width: 768px) {
+      font-size: 3rem;
+      display: block;
+    }
+
     &:hover {
       text-decoration: underline;
     }
@@ -47,13 +58,20 @@
 }
 
 .footer__navs {
-  margin-top: 40px;
+  margin-top: 2rem;
 }
 
 .footer__navs nav {
   display: flex;
-  gap: 100px;
+  gap: 5rem;
   text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 3rem;
+    justify-content: space-around;
+
+    margin-top: 2rem;
+  }
 
   ul {
     display: flex;
@@ -80,10 +98,15 @@
 }
 
 .footer__socials {
-  margin-top: 40px;
+  margin-top: 2rem;
+
+  @media (max-width: 768px) {
+    margin-top: 6rem;
+    font-size: 2rem;
+  }
 
   ul {
-    margin-top: 25px;
+    margin-top: 1.25rem;
   }
 
   svg {
@@ -96,7 +119,7 @@
 .footer__copyright {
   position: relative;
 
-  margin-top: 100px;
+  margin-top: 5rem;
 
   &::before {
     content: "";
@@ -108,20 +131,24 @@
     transform: translate(-50%, 50%);
 
     width: 100vw;
-    height: 1px;
+    height: 0.05rem;
 
     background: rgba(255, 255, 255, 0.3);
   }
 
   aside {
-    margin-top: 25px;
+    margin-top: 1.25rem;
 
     &:first-child {
       p {
         font-family: sans-serif;
         &:first-child {
-          font-size: 16px;
-          margin-bottom: 10px;
+          font-size: 0.8rem;
+          margin-bottom: 0.5rem;
+
+          @media (max-width: 768px) {
+            font-size: 1.5rem;
+          }
         }
       }
     }
