@@ -16,11 +16,11 @@
   display: flex;
   flex-direction: column;
 
-  gap: 0.5rem;
+  gap: 10px;
 
   @media (max-width: 768px) {
     display: block;
-    margin-bottom: 3rem;
+    margin-bottom: 60px;
   }
 
   svg {
@@ -42,7 +42,7 @@
     font-family: sans-serif;
 
     @media (max-width: 768px) {
-      font-size: 3rem;
+      font-size: 16px;
       display: block;
     }
 
@@ -55,22 +55,30 @@
     justify-content: center;
     align-items: center;
   }
+
+  @media (max-width: 520px) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 .footer__navs {
-  margin-top: 2rem;
+  margin-top: 40px;
+
+  @media (max-width: 768px) {
+    margin-top: 20px;
+  }
 }
 
 .footer__navs nav {
   display: flex;
-  gap: 5rem;
+  gap: 100px;
   text-align: center;
 
   @media (max-width: 768px) {
-    font-size: 3rem;
+    font-size: 16px;
     justify-content: space-around;
-
-    margin-top: 2rem;
   }
 
   ul {
@@ -98,15 +106,23 @@
 }
 
 .footer__socials {
-  margin-top: 2rem;
+  margin-top: 40px;
 
   @media (max-width: 768px) {
-    margin-top: 6rem;
-    font-size: 2rem;
+    margin-top: 40px;
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 24px;
+
+    @media (max-width: 425px) {
+      font-size: 20px;
+    }
   }
 
   ul {
-    margin-top: 1.25rem;
+    margin-top: 25px;
   }
 
   svg {
@@ -119,7 +135,7 @@
 .footer__copyright {
   position: relative;
 
-  margin-top: 5rem;
+  margin-top: 100px;
 
   &::before {
     content: "";
@@ -131,23 +147,24 @@
     transform: translate(-50%, 50%);
 
     width: 100vw;
-    height: 0.05rem;
+    height: 1px;
 
     background: rgba(255, 255, 255, 0.3);
   }
 
   aside {
-    margin-top: 1.25rem;
+    margin-top: 25px;
 
     &:first-child {
       p {
         font-family: sans-serif;
-        &:first-child {
-          font-size: 0.8rem;
-          margin-bottom: 0.5rem;
 
-          @media (max-width: 768px) {
-            font-size: 1.5rem;
+        &:first-child {
+          font-size: 16px;
+          margin-bottom: 10px;
+
+          @media (max-width: 520px) {
+            font-size: 14px;
           }
         }
       }
@@ -155,6 +172,11 @@
 
     a {
       text-decoration: underline;
+      font-size: 20px;
+
+      @media (max-width: 768px) {
+        font-size: 16px;
+      }
     }
   }
 

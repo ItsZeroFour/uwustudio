@@ -12,31 +12,52 @@ const Header = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
   const [openLangaugeList, setOpenLangaugeList] = useState<boolean>(false);
   const [language, setLanguage] = useState(() => {
-    const lang = window.localStorage.getItem("language");
-
-    return lang ? lang : "ru";
+    if (typeof window !== "undefined") {
+      const lang = window.localStorage.getItem("language");
+      return lang ? lang : "ru";
+    } else {
+      return "ru";
+    }
   });
 
   const { t, i18n } = useTranslation();
 
-  const changeLanguage = (language: string) => {
+  const changeLanguage_ = (language: string) => {
     setLanguage(language);
   };
 
   useEffect(() => {
-    i18n.changeLanguage(language === "en" ? "en" : "ru");
-    window.localStorage.setItem("language", language);
-  }, [language]);
+    if (i18n.changeLanguage) {
+      i18n
+        .changeLanguage(language === "en" ? "en" : "ru")
+        .then(() => {
+          if (typeof window !== "undefined") {
+            window.localStorage.setItem("language", language);
+          }
+        })
+        .catch((error) => {
+          console.error("Failed to change language:", error);
+        });
+    } else {
+      console.error("changeLanguage function is not available");
+    }
+  }, [language, i18n]);
 
   useEffect(() => {
     if (openMenu) {
-      document.body.classList.add("no-scroll");
+      if (typeof window !== "undefined") {
+        document.body.classList.add("no-scroll");
+      }
     } else {
-      document.body.classList.remove("no-scroll");
+      if (typeof window !== "undefined") {
+        document.body.classList.remove("no-scroll");
+      }
     }
 
     return () => {
-      document.body.classList.remove("no-scroll");
+      if (typeof window !== "undefined") {
+        document.body.classList.remove("no-scroll");
+      }
     };
   }, [openMenu]);
 
@@ -84,7 +105,7 @@ const Header = () => {
                   <li>
                     <button
                       onClick={() => {
-                        changeLanguage("ru");
+                        changeLanguage_("ru");
                         setOpenLangaugeList(false);
                       }}
                     >
@@ -127,7 +148,7 @@ const Header = () => {
         <div className={style.header__menu__box}></div>
       </div>
 
-      {openMenu && <HeaderMenu openMenu={openMenu} />}
+      {openMenu && <HeaderMenu setOpenMenu={setOpenMenu} openMenu={openMenu} />}
     </div>
   );
 };

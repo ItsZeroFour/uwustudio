@@ -8,7 +8,7 @@ import mainImage from "../../../public/images/aboutService/main-image.png";
 import HeadImage from "../../../public/images/aboutService/head.png";
 import Image from "next/image";
 import Quiz from "@/shared/quiz/Quiz";
-import AboutServiceContactsImage from "../../../public/images/aboutService/about-service-contacts.svg";
+import aboutServiceContactsImage from "../../../public/images/aboutService/about-service-contacts.png";
 import { useTranslation } from "react-i18next";
 
 interface StageItem {
@@ -35,21 +35,21 @@ const AboutService: React.FC<{ data: ServiceData | null }> = ({ data }) => {
   const componentRef = useRef();
 
   useEffect(() => {
-    // Функция обработки события прокрутки
     const handleScroll = () => {
-      // Рассчитываем смещение списка на основе позиции прокрутки
-      const scrollOffset = window.scrollY / 5;
-
-      // Применяем смещение к стилям списка
-      componentRef.current.style.transform = `translateY(-${scrollOffset}px)`;
+      if (typeof window !== "undefined") {
+        const scrollOffset = window.scrollY / 5;
+        componentRef.current.style.transform = `translateY(-${scrollOffset}px)`;
+      }
     };
 
-    // Добавляем обработчик события прокрутки при монтировании компонента
-    window.addEventListener("scroll", handleScroll);
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll);
+    }
 
-    // Убираем обработчик события прокрутки при размонтировании компонента
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      if (typeof window !== "undefined") {
+        window.removeEventListener("scroll", handleScroll);
+      }
     };
   }, []);
 
@@ -78,7 +78,7 @@ const AboutService: React.FC<{ data: ServiceData | null }> = ({ data }) => {
                   </Link>
                 </aside>
 
-                <aside className={style.about__service__top__left}>
+                <aside className={style.about__service__top__right}>
                   <Image src={mainImage} alt="main img" />
                 </aside>
               </div>
@@ -133,7 +133,7 @@ const AboutService: React.FC<{ data: ServiceData | null }> = ({ data }) => {
             <div className="container">
               <div className={style.about__service__contacts__wrapper}>
                 <aside className={style.about__service__contacts__left}>
-                  <AboutServiceContactsImage />
+                  <Image src={aboutServiceContactsImage} alt="contacts" />
                 </aside>
                 <aside className={style.about__service__contacts__right}>
                   <h2>{t("aboutServiceContactsTitle")}</h2>

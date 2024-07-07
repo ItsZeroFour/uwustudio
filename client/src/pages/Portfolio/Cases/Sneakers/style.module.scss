@@ -47,12 +47,26 @@
 
 .case__head {
   margin-top: 60px;
+
+  @media (max-width: 1440px) {
+    overflow: hidden;
+  }
+
+  @media (max-width: 1190px) {
+    overflow-y: hidden;
+    height: 550px;
+  }
 }
 
 .case__head__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 1190px) {
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .case__head__left {
@@ -67,6 +81,18 @@
     font-weight: 500;
     padding-bottom: 30px;
     border-bottom: 1px solid var(--color-black);
+
+    @media (max-width: 1190px) {
+      text-align: center;
+    }
+
+    @media (max-width: 620px) {
+      font-size: 48px;
+    }
+
+    @media (max-width: 425px) {
+      font-size: 32px;
+    }
   }
 
   ul {
@@ -97,6 +123,17 @@
     filter: blur(100px);
     z-index: -1;
   }
+
+  img {
+    @media (max-width: 1440px) {
+      width: 600px;
+      height: auto;
+    }
+  }
+
+  @media (max-width: 1190px) {
+    display: none;
+  }
 }
 
 .case__research,
@@ -118,17 +155,33 @@
 
   h2 {
     font-size: 48px;
+
+    @media (max-width: 620px) {
+      font-size: 32px;
+    }
+
+    @media (max-width: 425px) {
+      font-size: 24px;
+    }
   }
 
   h3 {
     font-size: 24px;
     font-family: "Raleway-sb", sans-serif;
+
+    @media (max-width: 425px) {
+      font-size: 20px;
+    }
   }
 
   p,
   li,
   span {
     font-size: 20px;
+
+    @media (max-width: 425px) {
+      font-size: 14px;
+    }
   }
 }
 
@@ -160,6 +213,15 @@
       h3 {
         width: 320px;
       }
+
+      @media (max-width: 1430px) {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 1430px) {
+      flex-direction: column;
+      gap: 30px;
     }
   }
 }
@@ -182,6 +244,15 @@
       padding-top: 20px;
       width: 465px;
       border-top: 4px solid #f5ec9b;
+
+      @media (max-width: 1430px) {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 1430px) {
+      flex-direction: column;
+      gap: 30px;
     }
   }
 }
@@ -208,6 +279,17 @@
   display: flex;
   justify-content: space-between;
   gap: 40px;
+
+  @media (max-width: 1470px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 80vw;
+      height: auto;
+    }
+  }
 }
 
 .case__design__left {
@@ -244,6 +326,12 @@
     li {
       width: 288px;
       text-align: center;
+    }
+
+    @media (max-width: 1200px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
   }
 }

@@ -26,7 +26,6 @@
       "@/*": [
         "./src/*"
       ],
-
       "#/*": [
         "./*"
       ]
@@ -37,8 +36,9 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
-, "src/paths.js", "src/pages/FAQ/FAQ.jsx", "src/pages/Portfolio/Portfolio.jsx", "src/features/Loader.jsx"  ],
+    ".next/types/**/*.ts",
+    "node_modules/@types/istanbul-lib-coverage/index.d.ts" // Пример пути к типам istanbul-lib-coverage
+  ],
   "exclude": [
     "node_modules"
   ]

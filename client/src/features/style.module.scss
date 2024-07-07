@@ -18,7 +18,7 @@
 
 .loader__wrapper {
   svg {
-    width: 12.5rem;
+    width: 250px;
     height: auto;
 
     animation-name: animateLogo;
@@ -29,11 +29,11 @@
 @keyframes animateLogo {
   from {
     opacity: 0;
-    transform: translateY(-1rem);
+    transform: translateY(-20px);
   }
 
   to {
     opacity: 1;
-    transform: translateY(0rem);
+    transform: translateY(0px);
   }
 }

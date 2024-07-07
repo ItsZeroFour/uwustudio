@@ -8,6 +8,9 @@ import { paths } from "@/paths";
 import { useTranslation } from "react-i18next";
 import axios from "../../utils/axios";
 import Notification from "../../shared/notification/Notification";
+import leftHeadImg from "../../../public/images/home/contacts-head-left.png";
+import rightHeadImg from "../../../public/images/home/contacts-head-right.png";
+import Image from "next/image";
 
 const Contacts = () => {
   const [name, setName] = useState("");
@@ -72,6 +75,8 @@ const Contacts = () => {
     }
   }, [messageIsSend]);
 
+  console.log(inView);
+
   return (
     <React.Fragment>
       {messageIsSend && (
@@ -85,8 +90,16 @@ const Contacts = () => {
       <section className={style.contacts} id="contacts" ref={ref}>
         {inView && (
           <div className={style.contacts__wrapper__images}>
-            <div className={style.contacts__wrapper__image__left} />
-            <div className={style.contacts__wrapper__image__right} />
+            <Image
+              className={style.contacts__wrapper__image__left}
+              src={leftHeadImg}
+              alt="left head"
+            />
+            <Image
+              className={style.contacts__wrapper__image__right}
+              src={rightHeadImg}
+              alt="right head"
+            />
           </div>
         )}
 

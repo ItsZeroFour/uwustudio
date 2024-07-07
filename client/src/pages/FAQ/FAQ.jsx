@@ -137,6 +137,7 @@ const FAQ = () => {
             <ul>
               {faqItems.map(({ question, answer }, index) => (
                 <li
+                  className={questionShowIndex === index && style.faq__active}
                   key={index}
                   onClick={() =>
                     questionShowIndex !== index
@@ -144,11 +145,7 @@ const FAQ = () => {
                       : setQuestionShowIndex(null)
                   }
                 >
-                  <h4
-                    className={questionShowIndex === index && style.faq__active}
-                  >
-                    {question}
-                  </h4>
+                  <h4>{question}</h4>
 
                   {answer.map((item) => (
                     <p

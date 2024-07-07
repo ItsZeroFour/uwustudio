@@ -17,17 +17,19 @@ const Notification = ({ message, isSuccess, isVisible, setMessageIsSend }) => {
 
   return (
     <aside className={`${style.notification} ${animationClass}`}>
-      <div className={style.notification__content}>
-        {isSuccess ? <SuccessImage /> : <UnsuccessImage />}
+      <div className={style.notification__wrapper}>
+        <div className={style.notification__content}>
+          {isSuccess ? <SuccessImage /> : <UnsuccessImage />}
 
-        <text>
-          <h4>{isSuccess ? "Спасибо!" : "Ошибка!"}</h4>
-          <p>{message}</p>
-        </text>
+          <div>
+            <h4>{isSuccess ? "Спасибо!" : "Ошибка!"}</h4>
+            <p>{message}</p>
+          </div>
 
-        <button onClick={() => setMessageIsSend(false)}>
-          <CloseImage />
-        </button>
+          <button onClick={() => setMessageIsSend(false)}>
+            <CloseImage />
+          </button>
+        </div>
       </div>
     </aside>
   );

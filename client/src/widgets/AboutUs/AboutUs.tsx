@@ -14,21 +14,21 @@ const About = () => {
   const componentRef = useRef();
 
   useEffect(() => {
-    // Функция обработки события прокрутки
     const handleScroll = () => {
-      // Рассчитываем смещение списка на основе позиции прокрутки
-      const scrollOffset = window.scrollY / 5;
-
-      // Применяем смещение к стилям списка
-      componentRef.current.style.transform = `translateY(-${scrollOffset}px)`;
+      if (typeof window !== "undefined") {
+        const scrollOffset = window.scrollY / 5;
+        componentRef.current.style.transform = `translateY(-${scrollOffset}px)`;
+      }
     };
 
-    // Добавляем обработчик события прокрутки при монтировании компонента
-    window.addEventListener("scroll", handleScroll);
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll);
+    }
 
-    // Убираем обработчик события прокрутки при размонтировании компонента
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      if (typeof window !== "undefined") {
+        window.removeEventListener("scroll", handleScroll);
+      }
     };
   }, []);
 

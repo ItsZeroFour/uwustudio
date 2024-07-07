@@ -19,7 +19,12 @@ import { paths } from "@/paths";
 import Socials from "../socials/Socials";
 import { useTranslation } from "react-i18next";
 
-const HeaderMenu = (openMenu: boolean) => {
+interface HeaderMenuProps {
+  setOpenMenu: (value: boolean) => void;
+  openMenu: boolean;
+}
+
+const HeaderMenu: React.FC<HeaderMenuProps> = ({ openMenu, setOpenMenu }) => {
   const { t } = useTranslation();
   const [animationClass, setAnimationClass] = useState("");
 
@@ -118,7 +123,7 @@ const HeaderMenu = (openMenu: boolean) => {
               <ul>
                 {firstList.slice(0, 3).map(({ image, title, link }) => (
                   <li className={style.menu__item} key={title}>
-                    <Link href={link}>
+                    <Link href={link} onClick={() => setOpenMenu(false)}>
                       <div className={style.menu__image}>{image}</div>
 
                       <p>{title}</p>
@@ -132,7 +137,7 @@ const HeaderMenu = (openMenu: boolean) => {
                   .slice(3, firstList.length)
                   .map(({ image, title, link }) => (
                     <li className={style.menu__item} key={title}>
-                      <Link href={link}>
+                      <Link href={link} onClick={() => setOpenMenu(false)}>
                         <div className={style.menu__image}>{image}</div>
 
                         <p>{title}</p>
@@ -145,7 +150,7 @@ const HeaderMenu = (openMenu: boolean) => {
               <ul>
                 {secondList.map(({ image, title, link }) => (
                   <li className={style.menu__item} key={title}>
-                    <Link href={link}>
+                    <Link href={link} onClick={() => setOpenMenu(false)}>
                       <div className={style.menu__image}>{image}</div>
 
                       <p>{title}</p>
@@ -160,7 +165,7 @@ const HeaderMenu = (openMenu: boolean) => {
               <ul>
                 {thirdList.slice(0, 2).map(({ image, title, link }) => (
                   <li className={style.menu__item} key={title}>
-                    <Link href={link}>
+                    <Link href={link} onClick={() => setOpenMenu(false)}>
                       <div className={style.menu__image}>{image}</div>
 
                       <p>{title}</p>
@@ -172,7 +177,7 @@ const HeaderMenu = (openMenu: boolean) => {
               <ul>
                 {thirdList.slice(2, 3).map(({ image, title, link }) => (
                   <li className={style.menu__item} key={title}>
-                    <Link href={link}>
+                    <Link href={link} onClick={() => setOpenMenu(false)}>
                       <div className={style.menu__image}>{image}</div>
 
                       <p>{title}</p>
@@ -181,13 +186,22 @@ const HeaderMenu = (openMenu: boolean) => {
                 ))}
 
                 <li>
-                  <Link href={paths.services}>{t("order")}</Link>
+                  <Link
+                    href={paths.services}
+                    onClick={() => setOpenMenu(false)}
+                  >
+                    {t("order")}
+                  </Link>
                 </li>
               </ul>
             </div>
             <div className={style.menu__bottom__other}>
               <Socials />
-              <Link className={style.menu__bottom__policy} href={paths.policy}>
+              <Link
+                className={style.menu__bottom__policy}
+                href={paths.policy}
+                onClick={() => setOpenMenu(false)}
+              >
                 {t("policy")}
               </Link>
               <Link href="mailto:uwustudio@yandex.ru">uwustudio@yandex.ru</Link>

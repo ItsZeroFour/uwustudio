@@ -15,7 +15,9 @@ const Footer = () => {
     <div className={style.footer__wrapper}>
       <div className={style.footer__main}>
         <aside className={style.footer__left}>
-          <Logo className={style.footer__logo} />
+          <Link href="/">
+            <Logo className={style.footer__logo} />
+          </Link>
           <Link href="tel:+79785688535">+7(978) 568-85-35</Link>
           <Link href="mailto:uwustudio@yandex.ru">uwustudio@yandex.ru</Link>
           <Link href="/authors">{t("footerAuthors")}</Link>

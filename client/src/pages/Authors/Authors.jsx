@@ -225,6 +225,87 @@ const Authors = () => {
             >
               Beautiful Greek Goddess Statue Aesthetic Mixed Media
             </a>
+            <a
+              href="https://www.flaticon.com/free-icons/pinch"
+              title="pinch icons"
+            >
+              Pinch icons created by Freepik - Flaticon
+            </a>
+            <a
+              href="https://www.flaticon.com/free-icons/intermediate-level"
+              title="intermediate level icons"
+            >
+              Intermediate level icons created by Flat Icons - Flaticon
+            </a>
+            <a
+              href="https://www.flaticon.com/free-icons/thought"
+              title="thought icons"
+            >
+              Thought icons created by Eucalyp - Flaticon
+            </a>
+            <a
+              href="https://www.flaticon.com/free-icons/giant"
+              title="giant icons"
+            >
+              Giant icons created by Flat Icons - Flaticon
+            </a>
+            <a href="https://www.flaticon.com/free-icons/sns" title="sns icons">
+              Sns icons created by Freepik - Flaticon
+            </a>
+            <a
+              href="https://www.flaticon.com/free-icons/presentation"
+              title="presentation icons"
+            >
+              Presentation icons created by Freepik - Flaticon
+            </a>
+            <a
+              href="https://www.flaticon.com/free-icons/admin"
+              title="admin icons"
+            >
+              Admin icons created by Freepik - Flaticon
+            </a>
+            <a
+              href="https://www.flaticon.com/free-icons/minimalist"
+              title="minimalist icons"
+            >
+              Minimalist icons created by MadeByPia - Flaticon
+            </a>
+            <a
+              href="https://www.flaticon.com/free-icons/responsive"
+              title="responsive icons"
+            >
+              Responsive icons created by Freepik - Flaticon
+            </a>
+            <a
+              href="https://www.flaticon.com/free-icons/entity"
+              title="entity icons"
+            >
+              Entity icons created by pojok d - Flaticon
+            </a>
+            <a
+              href="https://www.flaticon.com/free-icons/logo-design"
+              title="logo design icons"
+            >
+              Logo design icons created by Freepik - Flaticon
+            </a>
+            <a
+              href="https://www.flaticon.com/free-icons/banking-system"
+              title="banking system icons"
+            >
+              Banking system icons created by kerismaker - Flaticon
+            </a>
+            <a
+              href="https://www.flaticon.com/free-icons/quiz"
+              title="quiz icons"
+            >
+              Quiz icons created by Freepik - Flaticon
+            </a>
+            <a href="https://www.freepik.com/free-psd/fresh-broccoli-isolated-transparent-background_79570107.htm#fromView=search&page=1&position=1&uuid=01fcd478-f823-4a68-a142-9d63980f27cc">
+              Image by tohamina on Freepik
+            </a>
+            <a href="https://www.freepik.com/free-psd/classic-frame-skillfully-carved-isolated-transparent-background_91626795.htm#fromView=search&page=1&position=14&uuid=a7c7a922-789e-4c54-964a-85368385a9ea">
+              Image by tohamina on Freepik
+            </a>
           </div>
         </div>
       </section>

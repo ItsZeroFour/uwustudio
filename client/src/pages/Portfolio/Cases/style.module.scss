@@ -1,0 +1,134 @@
+.cases__wrapper > ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  margin-top: 60px;
+
+  @media (max-width: 425px) {
+    gap: 30px;
+  }
+}
+
+.cases__wrapper > ul > li > a {
+  display: flex;
+  flex-direction: column;
+
+  width: 750px;
+  height: 800px;
+  padding: 30px;
+
+  background: #ededed;
+  border-radius: 50px;
+
+  img {
+    display: flex;
+
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    margin: auto; /* Center the image both horizontally and vertically */
+
+    width: 395px;
+    height: 395px;
+    object-fit: cover;
+    border-radius: 40px;
+
+    transition: transform 0.2s ease;
+
+    @media (max-width: 555px) {
+      width: 300px;
+      height: 300px;
+    }
+
+    @media (max-width: 425px) {
+      width: 250px;
+      height: 250px;
+    }
+
+    @media (max-width: 356px) {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  div {
+    margin-top: auto;
+
+    h2 {
+      font-size: 32px;
+      font-family: "Raleway-sb", sans-serif;
+      font-weight: 600;
+
+      @media (max-width: 425px) {
+        font-size: 24px;
+      }
+    }
+
+    ul {
+      margin-top: 25px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+
+      li {
+        padding: 10px 30px;
+        border: 1px solid var(--color-black);
+        border-radius: 22px;
+        font-size: 16px;
+
+        @media (max-width: 425px) {
+          padding: 10px 10px;
+          font-size: 14px;
+        }
+      }
+
+      @media (max-width: 425px) {
+        gap: 10px;
+      }
+    }
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.2);
+
+      @media (max-width: 425px) {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  @media (max-width: 1300px) {
+    width: 90vw;
+  }
+
+  @media (max-width: 425px) {
+    height: 550px;
+  }
+}
+
+.cases__wrapper > a {
+  display: block;
+  text-align: center;
+  margin-top: 60px;
+  width: 100%;
+  padding: 20px;
+  border: 2px solid var(--color-black);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border-radius: 40px;
+
+  transition: all 0.3s linear;
+
+  &:hover {
+    background: var(--color-black);
+    color: var(--color-white);
+  }
+
+  @media (max-width: 425px) {
+    margin-top: 30px;
+    padding: 15px;
+    font-size: 14px;
+  }
+}

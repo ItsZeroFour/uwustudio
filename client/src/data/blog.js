@@ -8,7 +8,7 @@ export const getLastBlogItems = (t) => [
     text: t("blog1Text"),
     date: "12.05.2024",
     imagePath: brandMainImage,
-    link: "unique-brand",
+    link: "increased-conversion",
   },
   {
     title: t("blog2Title"),
@@ -22,6 +22,6 @@ export const getLastBlogItems = (t) => [
     text: t("blog3Text"),
     date: "11.04.2024",
     imagePath: IncreasedConversionImage,
-    link: "increased-conversion",
+    link: "unique-brand",
   },
 ];

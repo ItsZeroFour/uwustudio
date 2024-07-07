@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import style from "./style.module.scss";
 import Ticket from "../../../public/icons/blog/ticket.svg";
 import Calendar from "../../../public/icons/blog/Calendar.svg";
@@ -12,9 +12,14 @@ import brandMainImage from "../../../public/images/blog/unique-brand/main-image.
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
+import Notification from "@/shared/notification/Notification";
 
 const Blog = () => {
   const { t } = useTranslation();
+
+  const [messageIsSend, setMessageIsSend] = useState(false);
+  const [messageSendSuccess, setMessageSendSuccess] = useState(false);
+  const [messageText, setMessageText] = useState("");
 
   const blogItems = [
     {
@@ -35,16 +40,38 @@ const Blog = () => {
 
     {
       title: t("blog3Title"),
-      text: t("blog2Text"),
+      text: t("blog3Text"),
       image: IncreasedConversionImage,
       readPostLink: "increased-conversion",
       tags: [t("blog1Tag1"), t("blog1Tag2"), t("blog1Tag3")],
     },
   ];
 
+  const sharePost = (url: string) => {
+    try {
+      navigator.clipboard.writeText(url);
+      setMessageText("Ссылка на пост успешно скопирована!");
+      setMessageSendSuccess(true);
+      setMessageIsSend(true);
+    } catch (err) {
+      setMessageText("Не удалось скопировать ссылку на пост!");
+      setMessageSendSuccess(false);
+      setMessageIsSend(true);
+    }
+  };
+
+  useEffect(() => {
+    if (messageIsSend) {
+      const timeoutId = setTimeout(() => {
+        setMessageIsSend(false);
+      }, 3000);
+      return () => clearTimeout(timeoutId);
+    }
+  }, [messageIsSend]);
+
   return (
     <React.Fragment>
-      <section className={style.blog__panel}>
+      {/* <section className={style.blog__panel}>
         <div className="container">
           <div className={style.blog__panel__wrapper}>
             <aside>
@@ -67,7 +94,16 @@ const Blog = () => {
             </aside>
           </div>
         </div>
-      </section>
+      </section> */}
+
+      {messageIsSend && (
+        <Notification
+          isSuccess={messageSendSuccess}
+          message={messageText}
+          isVisible={messageIsSend}
+          setMessageIsSend={setMessageIsSend}
+        />
+      )}
 
       <section className={style.blog__list}>
         <div className="container">
@@ -94,7 +130,15 @@ const Blog = () => {
                         <Link href={`/blog/${readPostLink}`}>
                           {t("blogReadPost")}
                         </Link>
-                        <button>{t("blogSendPost")}</button>
+                        <button
+                          onClick={() =>
+                            sharePost(
+                              `https://uwustudio.ru/blog/${readPostLink}`
+                            )
+                          }
+                        >
+                          {t("blogSendPost")}
+                        </button>
                       </div>
                     </aside>
                   </li>

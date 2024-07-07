@@ -17,12 +17,11 @@ const Loader = ({ loadingLanguage }) => {
   }, [loadingLanguage]);
 
   return (
-    <></>
-    // <div className={style.loader} style={hide ? { top: "-200%" } : { top: 0 }}>
-    //   <div className={style.loader__wrapper}>
-    //     <Logo />
-    //   </div>
-    // </div>
+    <div className={style.loader} style={hide ? { top: "-200%" } : { top: 0 }}>
+      <div className={style.loader__wrapper}>
+        <Logo />
+      </div>
+    </div>
   );
 };
 

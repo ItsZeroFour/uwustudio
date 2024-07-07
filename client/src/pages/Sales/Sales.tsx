@@ -33,13 +33,7 @@ const Sales = () => {
     {
       image: image3,
       title: t("salesSale3Title"),
-      texts: [
-        t("salesSale3Text1"),
-        t("salesSale3Text2"),
-        t("salesSale3Text3"),
-        t("salesSale3Text4"),
-        t("salesSale3Text5"),
-      ],
+      texts: [t("salesSale3Text1"), t("salesSale3Text2")],
     },
   ];
 
@@ -47,7 +41,10 @@ const Sales = () => {
     <React.Fragment>
       <head>
         <title>Акции - UWUSTUDIO</title>
-        <meta name="description" content="Узнайте о наших актуальных акциях и специальных предложениях. Получите выгоду при заказе услуг веб-студии." />
+        <meta
+          name="description"
+          content="Узнайте о наших актуальных акциях и специальных предложениях. Получите выгоду при заказе услуг веб-студии."
+        />
       </head>
       <section className={style.sales}>
         <div className="container">

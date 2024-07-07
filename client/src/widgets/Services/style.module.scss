@@ -1,5 +1,5 @@
 .services {
-  margin-top: 4rem;
+  margin-top: 80px;
 }
 
 .servies__wrapper {
@@ -9,8 +9,8 @@
   align-items: center;
 
   h1 {
-    margin-bottom: 1.25rem;
-    font-size: 3.2rem;
+    margin-bottom: 25px;
+    font-size: 64px;
     font-weight: 400;
     font-family: "Raleway", sans-serif;
 
@@ -28,6 +28,7 @@
   p {
     text-align: center;
     width: 1220px;
+    font-size: 20px;
 
     @media (max-width: 1240px) {
       width: 100%;
@@ -43,17 +44,17 @@
   }
 
   ul {
-    margin-top: 5rem;
+    margin-top: 100px;
     width: 100%;
 
     display: flex;
     flex-direction: column;
 
-    gap: 3rem;
+    gap: 60px;
 
     li {
-      border-bottom: 0.1rem solid var(--color-black);
-      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--color-black);
+      padding-bottom: 10px;
 
       a {
         width: 100%;
@@ -64,6 +65,7 @@
           position: relative;
           font-family: "Raleway", sans-serif;
           font-weight: 400;
+          font-size: 24px;
 
           &::before {
             content: "";
@@ -72,7 +74,7 @@
             top: 15%;
 
             width: 0;
-            height: 1rem;
+            height: 20px;
 
             background: var(--color-yellow);
             transition: var(--transition);
@@ -87,22 +89,26 @@
 
           @media (max-width: 425px) {
             font-size: 20px;
-            width: 280px;
+            width: 250px;
           }
 
-          @media (max-width: 326px) {
-            width: 250px;
+          @media (max-width: 357px) {
+            width: 220px;
+          }
+
+          @media (max-width: 328px) {
+            width: 200px;
           }
         }
 
         svg {
-          margin-right: 0.5rem;
+          margin-right: 10px;
           transition: var(--transition);
         }
 
         p {
-          font-size: 0.7rem;
-          width: 40rem;
+          font-size: 14px;
+          width: 800px;
           text-align: left;
           transition: var(--transition);
 
@@ -155,11 +161,11 @@
 }
 
 .servies__contacts__text {
-  width: 40rem;
+  width: 800px;
 
   h3 {
-    font-size: 2.4rem;
-    width: 21.5rem;
+    font-size: 48px;
+    width: 430px;
     font-family: "Raleway-sb", sans-serif;
     font-weight: 600;
 
@@ -167,16 +173,25 @@
       width: 100%;
     }
 
+    @media (max-width: 551px) {
+      text-align: center;
+    }
+
     @media (max-width: 520px) {
       font-size: 32px;
+    }
+
+    @media (max-width: 425px) {
+      font-size: 28px;
     }
   }
 
   p {
-    margin-top: 1rem;
-    margin-left: 1.5rem;
+    margin-top: 20px;
+    margin-left: 30px;
     position: relative;
-    width: 39rem;
+    width: 780px;
+    font-size: 20px;
 
     &::before {
       content: "";
@@ -184,18 +199,23 @@
 
       left: -3%;
 
-      width: 0.5rem;
-      height: 3rem;
+      width: 10px;
+      height: 60px;
 
       background: var(--color-purple);
 
-      @media (max-width: 425px) {
-        left: -5%;
+      @media (max-width: 551px) {
+        display: none;
       }
     }
 
-    @media (max-width: 878px) {
+    @media (max-width: 1850px) {
       width: 90%;
+    }
+
+    @media (max-width: 551px) {
+      margin-left: 0;
+      text-align: center;
     }
 
     @media (max-width: 425px) {
@@ -207,14 +227,15 @@
     display: block;
 
     text-align: center;
-    width: 32.5rem;
-    margin-top: 2rem;
+    width: 650px;
+    margin-top: 40px;
+    font-size: 20px;
 
     background: var(--color-yellow);
-    padding: 1rem;
+    padding: 20px;
 
     transition: var(--transition);
-    border-radius: 0.25rem;
+    border-radius: 5px;
 
     &:hover {
       background: var(--color-purple);
@@ -231,8 +252,13 @@
     }
   }
 
-  @media (max-width: 878px) {
+  @media (max-width: 1850px) {
+    padding-left: 110px;
     width: 100%;
+  }
+
+  @media (max-width: 1530px) {
+    padding-left: 0;
   }
 }
 
@@ -245,8 +271,8 @@
 
     top: -10%;
 
-    width: 31.25rem;
-    height: 36rem;
+    width: 625px;
+    height: 720px;
 
     background: var(--color-purple);
 
@@ -259,10 +285,10 @@
     left: 10%;
     bottom: 5%;
 
-    width: 31.25rem;
-    height: 36rem;
+    width: 625px;
+    height: 720px;
 
-    border: 0.05rem solid var(--color-black);
+    border: 1px solid var(--color-black);
 
     z-index: -2;
   }

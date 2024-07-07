@@ -1,5 +1,3 @@
-"use client";
-
 import { useState, useEffect } from "react";
 import styles from "./style.module.scss";
 
@@ -11,10 +9,18 @@ const Cursor = () => {
   };
 
   useEffect(() => {
-    document.addEventListener("mousemove", updateCursorPosition);
+    const handleMouseMove = (e) => {
+      setPosition({ x: e.clientX, y: e.clientY });
+    };
+
+    if (typeof window !== "undefined") {
+      window.addEventListener("mousemove", handleMouseMove);
+    }
 
     return () => {
-      document.removeEventListener("mousemove", updateCursorPosition);
+      if (typeof window !== "undefined") {
+        window.removeEventListener("mousemove", handleMouseMove);
+      }
     };
   }, []);
 

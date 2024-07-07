@@ -2,10 +2,8 @@
 
 /**
  * @access Public
- * @authors t.me/ItsZeroFour, t.me/...
- * @description Hello! Welcome to code! We are a digital agancy,
-                who specialized on websites develops with moder technologies.
-                Call us: t.me/ItsZeroFour
+ * @description Digital agency specialized in modern technologies.
+ * Call us: t.me/ItsZeroFour
  * @link https://uwustudio.ru
  * @public True
  **/
@@ -16,11 +14,15 @@ import "./scss/index.scss";
 import Header from "@/widgets/header/Header";
 import Footer from "@/widgets/footer/Footer";
 import Cursor from "@/shared/cursor/Cursor";
-import SmoothScroll from "smoothscroll-for-websites";
-
-import "../utils/i18n";
 import { useTranslation } from "react-i18next";
 import Loader from "@/features/Loader";
+import "../utils/i18n";
+import dynamic from "next/dynamic";
+
+// Dynamic import for smooth scroll, disabled SSR
+const SmoothScroll = dynamic(() => import("smoothscroll-for-websites"), {
+  ssr: false,
+});
 
 export default function RootLayout({
   children,
@@ -31,46 +33,55 @@ export default function RootLayout({
   const [loadingLanguage, setLoadingLanguage] = useState(true);
 
   useEffect(() => {
-    i18n.changeLanguage(i18n.language).then(() => {
-      setLoadingLanguage(false);
-    });
+    if (typeof window !== "undefined" && i18n.changeLanguage) {
+      i18n
+        .changeLanguage(i18n.language)
+        .then(() => setLoadingLanguage(false))
+        .catch((error) => {
+          console.error("Failed to change language:", error);
+          setLoadingLanguage(false);
+        });
+    }
   }, [i18n]);
 
-  SmoothScroll({ stepSize: 50 });
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      SmoothScroll({ stepSize: 50 });
+    }
+  }, []);
 
   return (
-    <React.Fragment>
+    <>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>UWUSTUDIO</title>{" "}
+        <title>UWUSTUDIO</title>
         {metadata.icons && <link rel="icon" href={metadata.icons.icon} />}
       </head>
 
-      <html lang={i18n.language}>
-        <body id="root">
-          <div className="page">
-            <React.Fragment>
-              <header className="header">
-                <div className="container">
-                  <Header />
-                </div>
-              </header>
+      <body id="root">
+        <div className="page">
+          <header className="header">
+            <div className="container">
+              <Header />
+            </div>
+          </header>
 
-              <main className="main">{children}</main>
+          <main className="main">{children}</main>
 
-              <footer className="footer">
-                <div className="container">
-                  <Footer />
-                </div>
-              </footer>
-            </React.Fragment>
-            <Loader loadingLanguage={loadingLanguage} />
-          </div>
+          <footer className="footer">
+            <div className="container">
+              <Footer />
+            </div>
+          </footer>
 
-          {window.innerWidth > 768 && <Cursor />}
-        </body>
-      </html>
-    </React.Fragment>
+          <Loader loadingLanguage={loadingLanguage} />
+
+          {typeof window !== "undefined" && window.innerWidth > 768 && (
+            <Cursor />
+          )}
+        </div>
+      </body>
+    </>
   );
 }

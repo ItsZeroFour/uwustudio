@@ -4,6 +4,8 @@ import ArrowFromTopToRight from "../../../public/icons/ArrowFromTopToRight.svg";
 
 import case1Image from "../../../public/images/portfolio/portfolio/1.png";
 import case2Image from "../../../public/images/portfolio/portfolio/2.png";
+import case3Image from "../../../public/images/portfolio/portfolio/3.png";
+import case4Image from "../../../public/images/portfolio/portfolio/4.png";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -24,32 +26,32 @@ const Cases = () => {
     },
 
     {
-      title: "Магазин кроссовок в Симферополе",
-      image: case1Image,
-      tags: ["Разработка", "Дизайн", "Проектирование"],
-      linkTo: "/",
+      title: "Сайт приложения здорового питания Trumpick",
+      image: case3Image,
+      tags: ["Разработка", "Дизайн", "Анимации"],
+      linkTo: "/trumpick",
     },
 
     {
-      title: "Магазин кроссовок в Симферополе",
-      image: case1Image,
+      title: "Смарт зеркала BEWINTI",
+      image: case4Image,
       tags: ["Разработка", "Дизайн", "Проектирование"],
-      linkTo: "/",
+      linkTo: "/bewinti",
     },
 
-    {
-      title: "Магазин кроссовок в Симферополе",
-      image: case1Image,
-      tags: ["Разработка", "Дизайн", "Проектирование"],
-      linkTo: "/",
-    },
+    // {
+    //   title: "Магазин кроссовок в Симферополе",
+    //   image: case1Image,
+    //   tags: ["Разработка", "Дизайн", "Проектирование"],
+    //   linkTo: "/",
+    // },
 
-    {
-      title: "Магазин кроссовок в Симферополе",
-      image: case1Image,
-      tags: ["Разработка", "Дизайн", "Проектирование"],
-      linkTo: "/",
-    },
+    // {
+    //   title: "Магазин кроссовок в Симферополе",
+    //   image: case1Image,
+    //   tags: ["Разработка", "Дизайн", "Проектирование"],
+    //   linkTo: "/",
+    // },
   ];
 
   return (
@@ -80,7 +82,7 @@ const Cases = () => {
             ))}
           </ul>
 
-          <Link href="/">Все работы студии</Link>
+          <Link href="/portfolio/cases">Все работы студии</Link>
         </div>
       </div>
     </section>

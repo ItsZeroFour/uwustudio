@@ -2,6 +2,13 @@
   display: flex;
   justify-content: space-between;
   margin-top: 110px;
+
+  @media (max-width: 1320px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
 }
 
 .requisites__left,
@@ -29,11 +36,27 @@
 
         &:first-child {
           width: 225px;
+
+          @media (max-width: 727px) {
+            font-family: "Raleway-sb", sans-serif;
+            font-weight: 600;
+            width: 100%;
+          }
         }
 
         &:last-child {
           width: 310px;
+
+          @media (max-width: 727px) {
+            width: 100%;
+          }
         }
+      }
+
+      @media (max-width: 727px) {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
       }
     }
   }
