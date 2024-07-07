@@ -115,7 +115,7 @@ const Header = () => {
                   <li>
                     <button
                       onClick={() => {
-                        changeLanguage("en");
+                        changeLanguage_("en");
                         setOpenLangaugeList(false);
                       }}
                     >
