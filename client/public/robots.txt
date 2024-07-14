@@ -1,0 +1,12 @@
+# *
+User-agent: *
+Allow: /
+
+Disallow: /authors
+
+# Host
+Host: https://uwustudio.ru/
+
+# Sitemaps
+Sitemap: https://uwustudio.ru/sitemap.xml
+Sitemap: https://uwustudio.ru/sitemap-0.xml

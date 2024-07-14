@@ -153,7 +153,7 @@
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: 1528px) {
+  @media (max-width: 1530px) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -161,7 +161,8 @@
 }
 
 .servies__contacts__text {
-  width: 800px;
+  width: 100%;
+  margin-left: 150px;
 
   h3 {
     font-size: 48px;
@@ -169,11 +170,8 @@
     font-family: "Raleway-sb", sans-serif;
     font-weight: 600;
 
-    @media (max-width: 878px) {
+    @media (max-width: 1530px) {
       width: 100%;
-    }
-
-    @media (max-width: 551px) {
       text-align: center;
     }
 
@@ -190,7 +188,7 @@
     margin-top: 20px;
     margin-left: 30px;
     position: relative;
-    width: 780px;
+    width: 100%;
     font-size: 20px;
 
     &::before {
@@ -204,7 +202,7 @@
 
       background: var(--color-purple);
 
-      @media (max-width: 551px) {
+      @media (max-width: 1530px) {
         display: none;
       }
     }
@@ -213,7 +211,7 @@
       width: 90%;
     }
 
-    @media (max-width: 551px) {
+    @media (max-width: 1530px) {
       margin-left: 0;
       text-align: center;
     }
@@ -227,8 +225,8 @@
     display: block;
 
     text-align: center;
-    width: 650px;
-    margin-top: 40px;
+    width: 100%;
+    margin-top: 60px;
     font-size: 20px;
 
     background: var(--color-yellow);
@@ -240,6 +238,10 @@
     &:hover {
       background: var(--color-purple);
       color: var(--color-white);
+    }
+
+    @media (max-width: 1530px) {
+      width: 50%;
     }
 
     @media (max-width: 878px) {
@@ -258,7 +260,12 @@
   }
 
   @media (max-width: 1530px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding-left: 0;
+    margin-left: 0;
   }
 }
 
@@ -297,3 +304,4 @@
     display: none;
   }
 }
+

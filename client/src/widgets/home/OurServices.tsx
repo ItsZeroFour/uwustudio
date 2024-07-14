@@ -17,8 +17,8 @@ const OurServices = () => {
 
   useEffect(() => {
     if (inView) {
-      const target1 = 7;
-      const target2 = 101;
+      const target1 = 12 + 1;
+      const target2 = 100 + 1;
       const duration = 3000;
 
       const start = Date.now();

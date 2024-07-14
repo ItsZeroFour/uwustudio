@@ -1,18 +1,22 @@
 const nextConfig = {
-  webpack(config) {
-    // Ensure we have a rule for SVG files
+  webpack(config, { isServer }) {
+    if (isServer) {
+      config.optimization.splitChunks = false;
+    }
+
+    // Ensure we have a rule for SVG files and PDF files
     config.module.rules.push(
       {
         test: /\.svg$/,
-        use: ["@svgr/webpack"],
+        use: ['@svgr/webpack'],
       },
       {
         test: /\.pdf$/,
         use: [
           {
-            loader: "file-loader",
+            loader: 'file-loader',
             options: {
-              name: "[path][name].[ext]",
+              name: '[path][name].[ext]',
             },
           },
         ],

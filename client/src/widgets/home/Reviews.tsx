@@ -78,7 +78,7 @@ const Reviews = () => {
                     ))}
 
                     <li className={style.reviews__portfolio}>
-                      <Link href="/" target="_blank">
+                      <Link href="https://cmsmagazine.ru/agencies/uwustudio/reviews/" target="_blank">
                         {t("readMoreReviews")}
                       </Link>
                     </li>

@@ -59,6 +59,7 @@ const AboutService: React.FC<{ data: ServiceData | null }> = ({ data }) => {
         <React.Fragment>
           <head>
             <title>{data.title}</title>
+            <meta name="description" content="UWUSTUDIO: Мы разрабатываем кастомные сайты, предлагаем комплексные решения для бизнеса и предоставляем услуги в Крыму. Ваши уникальные потребности – наша специализация."/>
           </head>
           <section className={style.about__service__top}>
             <div className="container">

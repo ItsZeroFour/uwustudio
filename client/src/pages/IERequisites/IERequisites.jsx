@@ -5,6 +5,9 @@ import Link from "next/link";
 const IERequisites = () => {
   return (
     <React.Fragment>
+      <head>
+       <title>Реквизиты ИП - UWUSTUDIO</title>
+      </head>
       <section className={style.requisites}>
         <div className="container">
           <div className={style.requisites__wrapper}>
@@ -71,7 +74,7 @@ const IERequisites = () => {
 
                 <li>
                   <p>Время работы</p>
-                  <p>Круглосуточно 10:00 –18:00 по МСК</p>
+                  <p>Ежедневно c 10:00 до 18:00 по МСК</p>
                 </li>
               </ul>
             </aside>

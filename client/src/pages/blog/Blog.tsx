@@ -71,7 +71,11 @@ const Blog = () => {
 
   return (
     <React.Fragment>
-      {/* <section className={style.blog__panel}>
+    <head>
+          <title>Блог - UWUSTUDIO</title>
+          <meta name="keywords" content="блог, дизайн блог, статьи о дизайне, веб-дизайн статьи, графический дизайн статьи, брендинг статьи, советы по дизайну, uwustudio, блог Крым, веб-дизайн Крым, графический дизайн Крым, брендинг Крым, блог Симферополь, веб-дизайн Симферополь, графический дизайн Симферополь, брендинг Симферополь" />
+    </head>      
+{/* <section className={style.blog__panel}>
         <div className="container">
           <div className={style.blog__panel__wrapper}>
             <aside>

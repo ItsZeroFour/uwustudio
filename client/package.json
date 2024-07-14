@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "sitemap": "next-sitemap", 
     "start": "next start",
     "lint": "next lint"
   },
@@ -16,6 +17,7 @@
     "i18next-browser-languagedetector": "^7.2.1",
     "i18next-http-backend": "^2.5.1",
     "next": "^14.1.0",
+    "next-sitemap": "^4.2.3",
     "react": "^18",
     "react-dom": "^18",
     "react-gesture-responder": "^2.1.0",
@@ -26,6 +28,7 @@
     "react-spring": "^9.7.3",
     "react-use-gesture": "^9.1.3",
     "sass": "^1.71.1",
+    "sharp": "^0.33.4",
     "smoothscroll-for-websites": "^1.4.10"
   },
   "devDependencies": {
