@@ -10,7 +10,6 @@
 
 import React, { Suspense, useEffect, useState } from "react";
 import metadata from "./metadata";
-import "./scss/index.scss";
 import Header from "@/widgets/header/Header";
 import Footer from "@/widgets/footer/Footer";
 import Cursor from "@/shared/cursor/Cursor";

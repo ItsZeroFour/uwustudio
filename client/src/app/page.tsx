@@ -15,6 +15,10 @@ export default function Home() {
         // Удаляем классы при размонтировании компонента Home
         document.documentElement.classList.remove("home-page");
         document.body.classList.remove("home-page");
+
+        // Также очищаем любые инлайновые стили, которые могли быть добавлены
+        document.documentElement.removeAttribute("style");
+        document.body.removeAttribute("style");
       };
     }
   }, []);

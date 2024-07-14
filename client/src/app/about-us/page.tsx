@@ -1,6 +1,6 @@
 import React from "react";
-// import About from "../../pages/About/About";
 import dynamic from "next/dynamic";
+import "../scss/index.scss";
 
 const AboutUs = dynamic(() => import("../../pages/About/About"), {
   ssr: false,

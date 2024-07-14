@@ -1,7 +1,7 @@
 .cursor {
   /* Ваши текущие стили */
-  width: .75rem;
-  height: .75rem;
+  width: 0.75rem;
+  height: 0.75rem;
   border-radius: 50%;
   background-color: #fff;
   position: fixed;
@@ -11,5 +11,13 @@
 
   /* Новые стили для mix-blend-mode */
   mix-blend-mode: difference;
-  transition: all 0.1s linear;
+  transition: all 0.15s linear;
+}
+
+.cursorLarge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
 }

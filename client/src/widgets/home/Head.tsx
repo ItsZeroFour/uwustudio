@@ -43,10 +43,12 @@ const Head: React.FC = () => {
               <p>{t("headText")}</p>
 
               <div className={style.head__links}>
-                <Link href="/services" id="specialButton">
+                <Link href="/services" className="special-button">
                   {t("order")}
                 </Link>
-                <Link href="/presentation">{t("presentation")}</Link>
+                <Link href="/presentation" className="special-button">
+                  {t("presentation")}
+                </Link>
               </div>
 
               {/* SOCIALS LINKS */}

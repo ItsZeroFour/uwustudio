@@ -22,7 +22,7 @@ const Blog = () => {
             {lastBlogItems.map(
               ({ title, text, date, imagePath, link }, index) => (
                 <li key={index}>
-                  <Link href={`/blog/${link}`}>
+                  <Link href={`/blog/${link}`} className="special-button">
                     <Image src={imagePath} alt={title} loading="eager" />
 
                     <h3>{title}</h3>
