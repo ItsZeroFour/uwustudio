@@ -1,34 +1,76 @@
-"use client";
-
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import style from "./style.module.scss";
 import Image from "next/image";
-import AdvantagesIamge from "../../../public/images/home/advantages-image.png";
+import AdvantagesImage from "../../../public/images/home/advantages-image.png";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 
 const Advantages = () => {
   const { t } = useTranslation();
+  const ref = useRef(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+
+  const variants = {
+    hidden: { opacity: 0, y: 100 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+  };
 
   return (
-    <section className={style.advantages}>
+    <section className={style.advantages} ref={ref}>
       <div className="container">
-        <div className={style.advantages__wrapper}>
+        <motion.div
+          className={style.advantages__wrapper}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          variants={variants}
+        >
           <aside className={style.advantages__image}>
-            <Image src={AdvantagesIamge} alt="advantages statue" className={style.adv_statue_iamge} />
+            {/* Image component with fixed height and width */}
+            <div className={style.adv_image_container}>
+              <Image
+                className={style.adv_statue_iamge}
+                src={AdvantagesImage}
+                alt="advantages statue"
+                layout="fixed"
+                priority={true}
+                loading="eager"
+              />
+            </div>
           </aside>
 
           <aside className={style.advantages__list}>
             <h2>{t("ourAdvantages")}</h2>
 
             <ul>
-              <li>{t("ourAdvantagesText1")}</li>
-              <li>{t("ourAdvantagesText2")}</li>
-              <li>{t("ourAdvantagesText3")}</li>
-              <li>{t("ourAdvantagesText4")}</li>
-              <li>{t("ourAdvantagesText5")}</li>
+              {/* Map over advantages text from translations */}
+              {[1, 2, 3, 4, 5].map((index) => (
+                <li key={index}>{t(`ourAdvantagesText${index}`)}</li>
+              ))}
             </ul>
           </aside>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

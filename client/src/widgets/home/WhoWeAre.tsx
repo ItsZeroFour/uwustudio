@@ -1,19 +1,54 @@
-"use client"
+"use client";
 
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import style from "./style.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 import WhoWeAreImage from "../../../public/images/home/who-we-are.png";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 
 const WhoWeAre = () => {
   const { t } = useTranslation();
+  const ref = useRef(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+
+  const variants = {
+    hidden: { opacity: 0, y: 100 },
+    visible: { opacity: 1, y: 0, transition: { duration: 2 } },
+  };
 
   return (
-    <section className={style.whoweare}>
+    <section className={style.whoweare} ref={ref}>
       <div className="container">
-        <div className={style.whoweare__wrapper}>
+        <motion.div
+          className={style.whoweare__wrapper}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          variants={variants}
+        >
           <aside className={style.whoweare__main}>
             <h2>{t("whowe")}</h2>
 
@@ -32,9 +67,14 @@ const WhoWeAre = () => {
           </aside>
 
           <aside className={style.whoweare__image}>
-            <Image src={WhoWeAreImage} alt="statue" className={style.about_statue} />
+            <Image
+              src={WhoWeAreImage}
+              alt="statue"
+              className={style.about_statue}
+              loading="eager"
+            />
           </aside>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

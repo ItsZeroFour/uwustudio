@@ -23,7 +23,7 @@ const Blog = () => {
               ({ title, text, date, imagePath, link }, index) => (
                 <li key={index}>
                   <Link href={`/blog/${link}`}>
-                    <Image src={imagePath} alt={title} />
+                    <Image src={imagePath} alt={title} loading="eager" />
 
                     <h3>{title}</h3>
                     <p className={style.blog__article_subtitle}>

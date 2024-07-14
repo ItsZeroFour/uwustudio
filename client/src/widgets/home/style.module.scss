@@ -349,6 +349,15 @@
   }
 }
 
+.adv_statue_iamge {
+  width: 32.9rem;
+  height: 33rem;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
 // Who we are
 .whoweare__wrapper {
   display: flex;

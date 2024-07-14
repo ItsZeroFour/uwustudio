@@ -921,5 +921,7 @@
   "blogTagSearch": "Search by Tags",
   "blogSearchPlaceholder": "Search",
   "blogReadPost": "Read Post",
-  "blogSendPost": "Share"
+  "blogSendPost": "Share",
+
+  "experienceLabel": "Experience"
 }

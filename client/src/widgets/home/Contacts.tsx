@@ -94,11 +94,13 @@ const Contacts = () => {
               className={style.contacts__wrapper__image__left}
               src={leftHeadImg}
               alt="left head"
+              loading="eager"
             />
             <Image
               className={style.contacts__wrapper__image__right}
               src={rightHeadImg}
               alt="right head"
+              loading="eager"
             />
           </div>
         )}

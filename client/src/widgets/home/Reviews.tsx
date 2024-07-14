@@ -86,7 +86,7 @@ const Reviews = () => {
                 </aside>
 
                 <aside className={style.reviews__main__image}>
-                  <Image src={ReviewsImage} alt="statue" className={style.review__statie_image} />
+                  <Image src={ReviewsImage} alt="statue" className={style.review__statie_image} loading="eager" />
                 </aside>
               </div>
             )}

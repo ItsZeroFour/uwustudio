@@ -1,13 +1,20 @@
 "use client";
 
-import React, { useState, MouseEvent } from "react";
+import React, { useState, MouseEvent, useMemo } from "react";
 import style from "./style.module.scss";
 import Link from "next/link";
-import Socials from "@/shared/socials/Socials";
 import Figure from "../../../public/images/home/head-main-image.png";
 import Image from "next/image";
-import { Parallax as ReactParallax } from "react-parallax";
 import { useTranslation } from "react-i18next";
+import dynamic from "next/dynamic";
+
+const Socials = dynamic(() => import("@/shared/socials/Socials"), {
+  ssr: false,
+});
+const ReactParallax = dynamic(
+  () => import("react-parallax").then((mod) => mod.Parallax),
+  { ssr: false }
+);
 
 const Head: React.FC = () => {
   const [mouseX, setMouseX] = useState<number | undefined>(0);
@@ -15,9 +22,16 @@ const Head: React.FC = () => {
   const { t } = useTranslation();
 
   const handleMouseMove = (e: MouseEvent<HTMLElement>): void => {
-    const mouseX = e.clientX;
-    setMouseX(mouseX);
+    setMouseX(e.clientX);
   };
+
+  const parallaxStyle = useMemo(
+    () => ({
+      width: "100%",
+      transform: mouseX !== undefined ? `translateX(${mouseX / 90}px)` : "none",
+    }),
+    [mouseX]
+  );
 
   return (
     <>
@@ -29,7 +43,9 @@ const Head: React.FC = () => {
               <p>{t("headText")}</p>
 
               <div className={style.head__links}>
-                <Link href="/services">{t("order")}</Link>
+                <Link href="/services" id="specialButton">
+                  {t("order")}
+                </Link>
                 <Link href="/presentation">{t("presentation")}</Link>
               </div>
 
@@ -44,16 +60,14 @@ const Head: React.FC = () => {
                   width: "725px",
                 }}
               >
-                <div
-                  style={{
-                    width: "100%",
-                    transform:
-                      mouseX !== undefined
-                        ? `translateX(${mouseX / 90}px)`
-                        : "none",
-                  }}
-                >
-                  <Image className={style.head__figure} src={Figure} alt="Abstract figure" />
+                <div style={parallaxStyle}>
+                  <Image
+                    className={style.head__figure}
+                    src={Figure}
+                    alt="Abstract figure"
+                    priority
+                    loading="eager"
+                  />
                 </div>
               </ReactParallax>
             </aside>

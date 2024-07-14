@@ -921,5 +921,7 @@
   "blogTagSearch": "Поиск по тегам",
   "blogSearchPlaceholder": "Поиск",
   "blogReadPost": "Читать пост",
-  "blogSendPost": "Поделиться"
+  "blogSendPost": "Поделиться",
+
+  "experienceLabel": "Опыт"
 }

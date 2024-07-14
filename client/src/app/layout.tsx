@@ -17,14 +17,8 @@ import Cursor from "@/shared/cursor/Cursor";
 import { useTranslation } from "react-i18next";
 import Loader from "@/features/Loader";
 import "../utils/i18n";
-import dynamic from "next/dynamic";
 import YandexMetrika from "../utils/yandexmetrica";
 import Script from "next/script";
-
-// Dynamic import for smooth scroll, disabled SSR
-const SmoothScroll = dynamic(() => import("smoothscroll-for-websites"), {
-  ssr: false,
-});
 
 export default function RootLayout({
   children,
@@ -45,12 +39,6 @@ export default function RootLayout({
         });
     }
   }, [i18n]);
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      SmoothScroll({ stepSize: 50 });
-    }
-  }, []);
 
   return (
     <>

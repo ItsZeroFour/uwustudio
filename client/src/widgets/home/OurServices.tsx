@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import style from "./style.module.scss";
 import { useInView } from "react-intersection-observer";
 import { useTranslation } from "react-i18next";
 
-const OurServices = () => {
+const OurServices = React.memo(() => {
   const [count1, setCount1] = useState(0);
   const [count2, setCount2] = useState(0);
 
@@ -13,29 +13,49 @@ const OurServices = () => {
 
   const [ref, inView] = useInView({
     threshold: 0.6,
+    triggerOnce: true, // Убедимся, что анимация запускается только один раз
   });
 
+  const requestRef = useRef<number>();
+  const startRef = useRef<number>();
+  const previousTimestampRef = useRef<number>(0);
+
   useEffect(() => {
-    if (inView) {
-      const target1 = 12 + 1;
-      const target2 = 100 + 1;
-      const duration = 3000;
+    if (!inView) return; // Не запускаем анимацию, если компонент не в области видимости
 
-      const start = Date.now();
+    const target1 = 12 + 1;
+    const target2 = 100 + 1;
+    const duration = 3000;
 
-      const updateCounters = () => {
-        const elapsed = Date.now() - start;
+    const updateCounters = (timestamp: number) => {
+      if (!startRef.current) startRef.current = timestamp;
+      const elapsed = timestamp - startRef.current;
+
+      if (timestamp - previousTimestampRef.current > 1000 / 60) {
+        previousTimestampRef.current = timestamp;
 
         if (elapsed < duration) {
           const progress = Math.min(1, elapsed / duration);
           setCount1(Math.floor(progress * target1));
           setCount2(Math.floor(progress * target2));
-          requestAnimationFrame(updateCounters);
+          requestRef.current = requestAnimationFrame(updateCounters);
+        } else {
+          setCount1(target1 - 1); // Обеспечим точное конечное значение
+          setCount2(target2 - 1);
+          cancelAnimationFrame(requestRef.current!);
         }
-      };
+      } else {
+        requestRef.current = requestAnimationFrame(updateCounters);
+      }
+    };
 
-      updateCounters();
-    }
+    requestRef.current = requestAnimationFrame(updateCounters);
+
+    return () => {
+      if (requestRef.current) {
+        cancelAnimationFrame(requestRef.current);
+      }
+    };
   }, [inView]);
 
   return (
@@ -85,6 +105,6 @@ const OurServices = () => {
       </div>
     </section>
   );
-};
+});
 
 export default OurServices;

@@ -16,6 +16,10 @@ i18n
     detection: {
       order: ["queryString", "cookie"],
       cache: ["cookie"],
+      cookies: {
+        secure: true, // Установка куков только через HTTPS
+        sameSite: "None", // Установка SameSite=None для куков
+      },
     },
     interpolation: {
       escapeValue: false,
