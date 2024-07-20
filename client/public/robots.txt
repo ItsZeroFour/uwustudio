@@ -3,6 +3,7 @@ User-agent: *
 Allow: /
 
 Disallow: /authors
+Disallow: /policy
 
 # Host
 Host: https://uwustudio.ru/
