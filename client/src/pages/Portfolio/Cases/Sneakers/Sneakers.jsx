@@ -8,6 +8,19 @@ import Link from "next/link";
 const Sneakers = () => {
   return (
     <React.Fragment>
+      <head>
+        <title>Магазин кросовок в Симферополе - UWUSTUDIO</title>
+        <meta
+          name="description"
+          content="Разработка веб-сайта для магазина кроссовок в Симферополе от UWUSTUDIO. Мы создали современный и удобный сайт, который предлагает пользователям широкий ассортимент кроссовок, простую навигацию и интуитивно понятный интерфейс для удобного покупательского опыта. Сайт включает элементы e-commerce и адаптивный дизайн для всех устройств."
+        />
+
+        <meta
+          name="keywords"
+          content="магазин кроссовок, Симферополь, веб-дизайн, UWUSTUDIO, разработка сайта, e-commerce, онлайн-магазин, кроссовки, адаптивный дизайн, интернет-магазин, пользовательский опыт, создание сайта для магазина"
+        />
+      </head>
+
       <section className={style.case__head}>
         <div className="container">
           <div className={style.case__head__wrapper}>

@@ -9,11 +9,23 @@ import Image from "next/image";
 const Bewinti = () => {
   return (
     <React.Fragment>
+      <head>
+        <title>Смарт зеркала BEWINTI - UWUSTUDIO</title>
+        <meta
+          name="description"
+          content="Разработка веб-сайта для смарт зеркала BEWINTI от UWUSTUDIO. Мы создали инновационный и функциональный сайт, который демонстрирует уникальные особенности смарт зеркала, такие как интеграция с приложениями и персонализированные функции. Сайт имеет современный дизайн, адаптивный интерфейс и высокую интерактивность для улучшения пользовательского опыта."
+        />
+
+        <meta
+          name="keywords"
+          content="смарт зеркало, BEWINTI, UWUSTUDIO, веб-дизайн, разработка сайта, инновационные технологии, пользовательский интерфейс, адаптивный дизайн, интернет-презентация, умные устройства, функциональный сайт, технологии и гаджеты"
+        />
+      </head>
       <section className={style.case__head}>
         <div className="container">
           <div className={style.case__head__wrapper}>
             <aside className={style.case__head__left}>
-              <h1>Сайт приложения здорового питания Trumpick</h1>
+              <h1>Смарт зеркала BEWINTI</h1>
 
               <ul>
                 <li>Разработка Анимаций</li>

@@ -2,7 +2,7 @@ import React from "react";
 import style from "./style.module.scss";
 import ArrowFromTopToRight from "../../../public/icons/ArrowFromTopToRight.svg";
 
-import case1Image from "../../../public/images/portfolio/portfolio/1.png";
+import case1Image from "../../../public/images/portfolio/portfolio/5.png";
 import case2Image from "../../../public/images/portfolio/portfolio/2.png";
 import case3Image from "../../../public/images/portfolio/portfolio/3.png";
 import case4Image from "../../../public/images/portfolio/portfolio/4.png";
@@ -12,10 +12,10 @@ import Link from "next/link";
 const Cases = () => {
   const casesList = [
     {
-      title: "Магазин кроссовок в Симферополе",
+      title: "Преобразование рекрутингового бизнеса: Лендинг для JobMaster",
       image: case1Image,
-      tags: ["Разработка", "Дизайн", "Проектирование"],
-      linkTo: "/sneakers",
+      tags: ["Разработка", "Дизайн", "Исследование рынка"],
+      linkTo: "/jobmaster",
     },
 
     {

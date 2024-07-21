@@ -1,4 +1,5 @@
 import React from "react";
+import "./scss/index.scss";
 
 const notFound = () => {
   return (
