@@ -87,7 +87,7 @@ const OurTeam = () => {
                   <ul>
                     <li>Frontend Разработчик</li>
                     <li>UI/UX Дизайнер</li>
-                    <li>SEO специалист</li>
+                    <li>SEO-специалист</li>
                   </ul>
                 </div>
 
@@ -105,7 +105,6 @@ const OurTeam = () => {
                   <ul>
                     <li>Backend разработчик</li>
                     <li>DevOps</li>
-                    <li>Аналитик</li>
                   </ul>
                 </div>
 
@@ -121,9 +120,7 @@ const OurTeam = () => {
                   <h3>Семиволос Дарья</h3>
 
                   <ul>
-                    <li>Frontend разработчик</li>
-                    <li>Бренд-менеджер</li>
-                    <li>Аналитик</li>
+                    <li>Веб-Аналитик</li>
                   </ul>
                 </div>
 

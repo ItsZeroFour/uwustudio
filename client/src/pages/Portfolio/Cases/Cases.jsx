@@ -4,6 +4,7 @@ import case1Image from "../../../../public/images/portfolio/portfolio/5.png";
 import case2Image from "../../../../public/images/portfolio/portfolio/2.png";
 import case3Image from "../../../../public/images/portfolio/portfolio/3.png";
 import case4Image from "../../../../public/images/portfolio/portfolio/4.png";
+import case5Image from "../../../../public/images/portfolio/portfolio/1.png";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -35,6 +36,13 @@ const Cases = () => {
       image: case4Image,
       tags: ["Разработка", "Дизайн", "Проектирование"],
       linkTo: "/bewinti",
+    },
+
+    {
+      title: "Магазин кроссовок в Симферополе",
+      image: case5Image,
+      tags: ["Разработка", "Дизайн", "Проектирование"],
+      linkTo: "/sneakers",
     },
 
     // {
